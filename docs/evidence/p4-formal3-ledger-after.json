@@ -1,0 +1,44 @@
+{
+  "run_id": "p4-formal3-gray",
+  "robot_terminal_status": "completed; independent full result in p4-formal3-gray.json",
+  "application_request_id": "dd4e069ac9fc4dd7a2bfc3590dd8d27b",
+  "new_model_calls": 1,
+  "attempts_before_after": [
+    64,
+    65
+  ],
+  "accounted_usd": 0.41452,
+  "retained_unknown_usd": 0.166363,
+  "known_token_estimate_usd": 0.248157,
+  "this_call_token_estimate_usd": 0.007022,
+  "model": "gemini-3.1-pro-preview",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 148,
+    "candidates_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 148
+      }
+    ],
+    "prompt_token_count": 877,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 877
+      }
+    ],
+    "thoughts_token_count": 291,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 1316,
+    "traffic_type": "ON_DEMAND"
+  },
+  "old64_rows_unchanged": true,
+  "old64_rows_sha256": "42a561799f46566ede3378a6ee89c5e18145004cf1c0b0c944803ae94d4f8bdc",
+  "current65_rows_sha256": "b675383e556dfb3d321047118897b9eef078bf21797c671d2ebcc8c03869bf9c",
+  "max_usd": 5,
+  "max_attempts": 300,
+  "read_only": true
+}

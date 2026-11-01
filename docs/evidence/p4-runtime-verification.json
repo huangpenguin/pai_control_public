@@ -1,0 +1,52 @@
+{
+  "source": "actual P4 image integration and independent dual-Python hash verification",
+  "image": "sha256:cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+  "regression": {
+    "tests": 49,
+    "failures": 0,
+    "skips": 0,
+    "seconds": 4.372,
+    "raw_log": "logs/control-runtime-tests-p4.log",
+    "raw_sha256": "a89fa358e7fe7f7e6e24fbbdaa3aec67c54eefbbd77553fbcd41b8b790828d9e"
+  },
+  "runtime_integrity": {
+    "image": "sha256:cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+    "source_hash_count": 72,
+    "all_hashes_match": true,
+    "pip_check": "No broken requirements found.",
+    "model": "gemini-3.1-pro-preview",
+    "location": "global",
+    "thinking_level": "LOW",
+    "prompt_version": "task-plan-v3",
+    "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+    "sdk_version": "2.29.0",
+    "budget": {
+      "attempts": 62,
+      "accounted_usd": 0.392938,
+      "unknown_or_pending": 1,
+      "unknown_reserved_usd": 0.166363,
+      "known_estimated_usd": 0.226575,
+      "max_usd": 5.0,
+      "max_attempts": 300,
+      "warning_80_percent": false
+    },
+    "cv2_version": "4.6.0",
+    "numpy_version": "1.26.4",
+    "cv_bridge_available": true,
+    "follow_path_plugin": "nav2_rotation_shim_controller::RotationShimController",
+    "primary_controller": "dwb_core::DWBLocalPlanner",
+    "shim_debian_version": "1.3.13-1noble.20260921.032338",
+    "controller_frequency_wall_hz": 20.0,
+    "guard_command_timeout_wall_s": 0.3,
+    "sensor_timeout_wall_s": 0.5,
+    "driver_cpp_500ms_lease_test_exit": 0,
+    "network": "none",
+    "adc_mounted": false,
+    "simulation_started": false,
+    "model_calls": 0
+  },
+  "runtime_integrity_raw_sha256": "aec6bc94019fcee537a70d290144dfd080e5cb8d66c81847529888a28cf376ab",
+  "independent_core_evidence": "docs/evidence/p4-core-integrity.json",
+  "initial_prebuild_failure_evidence": "docs/evidence/p4-prebuild-fixture-regression.json",
+  "color_accuracy_claimed": false
+}

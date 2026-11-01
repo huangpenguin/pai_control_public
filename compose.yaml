@@ -1,0 +1,39 @@
+services:
+  simulation:
+    image: pai-inspection:p1
+    build:
+      context: .
+      target: runtime
+    init: true
+    user: "${PAI_UID:-1000}:${PAI_GID:-1000}"
+    cpus: 4.0
+    mem_limit: 8g
+    memswap_limit: 8g
+    pids_limit: 512
+    shm_size: 512m
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      ROS_DOMAIN_ID: "87"
+      ROS_LOCALHOST_ONLY: "1"
+      GZ_PARTITION: pai_inspection_p1
+      LIBGL_ALWAYS_SOFTWARE: "1"
+      GALLIUM_DRIVER: llvmpipe
+      EGL_PLATFORM: surfaceless
+      LP_NUM_THREADS: "4"
+      PAI_CAMERA_UPDATE_RATE: "${PAI_CAMERA_UPDATE_RATE:-5}"
+      PAI_VISUAL_SCENARIO: "${PAI_VISUAL_SCENARIO:-red_green}"
+      PAI_PLANNER_MODE: "${PAI_PLANNER_MODE:-vertex}"
+      PAI_VERTEX_MODEL: "${PAI_VERTEX_MODEL:-gemini-3.1-pro-preview}"
+      GOOGLE_CLOUD_PROJECT: "${GOOGLE_CLOUD_PROJECT:-}"
+      GOOGLE_CLOUD_LOCATION: global
+      GOOGLE_GENAI_USE_VERTEXAI: "true"
+    volumes:
+      - ./logs:/opt/pai/logs
+      - ./state:/opt/pai/state
+    tmpfs:
+      - /tmp:rw,mode=1777
+    networks: [pai]
+networks:
+  pai:
+    driver: bridge

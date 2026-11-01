@@ -1,0 +1,177 @@
+{
+  "image_sha256": "sha256:cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+  "video": {
+    "video": "logs/p4-formal1-red-green-action-video/render-x3/video.mp4",
+    "video_sha256": "7348f4b5f5b009ce7045a3a7e180f2332dcad38b38eaeb8a4ebbf1310274d4f8",
+    "ffprobe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1060,
+          "height": 560,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "10/1"
+        }
+      ],
+      "format": {
+        "duration": "127.800000",
+        "size": "748875"
+      }
+    },
+    "visual_samples": [
+      "logs/p4-formal1-red-green-action-video/render-x3/start.png",
+      "logs/p4-formal1-red-green-action-video/render-x3/middle.png",
+      "logs/p4-formal1-red-green-action-video/render-x3/end.png"
+    ],
+    "speedup": 3,
+    "full_action_covered": true,
+    "sampled_actual_frames_not_continuous_sensor_stream": true,
+    "right_panel_is_actual_tf_log_visualization_not_gazebo_overhead": true,
+    "clip_provenance_sha256": "9d3257fffa6aea6e1023fd20e0bd2a0ebca374dc440f340a1ab6dd7c4d265558",
+    "render_json_sha256": "00947b2266754565d4394cb4638235960002198b726d79d9b20330d320625860",
+    "simulation_stopped": true,
+    "model_calls_for_media": 0,
+    "actual_last_frame": {
+      "file": "frame-000273.jpg",
+      "wall_s": 3818598.919954579,
+      "image_sim_s": 192.0,
+      "map_pose": {
+        "x": -2.889585729796607,
+        "y": -1.9673777662544722,
+        "qx": 0.0,
+        "qy": 0.0,
+        "qz": -0.12284196378553017,
+        "qw": 0.9924262450849003
+      },
+      "safety": {
+        "locked": false,
+        "motion_permitted": false,
+        "generation": 2,
+        "reason": "ready"
+      }
+    },
+    "end_frame_interpretation": "Final actual frame is after Task completed at base. Guard remains unlocked until the independent post-terminal cleanup stop; complete raw audit verifies continuous standstill and later locked cleanup. Encoded repeats between sampled frames preserve actual wall gaps, not invented motion.",
+    "terminal_wall_s": 3818597.653632918,
+    "cleanup_stop_wall_s": 3818599.678904133,
+    "visual_samples_viewed": true,
+    "visual_review": "Decoded start/middle/end show actual camera and logged real TF trail with 3x label; labels and map panels are legible and unobscured."
+  },
+  "pdf": {
+    "pdf": "logs/REPORT_JA-final.pdf",
+    "pdf_sha256": "9e29f358d83f17919341edd567b2471c0c2b0646d26560876a404ff1f3fb4f54",
+    "pdf_bytes": 732647,
+    "source_html": "docs/REPORT_JA.html",
+    "source_html_sha256": "6fbb6ec614d57e16a613630852514cd7a97ecf624f46364eab15539dd5eb2b25",
+    "pages": 6,
+    "page_size": "A4",
+    "embedded_unicode_fonts": true,
+    "japanese_fonts": "NotoSansCJKjp Bold/Regular embedded",
+    "japanese_text_checks": {
+      "自然言語による TurtleBot3": true,
+      "3/3": true,
+      "5/5": true,
+      "65": true,
+      "127.8": true,
+      "unknown": true,
+      "観測": true
+    },
+    "raster_review": "All six first-render pages inspected; final section7 media facts corrected, final page raster inspected with no clipping/overlap. No other source content changed.",
+    "first_render_preserved": "logs/REPORT_JA.pdf",
+    "simulation_stopped": true,
+    "model_calls_for_media": 0
+  },
+  "recording_coverage": {
+    "p4-formal1-red-green": {
+      "run_id": "p4-formal1-red-green",
+      "raw_harness_pass": true,
+      "api_attempt_delta": 1,
+      "action_window_wall_s": [
+        3818216.509189225,
+        3818597.653632918
+      ],
+      "contact_window_covers_action": true,
+      "camera_window_covers_action": true,
+      "contact_status": "observed",
+      "observed_contact_episodes": 0,
+      "non_lossless_observation": true,
+      "maximum_contact_clock_gap_wall_s": 0.3955983007326722,
+      "sampled_actual_frames": 331,
+      "actual_frame_window_wall_s": [
+        3818140.919858702,
+        3818701.062918659
+      ],
+      "files": {
+        "logs/p4-formal1-red-green.json": "7187868f795866f0c8bc25ad7e84de01990169389ad6f2375fefc9323d01026a",
+        "logs/p4-formal1-red-green-contacts.json": "3b5e72c5072d57a6917cee29f381f9e2e28438a98d4a0c7d22e0f1a45f233f78",
+        "logs/p4-formal1-red-green-video/capture.json": "aff2ab00cb4524b4b2a9c1eff9c169aa93732fa3c8c92b9c00d877c3b509c860"
+      }
+    },
+    "p4-formal2-green-red": {
+      "run_id": "p4-formal2-green-red",
+      "raw_harness_pass": true,
+      "api_attempt_delta": 1,
+      "action_window_wall_s": [
+        3818841.455793485,
+        3819192.118723638
+      ],
+      "contact_window_covers_action": true,
+      "camera_window_covers_action": true,
+      "contact_status": "observed",
+      "observed_contact_episodes": 0,
+      "non_lossless_observation": true,
+      "maximum_contact_clock_gap_wall_s": 0.34962123166769743,
+      "sampled_actual_frames": 306,
+      "actual_frame_window_wall_s": [
+        3818760.73430463,
+        3819248.463564491
+      ],
+      "files": {
+        "logs/p4-formal2-green-red.json": "67b55a325e69e02c20ed0cc7b098384bee2bd5061315d90629a62688aed1380b",
+        "logs/p4-formal2-green-red-contacts.json": "703e1b4574556996706fc194bb7270a59b6fa906a6ac8ca5d44d6e2b438048ba",
+        "logs/p4-formal2-green-red-video/capture.json": "a229d9a2046ba41adae389ea0771ab6b8f653390c5621d0d1a3ef4ca86fc23af"
+      }
+    },
+    "p4-formal3-gray": {
+      "run_id": "p4-formal3-gray",
+      "raw_harness_pass": true,
+      "api_attempt_delta": 1,
+      "action_window_wall_s": [
+        3819375.432944754,
+        3819616.412214868
+      ],
+      "contact_window_covers_action": true,
+      "camera_window_covers_action": true,
+      "contact_status": "observed",
+      "observed_contact_episodes": 0,
+      "non_lossless_observation": true,
+      "maximum_contact_clock_gap_wall_s": 0.33281428273767233,
+      "sampled_actual_frames": 209,
+      "actual_frame_window_wall_s": [
+        3819312.266171638,
+        3819682.569105914
+      ],
+      "files": {
+        "logs/p4-formal3-gray.json": "86b166eb3e62efa53ed224707c4b077ba549c66e00c05d7ea29e0338181f3910",
+        "logs/p4-formal3-gray-contacts.json": "2a858cf84c27e3c9295b565ae0970ac2231e75c9f3ec755b0d52e8b67393fb7b",
+        "logs/p4-formal3-gray-video/capture.json": "524a8103671cdc3f9f243b4e995be8767eaa9e624824f5ce6cd0aeca783e90e3"
+      }
+    }
+  },
+  "contact_limitation": "Observed contact episodes; positive native probe and per-run health, no lossless packet guarantee or historical backfill.",
+  "no_added_api_or_navigation_for_media": true,
+  "all_task_simulation_stopped": true,
+  "offline_scripts": {
+    "scripts/prepare_action_video_clip.py": "c7c2d00ff882b67dbbc9511695c56c26f10f9ca3c4035f49c6d8490cc0510a8b",
+    "scripts/prepare_video_frames.py": "a21726dfb291efde585b22ea78efbe80fca90e7fb3a949d5fc7dbb60ea205231",
+    "scripts/render_video.sh": "92e20c01b00e4b64a85cdedc32644a09017381e4a466effe74446513a438ce0d",
+    "scripts/render_pdf.sh": "46410321bba8bd955c5aba0a21f2fe6b64fe6451fa86098a73d7ad6ea9d79cbf"
+  },
+  "local_delivery_files": {
+    "pdf": "submission/説明資料_PAI最終課題_<omnicampus_account>.pdf",
+    "video": "submission/task-video.mp4"
+  },
+  "independent_media_byte_hash_and_report_html_checks": true,
+  "independent_final_pdf_page6_viewed": true,
+  "independent_video_start_middle_end_viewed": true
+}

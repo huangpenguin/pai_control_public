@@ -1,0 +1,157 @@
+{
+  "created_utc": "2026-10-11T07:35:22.346494+00:00",
+  "read_only_independent_review": true,
+  "runtime_image_sha256": "10700d294b7ce956193bf8e2de71cdb0d2fed9db71683c0954599342303d391b",
+  "test_helpers_external_to_image": true,
+  "production_code_unchanged": true,
+  "source_manifests": [
+    {
+      "run_id": "recorded-real-plan-20261011T072505Z",
+      "execution_kind": "saved_real_model_output_then_real_Gazebo; no online generation during execution",
+      "image_sha256": "sha256:10700d294b7ce956193bf8e2de71cdb0d2fed9db71683c0954599342303d391b",
+      "source_files": {
+        "logs/recorded-output-harness/recorded_plan_provider.py": "0d1f00323188a26201f6451ccb3db66b0b4341978c0c59f376ac68afe9ac20b0",
+        "logs/recorded-output-harness/live_recorded_plan.py": "b45c7754c4f33923f8e2985fce86991a58760c08eec966b767451da301e8332d",
+        "logs/recorded-output-harness/live_acceptance.py": "5a2099cc1162ad8b71546f9f1485de1a68607841dac30e48ac55f3ba545ea506",
+        "logs/recorded-output-harness/test_recorded_plan_provider.py": "63431d0d32ba82edf8c9c79e4d5cb49af86f4c54d30dfafe810ab71191ae27b8",
+        "logs/recorded-output-harness/vertex-second-authorized-probe.json": "e6255e5c83cfa92f7872d51724046c4adfc69fec191db3e64407b65a1c7d5428"
+      },
+      "production_executor_sha256": "9cb067c2cd1f98a674a816cd841124373be3b71ad09b1f42a20203a79c5e9ebb",
+      "product_default_unchanged": "Vertex; 8 steps",
+      "provider_regression": {
+        "passed": 6,
+        "run": 6,
+        "skipped": 0,
+        "evidence": "logs/recorded-output-provider-regression.log"
+      },
+      "consumption_receipt": "logs/recorded-real-response-consumed.json",
+      "original_executor_exit_evidence": "logs/recorded-executor-replacement.json",
+      "automatic_task_replay": false,
+      "all_source_sha256_independently_verified": true
+    },
+    {
+      "run_id": "recorded-real-plan-attempt2-20261011T073125Z",
+      "execution_attempt": 2,
+      "same_real_request_id": "c78b1d1ad60042ae86f017b4373ed472",
+      "execution_kind": "saved_real_model_output_then_real_Gazebo; no online generation during execution",
+      "image_sha256": "10700d294b7ce956193bf8e2de71cdb0d2fed9db71683c0954599342303d391b",
+      "source_files": {
+        "logs/recorded-output-harness-attempt2/recorded_plan_provider.py": "1bf5e8f07eb5da8bbefd1792e559ea6b338430f60c66682712708eb1e1954c11",
+        "logs/recorded-output-harness-attempt2/live_recorded_plan.py": "9286c6a7ab757a2dff929ffff1548fbdc651e4e4195e15ce6b1045145e03f2c8",
+        "logs/recorded-output-harness-attempt2/live_acceptance.py": "5a2099cc1162ad8b71546f9f1485de1a68607841dac30e48ac55f3ba545ea506",
+        "logs/recorded-output-harness-attempt2/test_recorded_plan_provider.py": "63431d0d32ba82edf8c9c79e4d5cb49af86f4c54d30dfafe810ab71191ae27b8",
+        "logs/recorded-output-harness-attempt2/vertex-second-authorized-probe.json": "e6255e5c83cfa92f7872d51724046c4adfc69fec191db3e64407b65a1c7d5428"
+      },
+      "production_executor_sha256": "9cb067c2cd1f98a674a816cd841124373be3b71ad09b1f42a20203a79c5e9ebb",
+      "use_sim_time_parameter_evidence": "recorded-real-plan-attempt2-clock-parameter.log",
+      "clock_matching_assertion_log": "recorded-real-executor-attempt2.log",
+      "first_failed_run_preserved": "recorded-real-plan-20261011T072505Z.json",
+      "first_failed_receipt_preserved": "recorded-real-response-consumed.json",
+      "second_consumption_receipt": "recorded-real-response-consumed-attempt2.json",
+      "automatic_task_replay": false,
+      "all_source_sha256_independently_verified": true
+    }
+  ],
+  "provider_review": {
+    "exact_instruction_request_id_and_artifact_sha_bound": true,
+    "raw_response_revalidated_and_returned_without_route_replacement": true,
+    "exclusive_receipt_written_before_plan_return": true,
+    "each_execution_consumes_its_independent_receipt_once": true,
+    "no_sdk_instance_or_vertex_fallback": true,
+    "attempt_2_clock_parameter_and_clock_agreement_checked": true
+  },
+  "provider_tests": {
+    "passed": 6,
+    "run": 6,
+    "skipped": 0,
+    "source": "logs/recorded-output-provider-regression-attempt2.log",
+    "first_attempt_source": "logs/recorded-output-provider-regression.log",
+    "final_host_regression": {
+      "passed": 6,
+      "run": 6,
+      "source": "logs/recorded-provider-final-host-regression.log",
+      "test_source_sha256": "bdf212f3369877afc775d455cc824fd48cfada87c15e5a5f2572e9f23a7293e3",
+      "difference_from_runtime_copy": "Only evidence fixture path fallback to /opt/pai/docs when source lives at /workspace; provider/harness runtime code unchanged"
+    }
+  },
+  "ledger_checks": [
+    {
+      "created_utc": "2026-10-11T07:22:36.801221+00:00",
+      "phase": "before_recorded_real_plan_execution",
+      "read_only_ledger_check": true,
+      "generation_calls_performed": 0,
+      "attempts": 2,
+      "accounted_micro_usd": 166604,
+      "unknown_or_pending": 1,
+      "recorded_request_id": "c78b1d1ad60042ae86f017b4373ed472",
+      "recorded_request_usage_status": "known",
+      "recorded_request_accounted_micro_usd": 241,
+      "ledger_sha256": "0fbe257edf3ee7b5cb342485aa0f0620bdbe0d1df13f71eb115d5e4b9e9e002d",
+      "plan_evidence_sha256": "e6255e5c83cfa92f7872d51724046c4adfc69fec191db3e64407b65a1c7d5428"
+    },
+    {
+      "created_utc": "2026-10-11T07:28:45.729884+00:00",
+      "phase": "after_recorded_real_plan_execution_attempt_1",
+      "read_only_ledger_check": true,
+      "generation_calls_performed": 0,
+      "attempts": 2,
+      "accounted_micro_usd": 166604,
+      "unknown_or_pending": 1,
+      "ledger_sha256": "0fbe257edf3ee7b5cb342485aa0f0620bdbe0d1df13f71eb115d5e4b9e9e002d",
+      "ledger_bytes_unchanged_from_before": true,
+      "run_id": "recorded-real-plan-20261011T072505Z",
+      "task_pass": false,
+      "task_result": "aborted/succeeded_without_verified_arrival",
+      "raw_execution_evidence_sha256": "833fd30b3d31aa1fee2908b8fc148e9ae384d69082621024348f28ed795daa17"
+    },
+    {
+      "created_utc": "2026-10-11T07:35:22.329692+00:00",
+      "phase": "after_recorded_real_plan_execution_attempt_2",
+      "read_only_ledger_check": true,
+      "generation_calls_performed": 0,
+      "attempts": 2,
+      "accounted_micro_usd": 166604,
+      "unknown_or_pending": 1,
+      "ledger_sha256": "0fbe257edf3ee7b5cb342485aa0f0620bdbe0d1df13f71eb115d5e4b9e9e002d",
+      "ledger_bytes_unchanged_from_before": true
+    }
+  ],
+  "ledger_bytes_unchanged_through_both_executions": true,
+  "persistent_application_allowance": {
+    "attempts": 2,
+    "unknown_or_pending": 1,
+    "unknown_reservation_usd": 0.166363,
+    "successful_token_price_estimate_usd": 0.000241,
+    "accounted_usd": 0.166604,
+    "not_confirmed_cloud_billing": true
+  },
+  "runtime_isolation": {
+    "image": "sha256:10700d294b7ce956193bf8e2de71cdb0d2fed9db71683c0954599342303d391b",
+    "running": true,
+    "mount_targets": [
+      "/opt/pai/logs",
+      "/opt/pai/state"
+    ],
+    "adc_environment_present": false,
+    "cloudsdk_config_present": false,
+    "project_present": false,
+    "planner_mode": "vertex",
+    "gpus": null,
+    "ports": {}
+  },
+  "no_local_adc": {
+    "default_adc_file_exists": false,
+    "explicit_adc_env_present": false,
+    "project_configured": false
+  },
+  "shutdown": {
+    "observed": {
+      "project_containers": [],
+      "stopped": true
+    },
+    "stop_log": "logs/stop-recorded-output.log",
+    "retained_image_evidence": "logs/recorded-output-retained-image.txt",
+    "first_failure_receipt_and_raw_data_preserved": true,
+    "source_and_motion_evidence_directories_preserved": true
+  }
+}

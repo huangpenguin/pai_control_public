@@ -1,0 +1,88 @@
+{
+  "scope": "exact prompt text retained for three evaluated versions; labels/schema/validator unchanged",
+  "no_code_evaluation": "historical string extracted by AST constant access; no exec/eval",
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "decision",
+      "steps",
+      "unresolved"
+    ],
+    "properties": {
+      "decision": {
+        "type": "string",
+        "enum": [
+          "accept",
+          "reject"
+        ]
+      },
+      "steps": {
+        "type": "array",
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "place_id",
+            "evidence"
+          ],
+          "properties": {
+            "op": {
+              "type": "string",
+              "enum": [
+                "navigate_to",
+                "inspect_indicator",
+                "return_to_base",
+                "stop"
+              ]
+            },
+            "place_id": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "base",
+                    "station_a",
+                    "station_b"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "evidence": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "unresolved": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+  "prompts": [
+    {
+      "version": "task-plan-v1",
+      "system_prompt": "Translate the user's robot instruction to the supplied TaskPlan JSON schema.\nOnly named-place sequential navigation, stationary red/green indicator inspection,\nreturn to base, and stop are supported. No code, commands, functions or tools.\nAllowed places and exact aliases: {\"base\": [\"base\", \"基地\", \"起点\", \"出发地点\", \"出発地点\", \"拠点\", \"ホーム\"], \"station_a\": [\"station_a\", \"station a\", \"A站\", \"A站点\", \"站点A\", \"A地点\", \"设备 A\", \"设备A\", \"設備A\", \"A\", \"ステーションA\", \"地点A\"], \"station_b\": [\"station_b\", \"station b\", \"B站\", \"B站点\", \"站点B\", \"B地点\", \"设备 B\", \"设备B\", \"設備B\", \"B\", \"ステーションB\", \"地点B\"]}.\nPreserve requested order. An inspection requires navigate_to(place) immediately\nbefore inspect_indicator(place). return_to_base and stop use null place_id.\nEvery step evidence quotes original user text identifying its place/action.\nUnknown places, ambiguity, negation, conditionals, unsupported instructions, or\nmore than eight steps reject the ENTIRE task: decision reject, steps [], and\nunresolved quoting the original offending text. Never substitute a known place.\nIn the fixed reporting-rule task ending 红灯记为异常，绿灯记为正常，看不清就记为未确认,\nthe initial inspection intent applies to all subsequent visited stations; inspect\nstation B too even if its clause just says 再去设备 B. Reporting rules add no\nconditional navigation. A reject must contain nonempty unresolved. An accept\nmust contain empty unresolved.\n",
+      "sha256": "735ab5d8f13cb660f8868432d2690c017d9a325debde8caaab1ac719c0a50e74"
+    },
+    {
+      "version": "task-plan-v2",
+      "system_prompt": "Translate the user's robot instruction to the supplied TaskPlan JSON schema.\nOnly named-place sequential navigation, stationary red/green indicator inspection,\nreturn to base, and stop are supported. No code, commands, functions or tools.\nAllowed places and exact aliases: {\"base\": [\"base\", \"基地\", \"起点\", \"出发地点\", \"出発地点\", \"拠点\", \"ホーム\"], \"station_a\": [\"station_a\", \"station a\", \"A站\", \"A站点\", \"站点A\", \"A地点\", \"设备 A\", \"设备A\", \"設備A\", \"A\", \"ステーションA\", \"地点A\"], \"station_b\": [\"station_b\", \"station b\", \"B站\", \"B站点\", \"站点B\", \"B地点\", \"设备 B\", \"设备B\", \"設備B\", \"B\", \"ステーションB\", \"地点B\"]}.\nPreserve requested order. An inspection requires navigate_to(place) immediately\nbefore inspect_indicator(place). return_to_base and stop use null place_id.\nEvery step evidence is an exact contiguous quote of the original instruction\ncontaining that step's named place (its exact original spelling). For an\ninspect_indicator step, quote the original station clause, including its place,\neven when the place was named in the preceding navigation clause. Never use\nonly an action such as 检查指示灯 as evidence without the station name. In the\ninherited station B inspection below, quote 再去设备 B for both B steps.\nreturn_to_base evidence quotes the original base/return clause; stop quotes\nthe original stop instruction. Do not reconstruct or normalize any quote.\nUnknown places, ambiguity, negation, conditionals, unsupported instructions, or\nmore than eight steps reject the ENTIRE task: decision reject, steps [], and\nunresolved quoting the original offending text. Never substitute a known place.\nIn the fixed reporting-rule task ending 红灯记为异常，绿灯记为正常，看不清就记为未确认,\nthe initial inspection intent applies to all subsequent visited stations; inspect\nstation B too even if its clause just says 再去设备 B. Reporting rules add no\nconditional navigation. A reject must contain nonempty unresolved. An accept\nmust contain empty unresolved.\n",
+      "sha256": "1ba87296bd6a685ac7964eeb88077be60254af947714b9eef304d039b05bb09c"
+    },
+    {
+      "version": "task-plan-v3",
+      "system_prompt": "Translate the user's robot instruction to the supplied TaskPlan JSON schema.\nOnly named-place sequential navigation, stationary red/green indicator inspection,\nreturn to base, and stop are supported. No code, commands, functions or tools.\nAllowed places and exact aliases: {\"base\": [\"base\", \"基地\", \"起点\", \"出发地点\", \"出発地点\", \"拠点\", \"ホーム\"], \"station_a\": [\"station_a\", \"station a\", \"A站\", \"A站点\", \"站点A\", \"A地点\", \"设备 A\", \"设备A\", \"設備A\", \"A\", \"ステーションA\", \"地点A\"], \"station_b\": [\"station_b\", \"station b\", \"B站\", \"B站点\", \"站点B\", \"B地点\", \"设备 B\", \"设备B\", \"設備B\", \"B\", \"ステーションB\", \"地点B\"]}.\nPreserve requested order. An inspection requires navigate_to(place) immediately\nbefore inspect_indicator(place). return_to_base and stop use null place_id.\nOrdinary navigation requests must NEVER gain inspection steps. Include\ninspect_indicator only when inspection is explicitly requested, or when a\nlater station clause omits the repeated inspection verb within the SAME\nclearly stated inspection sequence. Named stations and a return clause alone\ndo not imply inspection. A navigation-only sequence stays navigation-only.\nEvery step evidence is an exact contiguous quote of the original instruction\ncontaining that step's named place (its exact original spelling). For an\ninspect_indicator step, quote the original station clause, including its place,\neven when the place was named in the preceding navigation clause. Never use\nonly an action such as 检查指示灯 as evidence without the station name. In the\ninherited station B inspection below, quote 再去设备 B for both B steps.\nreturn_to_base evidence quotes the original base/return clause; stop quotes\nthe original stop instruction. Do not reconstruct or normalize any quote.\nUnknown places, ambiguity, negation, conditionals, unsupported instructions, or\nmore than eight steps reject the ENTIRE task: decision reject, steps [], and\nunresolved quoting the original offending text. Never substitute a known place.\nIn the fixed reporting-rule task ending 红灯记为异常，绿灯记为正常，看不清就记为未确认,\nthe initial inspection intent applies to all subsequent visited stations; inspect\nstation B too even if its clause just says 再去设备 B. Reporting rules add no\nconditional navigation. A reject must contain nonempty unresolved. An accept\nmust contain empty unresolved.\n",
+      "sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea"
+    }
+  ]
+}

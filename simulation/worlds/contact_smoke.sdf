@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9"><world name="contact_smoke">
+  <physics name="default_physics" type="ignored"><max_step_size>0.004</max_step_size><real_time_factor>1</real_time_factor></physics>
+  <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+  <plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact" />
+  <scene><ambient>0.8 0.8 0.8 1</ambient><background>0.8 0.85 0.9 1</background><shadows>false</shadows></scene>
+  <light name="sun" type="directional"><pose>0 0 10 0 0 0</pose><diffuse>0.8 0.8 0.8 1</diffuse><specular>0.1 0.1 0.1 1</specular><direction>-0.5 0.1 -0.9</direction><cast_shadows>false</cast_shadows></light>
+  <model name="ground"><static>true</static><link name="ground"><collision name="ground"><geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry></collision>
+  <visual name="ground"><geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry><material><ambient>0.7 0.7 0.7 1</ambient><diffuse>0.7 0.7 0.7 1</diffuse></material></visual></link></model>
+<model name="west_wall"><static>true</static><pose>-5 0 0.5 0 0 0</pose>
+      <link name="body"><collision name="collision"><geometry><box><size>0.2 8.2 1</size></box></geometry></collision>
+      <sensor name="obstacle_contact" type="contact"><always_on>true</always_on>
+        <contact><collision>collision</collision><topic>/pai/contacts/west_wall</topic></contact></sensor>
+      <visual name="visual"><geometry><box><size>0.2 8.2 1</size></box></geometry>
+      <material><ambient>0.75 0.75 0.75 1</ambient><diffuse>0.75 0.75 0.75 1</diffuse></material></visual></link></model>
+<model name="east_wall"><static>true</static><pose>5 0 0.5 0 0 0</pose>
+      <link name="body"><collision name="collision"><geometry><box><size>0.2 8.2 1</size></box></geometry></collision>
+      <sensor name="obstacle_contact" type="contact"><always_on>true</always_on>
+        <contact><collision>collision</collision><topic>/pai/contacts/east_wall</topic></contact></sensor>
+      <visual name="visual"><geometry><box><size>0.2 8.2 1</size></box></geometry>
+      <material><ambient>0.75 0.75 0.75 1</ambient><diffuse>0.75 0.75 0.75 1</diffuse></material></visual></link></model>
+<model name="south_wall"><static>true</static><pose>0 -4 0.5 0 0 0</pose>
+      <link name="body"><collision name="collision"><geometry><box><size>10.2 0.2 1</size></box></geometry></collision>
+      <sensor name="obstacle_contact" type="contact"><always_on>true</always_on>
+        <contact><collision>collision</collision><topic>/pai/contacts/south_wall</topic></contact></sensor>
+      <visual name="visual"><geometry><box><size>10.2 0.2 1</size></box></geometry>
+      <material><ambient>0.75 0.75 0.75 1</ambient><diffuse>0.75 0.75 0.75 1</diffuse></material></visual></link></model>
+<model name="north_wall"><static>true</static><pose>0 4 0.5 0 0 0</pose>
+      <link name="body"><collision name="collision"><geometry><box><size>10.2 0.2 1</size></box></geometry></collision>
+      <sensor name="obstacle_contact" type="contact"><always_on>true</always_on>
+        <contact><collision>collision</collision><topic>/pai/contacts/north_wall</topic></contact></sensor>
+      <visual name="visual"><geometry><box><size>10.2 0.2 1</size></box></geometry>
+      <material><ambient>0.75 0.75 0.75 1</ambient><diffuse>0.75 0.75 0.75 1</diffuse></material></visual></link></model>
+<model name="central_obstacle"><static>true</static><pose>0 0 0.5 0 0 0</pose>
+      <link name="body"><collision name="collision"><geometry><box><size>1.4 1.4 1</size></box></geometry></collision>
+      <sensor name="obstacle_contact" type="contact"><always_on>true</always_on>
+        <contact><collision>collision</collision><topic>/pai/contacts/central_obstacle</topic></contact></sensor>
+      <visual name="visual"><geometry><box><size>1.4 1.4 1</size></box></geometry>
+      <material><ambient>0.25 0.35 0.5 1</ambient><diffuse>0.25 0.35 0.5 1</diffuse></material></visual></link></model>
+<model name="contact_probe_robot"><pose>0 0 2 0 0 0</pose>
+  <link name="probe"><inertial><mass>1</mass><inertia><ixx>.0066667</ixx><iyy>.0066667</iyy><izz>.0066667</izz></inertia></inertial>
+  <collision name="probe_collision"><geometry><box><size>.2 .2 .2</size></box></geometry></collision>
+  </link></model></world></sdf>

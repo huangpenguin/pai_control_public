@@ -1,0 +1,493 @@
+{
+  "created_utc": "2026-10-11T07:35:22.343678+00:00",
+  "execution_kind": "Real Gemini generated one plan, saved and validated, then two separately authorized real Gazebo execution attempts; no online generation during execution",
+  "model_request_evidence": "docs/evidence/vertex-second-authorized-probe.json",
+  "one_real_model_output": true,
+  "model_request_successes": 1,
+  "model_request_attempts": 2,
+  "first_model_request_failure_kind": "Malformed diagnostic project config, retained",
+  "real_plan_execution_successes": 1,
+  "real_plan_execution_attempts": 2,
+  "additional_model_requests_during_execution": 0,
+  "previous_stub_motion_statistics_are_separate": true,
+  "collision_statistics": "not measured",
+  "attempts": [
+    {
+      "run_id": "recorded-real-plan-20261011T072505Z",
+      "source": "real_vertex_output_recorded_then_real_gazebo_execution",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3810290.756220062,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": true,
+          "generation": 2,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3810290.758766572,
+          "sim_seconds": 74.944,
+          "scan_wall_age": 0.0009647361002862453,
+          "scan_sim_age": 0.5439999999999969,
+          "locked": false,
+          "generation": 3,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3810290.762947837,
+          "sim_seconds": 74.952,
+          "scan_wall_age": 0.00024726102128624916,
+          "scan_sim_age": 0.35200000000000387,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3810290.765034757,
+          "sim_seconds": 74.952,
+          "scan_wall_age": 0.0023341812193393707,
+          "scan_sim_age": 0.35200000000000387,
+          "instruction": "去设备 A。"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3810290.773410191,
+          "sim_seconds": 74.972,
+          "scan_wall_age": 0.0045318277552723885,
+          "scan_sim_age": 0.17199999999999704,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=recorded-real-model-output"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3810290.819725224,
+          "sim_seconds": 75.0,
+          "scan_wall_age": 0.050846860744059086,
+          "scan_sim_age": 0.20000000000000284,
+          "stage": "navigating",
+          "place_id": "station_a",
+          "message": "attempt=1"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3810290.963542452,
+          "sim_seconds": 75.076,
+          "scan_wall_age": 0.08416428323835135,
+          "scan_sim_age": 0.17599999999998772
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3810384.600401849,
+          "sim_seconds": 117.1,
+          "scan_wall_age": 0.16763874609023333,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "verifying_arrival",
+          "place_id": "station_a",
+          "message": ""
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3810389.628189201,
+          "sim_seconds": 119.3,
+          "scan_wall_age": 0.22385590989142656,
+          "scan_sim_age": 0.20000000000000284,
+          "locked": true,
+          "generation": 4,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3810389.632979465,
+          "sim_seconds": 119.3,
+          "scan_wall_age": 0.2286461740732193,
+          "scan_sim_age": 0.20000000000000284,
+          "action_status": 6,
+          "result": {
+            "outcome": "aborted",
+            "message": "succeeded_without_verified_arrival",
+            "planner_mode": "recorded-real-model-output",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        },
+        {
+          "event": "cleanup_stop_response",
+          "wall_seconds": 3810391.651584885,
+          "sim_seconds": 120.22,
+          "scan_wall_age": 0.023880532011389732,
+          "scan_sim_age": 0.12000000000000455,
+          "success": true,
+          "reason": "locked; navigation cancellation requested; pending task invalidated"
+        }
+      ],
+      "online_inference_during_execution": false,
+      "request_id": "c78b1d1ad60042ae86f017b4373ed472",
+      "original_instruction": "去设备 A。",
+      "evidence_sha256": "e6255e5c83cfa92f7872d51724046c4adfc69fec191db3e64407b65a1c7d5428",
+      "script_sha256": "b45c7754c4f33923f8e2985fce86991a58760c08eec966b767451da301e8332d",
+      "provider_sha256": "0d1f00323188a26201f6451ccb3db66b0b4341978c0c59f376ac68afe9ac20b0",
+      "collection_script_sha256": "5a2099cc1162ad8b71546f9f1485de1a68607841dac30e48ac55f3ba545ea506",
+      "approved_model_plan": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "去设备 A"
+          }
+        ],
+        "unresolved": []
+      },
+      "action_requests_sent": 1,
+      "ledger_before": {
+        "attempts": 2,
+        "requests": [
+          [
+            "3363a75dc25c4023949531d234602599",
+            166363,
+            "unknown"
+          ],
+          [
+            "c78b1d1ad60042ae86f017b4373ed472",
+            241,
+            "known"
+          ]
+        ]
+      },
+      "task_wall_seconds": 98.86795889725909,
+      "task_sim_seconds": 44.348,
+      "post_terminal_continuous_standstill": true,
+      "consumption_receipt": {
+        "source": "recorded-real-model-output",
+        "request_id": "c78b1d1ad60042ae86f017b4373ed472",
+        "evidence_sha256": "e6255e5c83cfa92f7872d51724046c4adfc69fec191db3e64407b65a1c7d5428",
+        "instruction": "去设备 A。",
+        "consumed_wall_seconds": 3810290.780906699
+      },
+      "ledger_after": {
+        "attempts": 2,
+        "requests": [
+          [
+            "3363a75dc25c4023949531d234602599",
+            166363,
+            "unknown"
+          ],
+          [
+            "c78b1d1ad60042ae86f017b4373ed472",
+            241,
+            "known"
+          ]
+        ]
+      },
+      "no_new_generation": true,
+      "final_position_error_m": 0.1925787945520509,
+      "final_yaw_error_rad": 0.03634750483148424,
+      "pass_": false,
+      "two_stage_real_model_execution_verified": false,
+      "final_map_pose": [
+        2.809577176848169,
+        -2.0287357013836016,
+        -0.03634750483148424
+      ],
+      "collision_statistics": "not measured",
+      "execution_attempt": 1,
+      "raw_evidence_path": "logs/recorded-real-plan-20261011T072505Z.json",
+      "raw_evidence_sha256": "833fd30b3d31aa1fee2908b8fc148e9ae384d69082621024348f28ed795daa17",
+      "odom_sample_count": 457,
+      "verification_window_observations": {
+        "wall_seconds": 5.032577616162598,
+        "odom_sample_count": 22,
+        "within_speed_threshold_samples": 21,
+        "first_odom_sample": {
+          "wall_seconds": 3810384.740044219,
+          "sim_seconds": 117.12,
+          "odom_pose": [
+            5.804290740703007,
+            0.20632654115867938,
+            0.011897435952519917
+          ],
+          "linear_velocity": 0.056842105285626054,
+          "angular_velocity": -0.007692307756621879,
+          "scan_wall_age": 0.018158158753067255,
+          "scan_sim_age": 0.12000000000000455
+        },
+        "last_odom_sample": {
+          "wall_seconds": 3810389.42371532,
+          "sim_seconds": 119.22,
+          "odom_pose": [
+            5.804290740703096,
+            0.20632654115868046,
+            0.011897435952458024
+          ],
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0,
+          "scan_wall_age": 0.019382028840482235,
+          "scan_sim_age": 0.12000000000000455
+        },
+        "per_cycle_map_tf_pose_and_stamp_not_recorded": true
+      },
+      "failure_diagnosis": {
+        "scope": "test-only external serve configuration",
+        "use_sim_time_actual": false,
+        "parameter_evidence": "logs/recorded-real-plan-attempt1-clock-parameter.log",
+        "cause": "Wall epoch node clock was compared with approximately 117-119 second simulation odometry stamps; required 0<=age<=0.5 cannot hold",
+        "post_terminal_pose_and_standstill_do_not_override_failed_task": true,
+        "original_raw_pass_false_preserved": true,
+        "initial_independent_review_missed_test_sim_clock_configuration": true
+      }
+    },
+    {
+      "run_id": "recorded-real-plan-attempt2-20261011T073125Z",
+      "source": "real_vertex_output_recorded_then_real_gazebo_execution",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3810718.942760211,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": true,
+          "generation": 2,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3810718.953737802,
+          "sim_seconds": 34.904,
+          "scan_wall_age": 0.0024833357892930508,
+          "scan_sim_age": 0.10400000000000631,
+          "locked": false,
+          "generation": 3,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3810718.954854883,
+          "sim_seconds": 34.908,
+          "scan_wall_age": 0.0036004167050123215,
+          "scan_sim_age": 0.10800000000000409,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3810719.455510305,
+          "sim_seconds": 34.908,
+          "scan_wall_age": 0.5042558386921883,
+          "scan_sim_age": 0.10800000000000409,
+          "instruction": "去设备 A。"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3810719.467533611,
+          "sim_seconds": 35.2,
+          "scan_wall_age": 0.006849280092865229,
+          "scan_sim_age": 0.20000000000000284,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=recorded-real-model-output"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3810719.517957005,
+          "sim_seconds": 35.2,
+          "scan_wall_age": 0.057272674050182104,
+          "scan_sim_age": 0.20000000000000284,
+          "stage": "navigating",
+          "place_id": "station_a",
+          "message": "attempt=1"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3810719.825496746,
+          "sim_seconds": 35.34,
+          "scan_wall_age": 0.03663958003744483,
+          "scan_sim_age": 0.14000000000000057
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3810813.3812139,
+          "sim_seconds": 77.1,
+          "scan_wall_age": 0.1183695113286376,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "verifying_arrival",
+          "place_id": "station_a",
+          "message": ""
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3810814.139541645,
+          "sim_seconds": 77.4,
+          "scan_wall_age": 0.1804543430916965,
+          "scan_sim_age": 0.20000000000000284,
+          "action_status": 4,
+          "result": {
+            "outcome": "completed",
+            "message": "task completed",
+            "planner_mode": "recorded-real-model-output",
+            "steps": [
+              {
+                "place_id": "station_a",
+                "outcome": "arrived",
+                "attempts": 1,
+                "pose": [
+                  2.807177798307446,
+                  -2.0251503535255724,
+                  0.06102527033016645
+                ],
+                "nav2_status": 4
+              }
+            ],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3810816.15934747,
+          "sim_seconds": 78.3,
+          "scan_wall_age": 0.14506146172061563,
+          "scan_sim_age": 0.20000000000000284,
+          "locked": true,
+          "generation": 4,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "cleanup_stop_response",
+          "wall_seconds": 3810816.163018107,
+          "sim_seconds": 78.3,
+          "scan_wall_age": 0.1487320987507701,
+          "scan_sim_age": 0.20000000000000284,
+          "success": true,
+          "reason": "locked; navigation cancellation requested; pending task invalidated"
+        }
+      ],
+      "execution_attempt": 2,
+      "online_inference_during_execution": false,
+      "request_id": "c78b1d1ad60042ae86f017b4373ed472",
+      "original_instruction": "去设备 A。",
+      "evidence_sha256": "e6255e5c83cfa92f7872d51724046c4adfc69fec191db3e64407b65a1c7d5428",
+      "script_sha256": "9286c6a7ab757a2dff929ffff1548fbdc651e4e4195e15ce6b1045145e03f2c8",
+      "provider_sha256": "1bf5e8f07eb5da8bbefd1792e559ea6b338430f60c66682712708eb1e1954c11",
+      "collection_script_sha256": "5a2099cc1162ad8b71546f9f1485de1a68607841dac30e48ac55f3ba545ea506",
+      "approved_model_plan": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "去设备 A"
+          }
+        ],
+        "unresolved": []
+      },
+      "action_requests_sent": 1,
+      "ledger_before": {
+        "attempts": 2,
+        "requests": [
+          [
+            "3363a75dc25c4023949531d234602599",
+            166363,
+            "unknown"
+          ],
+          [
+            "c78b1d1ad60042ae86f017b4373ed472",
+            241,
+            "known"
+          ]
+        ]
+      },
+      "task_wall_seconds": 94.68406159896404,
+      "task_sim_seconds": 42.492000000000004,
+      "post_terminal_continuous_standstill": true,
+      "consumption_receipt": {
+        "source": "recorded-real-model-output",
+        "request_id": "c78b1d1ad60042ae86f017b4373ed472",
+        "execution_attempt": 2,
+        "evidence_sha256": "e6255e5c83cfa92f7872d51724046c4adfc69fec191db3e64407b65a1c7d5428",
+        "instruction": "去设备 A。",
+        "consumed_wall_seconds": 3810719.470631418
+      },
+      "ledger_after": {
+        "attempts": 2,
+        "requests": [
+          [
+            "3363a75dc25c4023949531d234602599",
+            166363,
+            "unknown"
+          ],
+          [
+            "c78b1d1ad60042ae86f017b4373ed472",
+            241,
+            "known"
+          ]
+        ]
+      },
+      "no_new_generation": true,
+      "final_position_error_m": 0.1944555006885256,
+      "final_yaw_error_rad": 0.06102527033016645,
+      "pass_": true,
+      "two_stage_real_model_execution_verified": true,
+      "final_map_pose": [
+        2.807177798307446,
+        -2.0251503535255724,
+        0.06102527033016645
+      ],
+      "collision_statistics": "not measured",
+      "raw_evidence_path": "logs/recorded-real-plan-attempt2-20261011T073125Z.json",
+      "raw_evidence_sha256": "77c3319713046744a88c98f3dc2a45982ba6868cb56948235cc0cebca821e335",
+      "odom_sample_count": 432,
+      "verification_window_observations": {
+        "wall_seconds": 0.7583277449011803,
+        "odom_sample_count": 3,
+        "within_speed_threshold_samples": 2,
+        "first_odom_sample": {
+          "wall_seconds": 3810813.536647779,
+          "sim_seconds": 77.12,
+          "odom_pose": [
+            5.784782164275276,
+            0.1422816210065261,
+            0.09158974368248714
+          ],
+          "linear_velocity": 0.04421052634184797,
+          "angular_velocity": -0.025641025795214385,
+          "scan_wall_age": 0.01788082206621766,
+          "scan_sim_age": 0.12000000000000455
+        },
+        "last_odom_sample": {
+          "wall_seconds": 3810813.975993127,
+          "sim_seconds": 77.32,
+          "odom_pose": [
+            5.7847821642753905,
+            0.14228162100653666,
+            0.09158974367652675
+          ],
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0,
+          "scan_wall_age": 0.01690582511946559,
+          "scan_sim_age": 0.11999999999999034
+        },
+        "per_cycle_map_tf_pose_and_stamp_not_recorded": true
+      },
+      "test_only_fix": {
+        "use_sim_time_actual": true,
+        "preflight_node_clock_seconds": 27.104,
+        "preflight_observed_clock_seconds": 27.104,
+        "production_arrival_predicate_unchanged": true,
+        "independent_receipt_preserves_first_receipt": true
+      }
+    }
+  ]
+}

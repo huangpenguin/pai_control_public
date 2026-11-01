@@ -1,0 +1,98 @@
+{
+  "checked_at": "2026-10-11",
+  "image": "sha256:10700d294b7ce956193bf8e2de71cdb0d2fed9db71683c0954599342303d391b",
+  "scope": "Final delivery image integrity; no motion or real model generation",
+  "core": [
+    {
+      "configuration_sha256": {
+        "pyproject.toml": "0d2205b62fa204046c15a9f88f78c2d9c9094b759aed1505650d3b445a3bca4c",
+        "requirements.lock": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672"
+      },
+      "core_path": "/opt/pai/core/pai_inspection_core",
+      "dependencies": {
+        "google-genai": "2.29.0",
+        "pytest": "8.4.2",
+        "setuptools": "79.0.1"
+      },
+      "python": "/usr/bin/python3",
+      "python_version": "3.12.3",
+      "sha256": {
+        "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+        "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+        "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+      },
+      "matches_workspace": true
+    },
+    {
+      "configuration_sha256": {
+        "pyproject.toml": "0d2205b62fa204046c15a9f88f78c2d9c9094b759aed1505650d3b445a3bca4c",
+        "requirements.lock": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672"
+      },
+      "core_path": "/opt/pai/core/pai_inspection_core",
+      "dependencies": {
+        "google-genai": "2.29.0",
+        "pytest": "8.4.2",
+        "setuptools": "79.0.1"
+      },
+      "python": "/opt/pai/venv/bin/python",
+      "python_version": "3.12.3",
+      "sha256": {
+        "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+        "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+        "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+      },
+      "matches_workspace": true
+    }
+  ],
+  "control": {
+    "installed_modules": {
+      "pai_inspection_ros.instruction_executor": {
+        "path": "/workspace/install/pai_inspection_ros/lib/python3.12/site-packages/pai_inspection_ros/instruction_executor.py",
+        "sha256": "9cb067c2cd1f98a674a816cd841124373be3b71ad09b1f42a20203a79c5e9ebb"
+      },
+      "pai_inspection_ros.safety_guard": {
+        "path": "/workspace/install/pai_inspection_ros/lib/python3.12/site-packages/pai_inspection_ros/safety_guard.py",
+        "sha256": "f2d29c7284060ba0aa84b117164c71bec36dc554b7d027ec6e64d55a76c18954"
+      }
+    },
+    "source_sha256": {
+      "pai_inspection_interfaces/CMakeLists.txt": "0bf2263b05d817738a08b7058d23d2fefc3c462ae74ab1922e6ac4fa6b9cf341",
+      "pai_inspection_interfaces/action/ExecuteInstruction.action": "2741289f395f81345575fd9d05d057bcd8d01ab55ee1ba647ba8cd3e4ba259df",
+      "pai_inspection_interfaces/msg/SafetyState.msg": "5a0b4f46da045dd6ce1e2b62f8acffbc4be8890310223612af6a7602f24a62b5",
+      "pai_inspection_interfaces/package.xml": "22ff7e146025f4dfbd43e58f707c8ae1503942b4f9a363ea44f567aedee8c94c",
+      "pai_inspection_interfaces/srv/SetMotionPermit.srv": "844dfef554056f9c7f4c36c54ab43cbe3a2e739f09d5c354e988561909ea35e1",
+      "pai_inspection_ros/config/bounded_nav.xml": "5700036a66a26726f0f86c5088499a31678b3904d379d1f66ab89b56eac21013",
+      "pai_inspection_ros/config/nav2.yaml": "68eb61f0afec6c2c2ff835c3d5048053caaf28a1e086ff1a80a2559be6625c95",
+      "pai_inspection_ros/launch/inspection.launch.py": "07eb3905050b13aaf7309850350b1cc68338cc4c1b781d1db31ab2035b7a9679",
+      "pai_inspection_ros/package.xml": "3d5fde514e7d1441924083194faa092502f0b87b44886ac9cf1a1935738f3cb3",
+      "pai_inspection_ros/pai_inspection_ros/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pai_inspection_ros/pai_inspection_ros/execution_core.py": "3a3e0ad8464cdeaecaa7c0fde815b5c1db58dada38214a13c1925bd78442daad",
+      "pai_inspection_ros/pai_inspection_ros/instruction_cli.py": "085bfa150056778f1296c386d12fec7b55aa3ef0a004add3788eceb8d2f747c1",
+      "pai_inspection_ros/pai_inspection_ros/instruction_executor.py": "9cb067c2cd1f98a674a816cd841124373be3b71ad09b1f42a20203a79c5e9ebb",
+      "pai_inspection_ros/pai_inspection_ros/safety_core.py": "0fa178916b99d9a3d561c15a86a53c3115e13bd40fbcdaccbdc691074a611b91",
+      "pai_inspection_ros/pai_inspection_ros/safety_guard.py": "f2d29c7284060ba0aa84b117164c71bec36dc554b7d027ec6e64d55a76c18954",
+      "pai_inspection_ros/resource/pai_inspection_ros": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pai_inspection_ros/setup.cfg": "494664268c19525309a0fa7187c79009be94b450096dabca6e6c37375f27152e",
+      "pai_inspection_ros/setup.py": "694df8bb0f303e6f424e4a6a2c013488b2b05bd4b091c9022885e032c435fef0",
+      "pai_inspection_ros/test/live_acceptance.py": "5a2099cc1162ad8b71546f9f1485de1a68607841dac30e48ac55f3ba545ea506",
+      "pai_inspection_ros/test/live_p3_acceptance.py": "05473bd29262263927e06f21d0213dbf53240a003cbfb20c62acddf6bada8489",
+      "pai_inspection_ros/test/live_slow_planner.py": "92c1eff05536e7fac2556d5d05b4391d33c2d5d9b17d7980a131192a4ea5daec",
+      "pai_inspection_ros/test/test_ros_callbacks.py": "7e50fcc8169667321643e124623b8b6b1d2a37cb0bef85f434d8e30da3eb8d88",
+      "pai_inspection_ros/test/test_safety_core.py": "5ddcc32c301ca938517b98793d8b43f511465c3102fb163d687d12da8c12f1e7",
+      "pai_sim_safety/CMakeLists.txt": "39214f74ca4973d1d88e62d2e64d0234b75fbe1ea88da880e9956590b365009b",
+      "pai_sim_safety/UPSTREAM.md": "3308dfd7258b71a72e26b7d851dd1db056ae2c248af7a91ddcbe9efb65998025",
+      "pai_sim_safety/include/pai_sim_safety/CommandLease.hh": "bae65fd2cc4b8dffb65d375c91ea3b1b72ac528010d79566db614060000b028f",
+      "pai_sim_safety/package.xml": "9d1fda8eb607750bd73553a5aa692dbf2a6675c8129c67980a39b2988b572479",
+      "pai_sim_safety/src/SafeDiffDrive.cc": "f7e3dd184be44c4d87badf270af84b1b3a37300e7532e4545f8d16fa30cb71c1",
+      "pai_sim_safety/src/SafeDiffDrive.hh": "5237b53da9ada644483bae0775dce1679259913df0864c98ace506ff8a649b9b",
+      "pai_sim_safety/test/command_lease_test.cc": "07ddada45fe4af58301face0797bb6f79f8afa21fadd1f73a23658f53fa307e9"
+    },
+    "matches_workspace": true
+  },
+  "previous_motion_image": "sha256:f3efdf18453231ba4b912756fee052e8b810c24eb32d257bcc7339d9f0182f9b",
+  "motion_rerun": false
+}

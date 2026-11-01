@@ -1,0 +1,10 @@
+DIAGNOSTIC ONLY: pre-fix image; PYTEST_DISABLE_PLUGIN_AUTOLOAD=1. Not final integration acceptance.
+
+...............................................                          [100%]
+=============================== warnings summary ===============================
+test_budget.py::test_attempt_cap_and_persistence
+  /opt/pai/core/pai_inspection_core/budget.py:58: RuntimeWarning: Vertex allowance has reached 80%; check persistent usage ledger
+    warnings.warn('Vertex allowance has reached 80%; check persistent usage ledger', RuntimeWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+47 passed, 1 warning in 1.31s

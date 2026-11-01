@@ -1,0 +1,13 @@
+{
+  "stage": "P4 before calibration and three authorized formal Actions",
+  "attempts": 62,
+  "accounted_usd": 0.392938,
+  "retained_unknown_usd": 0.166363,
+  "known_token_estimate_usd": 0.226575,
+  "max_usd": 5.0,
+  "max_attempts": 300,
+  "prior_rows_sha256": "865c651a5993713c7bab8afa39b0efcc8671994d992fda9e6a98b51e136c69d3",
+  "read_only": true,
+  "calibration_expected_api_delta": 0,
+  "formal_maximum_new_api_attempts": 3
+}

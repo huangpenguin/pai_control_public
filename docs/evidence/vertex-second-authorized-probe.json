@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-10-11T07:18:46.637669+00:00",
+  "mode": "vertex-real",
+  "model": "gemini-2.5-flash",
+  "location": "global",
+  "instruction": "去设备 A。",
+  "sdk_http_attempts": 1,
+  "single_attempt_limit": 1,
+  "resource_creation_performed": false,
+  "iam_api_or_billing_change_performed": false,
+  "direct_user_authorization": "授权再尝试 1 次",
+  "prior_failed_request_and_reservation_preserved": true,
+  "success": true,
+  "semantic_validated": true,
+  "ledger_before": {
+    "attempts": 1,
+    "accounted_usd": 0.166363,
+    "unknown_or_pending": 1,
+    "warning_80_percent": false
+  },
+  "project_configuration": {
+    "loaded_by_product_shell_source": true,
+    "format_valid": true,
+    "matches_user_supplied": true
+  },
+  "adc_refresh_success": true,
+  "quota_project_present": false,
+  "permission_refresh": {
+    "read_only": true,
+    "http_status": 200,
+    "requested_permissions_granted": {
+      "serviceusage.services.use": false,
+      "serviceusage.services.get": false,
+      "aiplatform.endpoints.predict": true
+    }
+  },
+  "raw_model_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"去设备 A\"}], \"unresolved\": []}",
+  "validated_plan": {
+    "decision": "accept",
+    "steps": [
+      {
+        "op": "navigate_to",
+        "place_id": "station_a",
+        "evidence": "去设备 A"
+      }
+    ],
+    "unresolved": []
+  },
+  "duration_wall_s": 2.458486604038626,
+  "request_id": "c78b1d1ad60042ae86f017b4373ed472",
+  "ledger_after": {
+    "attempts": 2,
+    "accounted_usd": 0.166604,
+    "unknown_or_pending": 1,
+    "warning_80_percent": false
+  },
+  "attempts_this_probe": 1,
+  "request_accounting": {
+    "model": "gemini-2.5-flash",
+    "location": "global",
+    "reserved_usd": 0.166364,
+    "accounted_usd": 0.000241,
+    "usage_status": "known",
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 42,
+      "candidates_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 42
+        }
+      ],
+      "prompt_token_count": 453,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 453
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 495,
+      "traffic_type": "ON_DEMAND"
+    },
+    "error_type": null
+  }
+}

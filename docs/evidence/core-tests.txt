@@ -1,0 +1,9 @@
+Sanitized local repository prefix only; measured test results unchanged.
+...............................................                          [100%]
+=============================== warnings summary ===============================
+tests/core/test_budget.py::test_attempt_cap_and_persistence
+  <repository>/core/pai_inspection_core/budget.py:58: RuntimeWarning: Vertex allowance has reached 80%; check persistent usage ledger
+    warnings.warn('Vertex allowance has reached 80%; check persistent usage ledger', RuntimeWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+47 passed, 1 warning in 1.29s

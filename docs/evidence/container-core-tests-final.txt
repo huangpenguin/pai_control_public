@@ -1,0 +1,12 @@
+Image: sha256:a713be8e8422fd3d161904674ddbcda8f104a58b22828264a0b76854d025337f
+Python: /opt/pai/venv/bin/python, 3.12.3
+Command: scripts/ros.sh /opt/pai/venv/bin/python -m pytest /tmp/pai-test-suite/tests/core -q -p no:cacheprovider
+Normal pytest plugin autoload enabled. No model generation or robot motion.
+
+...............................................                          [100%]
+=============================== warnings summary ===============================
+test_budget.py::test_attempt_cap_and_persistence
+  Warning: Vertex allowance has reached 80%; check persistent usage ledger
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+47 passed, 1 warning in 1.33s

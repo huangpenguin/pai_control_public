@@ -1,0 +1,17 @@
+.git
+.agents
+.aws
+.codex
+.local
+.cache
+.venv
+logs
+state
+build
+install
+log
+**/__pycache__
+**/*.pyc
+**/application_default_credentials.json
+**/credentials.json
+.env

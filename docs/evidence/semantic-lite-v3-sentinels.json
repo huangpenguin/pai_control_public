@@ -1,0 +1,246 @@
+{
+  "mode": "vertex-real",
+  "created_utc": "2026-10-11T08:00:08.270144+00:00",
+  "cases": [
+    {
+      "id": "critical-1",
+      "group": "critical",
+      "instruction": "去A站，然后去未知地点",
+      "decision": "reject",
+      "steps": [],
+      "hard_gate": true,
+      "actual": {
+        "decision": "reject",
+        "steps": [],
+        "unresolved": [
+          "去未知地点"
+        ]
+      },
+      "raw_response": "{\n  \"decision\": \"reject\",\n  \"steps\": [],\n  \"unresolved\": [\n    \"去未知地点\"\n  ]\n}",
+      "passed": true,
+      "classification": "passed",
+      "audit": {
+        "mode": "vertex-real",
+        "model": "gemini-3.1-flash-lite",
+        "location": "global",
+        "instruction": "去A站，然后去未知地点",
+        "instruction_sha256": "3c134e1d914e64cdab2fa677aca6c0150ffd1c4994437af927e62c3f1ed18370",
+        "prompt_version": "task-plan-v3",
+        "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+        "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+        "request_id": "713c822426014404a09a097e8349fdc3",
+        "duration_wall_s": 3.281957597937435,
+        "raw_response": "{\n  \"decision\": \"reject\",\n  \"steps\": [],\n  \"unresolved\": [\n    \"去未知地点\"\n  ]\n}",
+        "validated_plan": {
+          "decision": "reject",
+          "steps": [],
+          "unresolved": [
+            "去未知地点"
+          ]
+        },
+        "finish_reason": "STOP",
+        "error": null,
+        "usage_metadata": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 34,
+          "candidates_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 34
+            }
+          ],
+          "prompt_token_count": 874,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 874
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 908,
+          "traffic_type": "ON_DEMAND"
+        },
+        "request_accounting": {
+          "reserved_usd": 0.103178,
+          "accounted_usd": 0.00027,
+          "usage_status": "known",
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 34,
+            "candidates_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 34
+              }
+            ],
+            "prompt_token_count": 874,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 874
+              }
+            ],
+            "thoughts_token_count": null,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 908,
+            "traffic_type": "ON_DEMAND"
+          }
+        },
+        "sdk_http_attempts": 1,
+        "generation_config": {
+          "temperature": 0,
+          "max_output_tokens": 2048,
+          "thinking_config": {
+            "thinking_level": "MINIMAL"
+          },
+          "http_timeout_seconds": 30.0,
+          "automatic_function_calling": false
+        }
+      },
+      "request_id": "713c822426014404a09a097e8349fdc3",
+      "raw_plan_matches_golden_steps": true
+    },
+    {
+      "id": "critical-2",
+      "group": "critical",
+      "instruction": "まず設備Bへ行き、次に設備Aへ行って、最後に出発地点へ戻ってください。",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "hard_gate": true,
+      "passed": false,
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"まず設備Bへ行き\"}, {\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"次に設備Aへ行って\"}, {\"op\": \"return_to_base\", \"place_id\": \"base\", \"evidence\": \"最後に出発地点へ戻ってください\"}], \"unresolved\": []}",
+      "error": "PlanValidationError",
+      "message": "plan changes instruction actions or order",
+      "audit": {
+        "mode": "vertex-real",
+        "model": "gemini-3.1-flash-lite",
+        "location": "global",
+        "instruction": "まず設備Bへ行き、次に設備Aへ行って、最後に出発地点へ戻ってください。",
+        "instruction_sha256": "2bcd9d3501ef12da428ea3b08f28b60df566201d12f5c8a1fefe38aac43e5ceb",
+        "prompt_version": "task-plan-v3",
+        "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+        "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+        "request_id": "f2d0d146febc4f17a839676266170889",
+        "duration_wall_s": 1.7274509822018445,
+        "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"まず設備Bへ行き\"}, {\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"次に設備Aへ行って\"}, {\"op\": \"return_to_base\", \"place_id\": \"base\", \"evidence\": \"最後に出発地点へ戻ってください\"}], \"unresolved\": []}",
+        "validated_plan": null,
+        "finish_reason": "STOP",
+        "error": {
+          "category": "plan_validation",
+          "type": "PlanValidationError"
+        },
+        "usage_metadata": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 102,
+          "candidates_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 102
+            }
+          ],
+          "prompt_token_count": 886,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 886
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 988,
+          "traffic_type": "ON_DEMAND"
+        },
+        "request_accounting": {
+          "reserved_usd": 0.103195,
+          "accounted_usd": 0.000375,
+          "usage_status": "known",
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 102,
+            "candidates_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 102
+              }
+            ],
+            "prompt_token_count": 886,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 886
+              }
+            ],
+            "thoughts_token_count": null,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 988,
+            "traffic_type": "ON_DEMAND"
+          }
+        },
+        "sdk_http_attempts": 1,
+        "generation_config": {
+          "temperature": 0,
+          "max_output_tokens": 2048,
+          "thinking_config": {
+            "thinking_level": "MINIMAL"
+          },
+          "http_timeout_seconds": 30.0,
+          "automatic_function_calling": false
+        }
+      },
+      "request_id": "f2d0d146febc4f17a839676266170889",
+      "classification": "plan_validation",
+      "raw_plan_matches_golden_steps": false
+    }
+  ],
+  "case_file_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+  "suite_total": 24,
+  "offset": 0,
+  "requested_case_ids": [
+    "critical-1",
+    "critical-2",
+    "critical-3",
+    "critical-4"
+  ],
+  "stopped_early": true,
+  "passed": 1,
+  "total": 4,
+  "executed_cases": 2,
+  "skipped_case_ids": [
+    "critical-3",
+    "critical-4"
+  ],
+  "hard_gate_passed": false,
+  "attempts_this_run": 2,
+  "cumulative_usage": {
+    "attempts": 9,
+    "accounted_usd": 0.169163,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.0028,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  }
+}

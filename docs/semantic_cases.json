@@ -1,0 +1,18 @@
+[
+ {"id":"normal-1","group":"normal","instruction":"去A站","decision":"accept","steps":[["navigate_to","station_a"]]},
+ {"id":"normal-2","group":"normal","instruction":"前往B站","decision":"accept","steps":[["navigate_to","station_b"]]},
+ {"id":"normal-3","group":"normal","instruction":"检查A站指示灯，然后返回基地","decision":"accept","steps":[["navigate_to","station_a"],["inspect_indicator","station_a"],["return_to_base",null]]},
+ {"id":"normal-4","group":"normal","instruction":"停止","decision":"accept","steps":[["stop",null]]},
+ {"id":"rewrite-1","group":"rewrite","instruction":"请到站点A","decision":"accept","steps":[["navigate_to","station_a"]]},
+ {"id":"rewrite-2","group":"rewrite","instruction":"ステーションBへ行ってください","decision":"accept","steps":[["navigate_to","station_b"]]},
+ {"id":"rewrite-3","group":"rewrite","instruction":"地点Aの表示灯を確認して、ホームに戻ってください","decision":"accept","steps":[["navigate_to","station_a"],["inspect_indicator","station_a"],["return_to_base",null]]},
+ {"id":"rewrite-4","group":"rewrite","instruction":"please go to station b","decision":"accept","steps":[["navigate_to","station_b"]]},
+ {"id":"order-1","group":"order","instruction":"先去A站，然后去B站，最后返回基地","decision":"accept","steps":[["navigate_to","station_a"],["navigate_to","station_b"],["return_to_base",null]]},
+ {"id":"order-2","group":"order","instruction":"先检查B站指示灯，然后检查A站指示灯，最后返回基地","decision":"accept","steps":[["navigate_to","station_b"],["inspect_indicator","station_b"],["navigate_to","station_a"],["inspect_indicator","station_a"],["return_to_base",null]]},
+ {"id":"order-3","group":"order","instruction":"まず地点Bへ移動、次に地点Aへ移動、最後に拠点に戻る","decision":"accept","steps":[["navigate_to","station_b"],["navigate_to","station_a"],["return_to_base",null]]},
+ {"id":"order-4","group":"order","instruction":"go to station a, then go to station b, finally stop","decision":"accept","steps":[["navigate_to","station_a"],["navigate_to","station_b"],["stop",null]]},
+ {"id":"unknown-1","group":"unknown","instruction":"去C站","decision":"reject","steps":[]},
+ {"id":"unknown-2","group":"unknown","instruction":"去A站，然后去仓库","decision":"reject","steps":[]},
+ {"id":"unknown-3","group":"unknown","instruction":"ステーションCへ行ってください","decision":"reject","steps":[]},
+ {"id":"unknown-4","group":"unknown","instruction":"检查station_a和station_c的指示灯","decision":"reject","steps":[]}
+]

@@ -1,0 +1,23 @@
+{
+  "scope": "external test observer only; no production or candidate image changes",
+  "root_failure_evidence": "docs/evidence/visual-classifier-freeze.json",
+  "fix": [
+    "before resume and Action wait at most5wall for finite positive actual sim clock",
+    "missing or reset elapsed sim duration records null and reason; terminal collection continues"
+  ],
+  "targeted_regression": {
+    "tests": 3,
+    "passed": 3,
+    "seconds": 0.001,
+    "raw_log": "logs/p4-observation-clock-regression.log",
+    "raw_sha256": "ab3f30fda86681941ef0d2b8322a15c97a2e7a546dff06ac67a375a9fe813dfd"
+  },
+  "external_source_sha256": {
+    "live_online_acceptance.py": "da0cbcb4f4c74b8ee6f57fd32eab2b41a225250198085e72ec7b2b03d04a827b",
+    "observation_clock.py": "fd92080c5646317c476a264d042235791e33f75b0e0484eea3425da8c980a9ab",
+    "test_observation_clock.py": "fd5a0b51d20fa52cd014137a7c25f27da049067fd7e666ece66957fe71cc21f8"
+  },
+  "baked_into_image_49": false,
+  "new_model_calls_or_actions_for_test": 0,
+  "actual_formal_task_results": "pending"
+}

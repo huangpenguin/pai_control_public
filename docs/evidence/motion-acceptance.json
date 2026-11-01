@@ -1,0 +1,1600 @@
+{
+  "real_ai_verified": false,
+  "planner": "explicit stub-test-double",
+  "navigation_singlepoint": {
+    "successes": 1,
+    "tasks": 2
+  },
+  "startup_harness_errors": 1,
+  "safety_raw_automatic": {
+    "passes": 3,
+    "cases": 4
+  },
+  "safety_behavior_after_independent_review": {
+    "passes": 4,
+    "cases": 4
+  },
+  "sequence_test": {
+    "successes": 1,
+    "tasks": 1,
+    "order": [
+      "station_b",
+      "station_a",
+      "base"
+    ],
+    "real_ai_verified": false
+  },
+  "runs": [
+    {
+      "run_id": "singlepoint-20261011T055130Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "failure",
+          "wall_seconds": 3804695.590476205,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "error": "'Run' object has no attribute 'spin_until'"
+        }
+      ],
+      "case": "singlepoint",
+      "pass_": false,
+      "real_ai_verified": false,
+      "final_map_pose": {
+        "unavailable": "\"map\" passed to lookupTransform argument target_frame does not exist. "
+      },
+      "original_evidence": "logs/singlepoint-20261011T055130Z.json",
+      "original_sha256": "c612d5e6687044ca4917f041b33b9ce016e532bed4362728429dca0e70638095",
+      "sample_count": 0,
+      "classification": "harness_error_before_resume_or_goal"
+    },
+    {
+      "run_id": "singlepoint-20261011T055250Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3804748.979734981,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3804748.983363106,
+          "sim_seconds": 36.188,
+          "scan_wall_age": 0.0015790457837283611,
+          "scan_sim_age": 0.08800000000000097,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3804749.987327399,
+          "sim_seconds": 36.188,
+          "scan_wall_age": 1.0055433390662074,
+          "scan_sim_age": 0.08800000000000097,
+          "instruction": "去设备 A"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3804750.363947222,
+          "sim_seconds": 36.6,
+          "scan_wall_age": 0.11414853716269135,
+          "scan_sim_age": 0.10000000000000142
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3804859.010191072,
+          "sim_seconds": 65.012,
+          "scan_wall_age": 0.5064344475977123,
+          "scan_sim_age": 0.11199999999999477,
+          "locked": true,
+          "generation": 3,
+          "reason": "scan_stale",
+          "motion_permitted": false
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3804859.06033112,
+          "sim_seconds": 65.012,
+          "scan_wall_age": 0.5565744959749281,
+          "scan_sim_age": 0.11199999999999477,
+          "action_status": 6,
+          "result": {
+            "outcome": "stopped",
+            "message": "task invalidated: scan_stale",
+            "planner_mode": "stub-test-double",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        }
+      ],
+      "case": "singlepoint",
+      "pass_": false,
+      "real_ai_verified": false,
+      "final_map_pose": [
+        0.8499549554205132,
+        -2.0284839075166214,
+        0.12395196066757824
+      ],
+      "movement_summary": {
+        "wall_duration_s": 108.69638389814645,
+        "sim_duration_s": 28.36,
+        "scan_wall_age_max_s": 0.43624980887398124,
+        "scan_sim_age_max_s": 0.13600000000000279,
+        "sample_count": 583,
+        "nav2_cancellation_confirmed_in_log": "singlepoint-20261011T055250Z-ros.log"
+      },
+      "original_evidence": "logs/singlepoint-20261011T055250Z.json",
+      "original_sha256": "4dfe0c5df4307b6c88e450ce61131431c4426c3b2ccd1749825e1021a4e39074",
+      "sample_count": 599,
+      "classification": "navigation_task"
+    },
+    {
+      "run_id": "singlepoint-camera5-20261011T055920Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805181.716737073,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3805181.71913694,
+          "sim_seconds": 31.588,
+          "scan_wall_age": 0.0002436116337776184,
+          "scan_sim_age": 0.48799999999999955,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3805181.719373947,
+          "sim_seconds": 31.588,
+          "scan_wall_age": 0.00048061879351735115,
+          "scan_sim_age": 0.48799999999999955,
+          "instruction": "去设备 A"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3805182.069142488,
+          "sim_seconds": 31.72,
+          "scan_wall_age": 0.0157030476257205,
+          "scan_sim_age": 0.11999999999999744
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3805277.634811631,
+          "sim_seconds": 73.8,
+          "scan_wall_age": 0.13858328480273485,
+          "scan_sim_age": 0.20000000000000284,
+          "action_status": 4,
+          "result": {
+            "outcome": "completed",
+            "message": "task completed",
+            "planner_mode": "stub-test-double",
+            "steps": [
+              {
+                "place_id": "station_a",
+                "outcome": "arrived",
+                "attempts": 1,
+                "pose": [
+                  2.804792629047291,
+                  -2.008262923964664,
+                  0.05738845451631494
+                ],
+                "nav2_status": 4
+              }
+            ],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        }
+      ],
+      "case": "singlepoint",
+      "pass_": true,
+      "real_ai_verified": false,
+      "final_map_pose": [
+        2.804792629047291,
+        -2.008262923964664,
+        0.05738845451631494
+      ],
+      "movement_summary": {
+        "wall_duration_s": 95.56566914310679,
+        "sim_duration_s": 41.9,
+        "scan_wall_age_max_sampled_s": 0.1346470071002841,
+        "scan_sim_age_max_sampled_s": 0.19999999999999574,
+        "position_error_m": 0.19538217315485648,
+        "yaw_error_rad": 0.05738845451631494,
+        "nav2_terminal": 4,
+        "continuous_standstill_verified_by_executor": true
+      },
+      "image_sha256": "f3efdf18453231ba4b912756fee052e8b810c24eb32d257bcc7339d9f0182f9b",
+      "original_evidence": "logs/singlepoint-camera5-20261011T055920Z.json",
+      "original_sha256": "fec92bf256d62c7a54be43455788b862e9477aabf8f825579cfde9949ef9fceb",
+      "sample_count": 434,
+      "classification": "navigation_task"
+    },
+    {
+      "run_id": "manual-stop-20261011T060240Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805388.301735959,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": true,
+          "generation": 1,
+          "reason": "startup_locked",
+          "motion_permitted": false
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805388.304393365,
+          "sim_seconds": 22.384,
+          "scan_wall_age": 0.0017469199374318123,
+          "scan_sim_age": 0.5839999999999996,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3805388.305259701,
+          "sim_seconds": 22.388,
+          "scan_wall_age": 0.00021101301535964012,
+          "scan_sim_age": 0.4880000000000031,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3805388.555644518,
+          "sim_seconds": 22.388,
+          "scan_wall_age": 0.2505958303809166,
+          "scan_sim_age": 0.4880000000000031,
+          "instruction": "去设备 A"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3805388.803726669,
+          "sim_seconds": 22.636,
+          "scan_wall_age": 0.04105808073654771,
+          "scan_sim_age": 0.13599999999999923
+        },
+        {
+          "event": "manual_stop_request",
+          "wall_seconds": 3805390.803758287,
+          "sim_seconds": 23.496,
+          "scan_wall_age": 0.09718971978873014,
+          "scan_sim_age": 0.19599999999999795
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805390.807728694,
+          "sim_seconds": 23.5,
+          "scan_wall_age": 0.10116012673825026,
+          "scan_sim_age": 0.1999999999999993,
+          "locked": true,
+          "generation": 3,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "first_ros_safe_command_zero",
+          "wall_seconds": 3805390.807931382,
+          "sim_seconds": 23.5,
+          "scan_wall_age": 0.1013628151267767,
+          "scan_sim_age": 0.1999999999999993
+        },
+        {
+          "event": "manual_stop_response",
+          "wall_seconds": 3805390.812104213,
+          "sim_seconds": 23.5,
+          "scan_wall_age": 0.10553564596921206,
+          "scan_sim_age": 0.1999999999999993,
+          "success": true,
+          "reason": "locked; navigation canceled; pending task invalidated"
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3805390.829865864,
+          "sim_seconds": 23.5,
+          "scan_wall_age": 0.1232972969301045,
+          "scan_sim_age": 0.1999999999999993,
+          "action_status": 6,
+          "result": {
+            "outcome": "stopped",
+            "message": "task invalidated: manual_stop",
+            "planner_mode": "stub-test-double",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        },
+        {
+          "event": "actual_odom_continuous_standstill",
+          "wall_seconds": 3805391.57428708,
+          "sim_seconds": 23.816,
+          "scan_wall_age": 0.015556808095425367,
+          "scan_sim_age": 0.11599999999999966
+        }
+      ],
+      "stop_request_wall": 3805390.803753651,
+      "first_ros_safe_zero_wall": 3805390.807929976,
+      "odom_settled_wall": 3805391.574280305,
+      "ros_command_zero_delay": 0.00417632469907403,
+      "continuous_odom_standstill_delay": 0.7705266536213458,
+      "case": "manual-stop",
+      "pass_": true,
+      "real_ai_verified": false,
+      "final_map_pose": [
+        -2.8843274670364463,
+        -2.000064694792202,
+        -0.026821422541278204
+      ],
+      "original_evidence": "logs/manual-stop-20261011T060240Z.json",
+      "original_sha256": "31a94cfef74d1fa820a835c1d7f0622778dba00254f2fd4e450879243bd94791",
+      "sample_count": 20,
+      "classification": "safety_fault_injection",
+      "post_settle_observation": {
+        "samples": 6,
+        "seconds": 1.2055880553089082,
+        "max_abs_linear_velocity": 0.0,
+        "max_abs_angular_velocity": 0.0
+      }
+    },
+    {
+      "run_id": "guard-loss-20261011T060400Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805473.427225712,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": true,
+          "generation": 1,
+          "reason": "startup_locked",
+          "motion_permitted": false
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805473.432905075,
+          "sim_seconds": 18.352,
+          "scan_wall_age": 0.003943328280001879,
+          "scan_sim_age": 0.15200000000000102,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3805473.434748881,
+          "sim_seconds": 18.356,
+          "scan_wall_age": 0.0057871341705322266,
+          "scan_sim_age": 0.15600000000000236,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3805474.186029653,
+          "sim_seconds": 18.356,
+          "scan_wall_age": 0.7570679062046111,
+          "scan_sim_age": 0.15600000000000236,
+          "instruction": "去设备 A"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3805474.451538973,
+          "sim_seconds": 18.84,
+          "scan_wall_age": 0.03808676125481725,
+          "scan_sim_age": 0.14000000000000057
+        },
+        {
+          "event": "fault_injected",
+          "wall_seconds": 3805476.495445571,
+          "sim_seconds": 19.7,
+          "scan_wall_age": 0.2043255758471787,
+          "scan_sim_age": 0.1999999999999993,
+          "case": "guard-loss",
+          "pid": 45
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3805476.899636817,
+          "sim_seconds": 19.9,
+          "scan_wall_age": 0.12074630428105593,
+          "scan_sim_age": 0.1999999999999993,
+          "action_status": 6,
+          "result": {
+            "outcome": "aborted",
+            "message": "service_or_action_response_timeout",
+            "planner_mode": "stub-test-double",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        },
+        {
+          "event": "actual_odom_continuous_standstill",
+          "wall_seconds": 3805477.581384959,
+          "sim_seconds": 20.2,
+          "scan_wall_age": 0.09800098137930036,
+          "scan_sim_age": 0.1999999999999993
+        }
+      ],
+      "stop_request_wall": 3805476.493013535,
+      "first_ros_safe_zero_wall": null,
+      "odom_settled_wall": 3805477.581378674,
+      "ros_command_zero_delay": null,
+      "continuous_odom_standstill_delay": 1.0883651389740407,
+      "case": "guard-loss",
+      "pass_": false,
+      "real_ai_verified": false,
+      "final_map_pose": [
+        -2.8566091798769384,
+        -1.9996667173552414,
+        0.0026683785420803735
+      ],
+      "original_evidence": "logs/guard-loss-20261011T060400Z.json",
+      "original_sha256": "ea61a2ee1657b1365fe9753d7786275b3bf3ba469cf6261cc01710566a78cd17",
+      "sample_count": 23,
+      "derived_validation": {
+        "source_run": "guard-loss-20261011T060400Z.json",
+        "original_harness_pass": false,
+        "assertion_correction": "control-service loss must abort the task; stopped is not the sole permitted outcome",
+        "safety_acceptance_pass": true,
+        "driver_command_zero_wall": 3805477.038205393,
+        "continuous_odom_standstill_delay_s": 1.0883651389740407,
+        "nav2_terminal_confirmed": "CANCELED in companion ROS log",
+        "real_ai_verified": false,
+        "fault_request_to_driver_zero_s": 0.5451918579638004,
+        "timing_origin": "stop_request_wall, recorded immediately before SIGTERM process lookup",
+        "fault_event_to_driver_zero_s": 0.5427598222158849
+      },
+      "derived_validation_sha256": "25c747276483cd5c755c6a28e3e6a5a56b6323a03c0d6115c6e7d473184cf5a2",
+      "classification": "safety_fault_injection",
+      "post_settle_observation": {
+        "samples": 6,
+        "seconds": 1.2715500136837363,
+        "max_abs_linear_velocity": 0.0,
+        "max_abs_angular_velocity": 0.0
+      }
+    },
+    {
+      "run_id": "bridge-loss-20261011T060625Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805630.269471247,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3805630.269863844,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3805630.520340575,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "instruction": "去设备 A"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3805630.53188169,
+          "sim_seconds": 24.284,
+          "scan_wall_age": 0.005974491126835346,
+          "scan_sim_age": 0.1839999999999975,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=stub-test-double"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3805630.584015966,
+          "sim_seconds": 24.3,
+          "scan_wall_age": 0.058108767028898,
+          "scan_sim_age": 0.1999999999999993,
+          "stage": "navigating",
+          "place_id": "station_a",
+          "message": "attempt=1"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3805630.740910605,
+          "sim_seconds": 24.36,
+          "scan_wall_age": 0.055090831127017736,
+          "scan_sim_age": 0.16000000000000014
+        },
+        {
+          "event": "fault_injected",
+          "wall_seconds": 3805632.748239013,
+          "sim_seconds": 25.26,
+          "scan_wall_age": 0.060561542864888906,
+          "scan_sim_age": 0.16000000000000014,
+          "case": "bridge-loss",
+          "pid": 34
+        },
+        {
+          "event": "actual_odom_continuous_standstill",
+          "wall_seconds": 3805633.968920356,
+          "sim_seconds": 25.78,
+          "scan_wall_age": 0.07911626994609833,
+          "scan_sim_age": 0.17999999999999972
+        },
+        {
+          "event": "fault_observation_complete_cleanup_stop",
+          "wall_seconds": 3805637.744195638,
+          "sim_seconds": 27.432,
+          "scan_wall_age": 0.03085698140785098,
+          "scan_sim_age": 0.1319999999999979
+        },
+        {
+          "event": "first_ros_safe_command_zero",
+          "wall_seconds": 3805637.746555584,
+          "sim_seconds": 27.436,
+          "scan_wall_age": 0.0332169272005558,
+          "scan_sim_age": 0.13599999999999923
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805637.747141702,
+          "sim_seconds": 27.436,
+          "scan_wall_age": 0.03380304528400302,
+          "scan_sim_age": 0.13599999999999923,
+          "locked": true,
+          "generation": 3,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3805637.805817764,
+          "sim_seconds": 27.492,
+          "scan_wall_age": 0.0924791069701314,
+          "scan_sim_age": 0.19200000000000017,
+          "action_status": 6,
+          "result": {
+            "outcome": "stopped",
+            "message": "task invalidated: manual_stop",
+            "planner_mode": "stub-test-double",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        }
+      ],
+      "stop_request_wall": 3805632.743936434,
+      "first_ros_safe_zero_wall": 3805637.74654896,
+      "odom_settled_wall": 3805633.968912058,
+      "ros_command_zero_delay": 5.002612526062876,
+      "continuous_odom_standstill_delay": 1.2249756241217256,
+      "case": "bridge-loss",
+      "pass_": true,
+      "real_ai_verified": false,
+      "final_map_pose": [
+        -2.8473893816636453,
+        -2.001442969264478,
+        -0.04972954310730017
+      ],
+      "original_evidence": "logs/bridge-loss-20261011T060625Z.json",
+      "original_sha256": "63e5cf72a3cadcc4c438a7c2b945c8a8a33862662666b293ab00cee01f74c94b",
+      "sample_count": 42,
+      "derived_validation": {
+        "source_run": "bridge-loss-20261011T060625Z.json",
+        "safety_acceptance_pass": true,
+        "driver_command_zero_wall": 3805633.234405477,
+        "fault_request_to_driver_zero_s": 0.4904690431430936,
+        "fault_event_to_driver_zero_s": 0.4861664641648531,
+        "continuous_odom_standstill_delay_s": 1.2249756241217256,
+        "first_ros_zero_after_fault_s": 5.002612526062876,
+        "zero_precedes_later_ros_cleanup": true,
+        "real_ai_verified": false
+      },
+      "derived_validation_sha256": "8b2d829cff10d6926122fb96bd240d44867b93c21aa0b3258c3750cfebb8bc62",
+      "classification": "safety_fault_injection",
+      "post_settle_observation": {
+        "samples": 26,
+        "seconds": 5.75666725076735,
+        "max_abs_linear_velocity": 0.0,
+        "max_abs_angular_velocity": 0.0
+      }
+    },
+    {
+      "run_id": "pause-20261011T060825Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805732.078899383,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3805732.082400965,
+          "sim_seconds": 15.748,
+          "scan_wall_age": 0.0005980799905955791,
+          "scan_sim_age": 0.4479999999999986,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3805732.082652846,
+          "sim_seconds": 15.748,
+          "scan_wall_age": 0.0008499608375132084,
+          "scan_sim_age": 0.4479999999999986,
+          "instruction": "去设备 A"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3805732.094126543,
+          "sim_seconds": 15.772,
+          "scan_wall_age": 0.0063757202588021755,
+          "scan_sim_age": 0.1720000000000006,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=stub-test-double"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3805732.145689165,
+          "sim_seconds": 15.8,
+          "scan_wall_age": 0.057938342448323965,
+          "scan_sim_age": 0.20000000000000107,
+          "stage": "navigating",
+          "place_id": "station_a",
+          "message": "attempt=1"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3805732.285367298,
+          "sim_seconds": 15.86,
+          "scan_wall_age": 0.05875906674191356,
+          "scan_sim_age": 0.16000000000000014
+        },
+        {
+          "event": "gazebo_pause_request",
+          "wall_seconds": 3805734.788850325,
+          "sim_seconds": 16.7,
+          "scan_wall_age": 0.6853889869526029,
+          "scan_sim_age": 0.1999999999999993,
+          "acknowledgement": "data: true"
+        },
+        {
+          "event": "gazebo_resume_request",
+          "wall_seconds": 3805735.649947959,
+          "sim_seconds": 16.9,
+          "scan_wall_age": 0.6296760072000325,
+          "scan_sim_age": 0.0,
+          "acknowledgement": "data: true"
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3805735.651154745,
+          "sim_seconds": 16.9,
+          "scan_wall_age": 0.6308827931061387,
+          "scan_sim_age": 0.0,
+          "action_status": 6,
+          "result": {
+            "outcome": "stopped",
+            "message": "task invalidated: clock_stale_or_paused",
+            "planner_mode": "stub-test-double",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805735.651555384,
+          "sim_seconds": 16.9,
+          "scan_wall_age": 0.6312834322452545,
+          "scan_sim_age": 0.0,
+          "locked": true,
+          "generation": 3,
+          "reason": "clock_stale_or_paused",
+          "motion_permitted": false
+        },
+        {
+          "event": "first_ros_safe_command_zero",
+          "wall_seconds": 3805735.651997573,
+          "sim_seconds": 16.9,
+          "scan_wall_age": 0.6317256214097142,
+          "scan_sim_age": 0.0
+        },
+        {
+          "event": "actual_odom_continuous_standstill",
+          "wall_seconds": 3805736.251424661,
+          "sim_seconds": 17.216,
+          "scan_wall_age": 0.01779361581429839,
+          "scan_sim_age": 0.11599999999999966
+        }
+      ],
+      "stop_request_wall": 3805734.30826701,
+      "first_ros_safe_zero_wall": 3805735.651995899,
+      "odom_settled_wall": 3805736.251394643,
+      "ros_command_zero_delay": 1.34372888924554,
+      "continuous_odom_standstill_delay": 1.9431276330724359,
+      "case": "pause",
+      "pass_": true,
+      "real_ai_verified": false,
+      "final_map_pose": [
+        -2.8578025466546135,
+        -1.9998061725612302,
+        0.0018787718744608267
+      ],
+      "original_evidence": "logs/pause-20261011T060825Z.json",
+      "original_sha256": "8b084d92884b3c9a5aba2ba9fe437fde652111efc8f0926dc664331fa1b88ad3",
+      "sample_count": 20,
+      "derived_validation": {
+        "source_run": "pause-20261011T060825Z.json",
+        "safety_acceptance_pass": true,
+        "pause_ack_to_resume_ack_wall_s": 0.8610976338386536,
+        "resumed_observation_wall_s": 1.900207641068846,
+        "max_abs_linear_velocity_after_resume": 0.08052631582169503,
+        "max_abs_angular_velocity_after_resume": 6.9799953660558094e-12,
+        "timing_note": "ROS zero observation includes blocking Gazebo service subprocess latency; not asserted as guard publication deadline. Actual pause/resume acknowledgements and subsequent odom are retained.",
+        "real_ai_verified": false,
+        "first_post_resume_odom_sim_s": 16.92,
+        "first_post_resume_odom_wall_delay_s": 0.015948262065649033,
+        "first_post_resume_linear_velocity": 0.08052631582169503,
+        "first_zero_odom_after_resume_s": 0.12378170294687152,
+        "post_transient_sample_count": 8,
+        "zero_sample_pose_displacement_m": 0.0,
+        "official_odometry_velocity_rolling_window_samples": 10,
+        "driver_first_preupdate_zero_time": "not instrumented; no lease-expiry log in this pause run",
+        "interpretation": "Resume first observed odom has a short velocity transient; all subsequent samples are stationary. Rolling odometry mean and callback backlog can contribute; data cannot uniquely separate dynamics, cached actuator update, and sampling latency."
+      },
+      "derived_validation_sha256": "9a3f2a2706d876ef612c468b67d055ddae20dc5f00e5c5c9c6aebf9d0f2f206a",
+      "classification": "safety_fault_injection",
+      "post_settle_observation": {
+        "samples": 6,
+        "seconds": 1.2987609570845962,
+        "max_abs_linear_velocity": 0.0,
+        "max_abs_angular_velocity": 0.0
+      },
+      "independent_review": {
+        "first_post_resume_sample": {
+          "wall_seconds": 3805735.665896221,
+          "sim_seconds": 16.92,
+          "odom_pose": [
+            0.14405782380311866,
+            1.3976733121991927e-11,
+            9.661290352219287e-11
+          ],
+          "linear_velocity": 0.08052631582169503,
+          "angular_velocity": -6.9799953660558094e-12,
+          "scan_wall_age": 0.6456242692656815,
+          "scan_sim_age": 0.020000000000003126
+        },
+        "first_zero_odom_after_resume_wall_s": 0.12378170294687152,
+        "zero_samples_after_initial_transient": 8,
+        "position_change_after_first_post_resume_sample_m": 1.3067324999838092e-13,
+        "limitation": "Initial post-resume odometry reports 0.08053 m/s; evidence supports subsequent continuous standstill without sustained re-motion, not zero at every instant after resume. ROS zero observation includes blocking service collection latency."
+      }
+    },
+    {
+      "run_id": "multipoint-20261011T061125Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3805904.712584025,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3805904.715280788,
+          "sim_seconds": 41.888,
+          "scan_wall_age": 0.00023609213531017303,
+          "scan_sim_age": 0.48799999999999955,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3805904.715524537,
+          "sim_seconds": 41.888,
+          "scan_wall_age": 0.0004798411391675472,
+          "scan_sim_age": 0.48799999999999955,
+          "instruction": "先去设备 B，然后去设备 A，最后返回基地"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3805904.725884458,
+          "sim_seconds": 41.9,
+          "scan_wall_age": 0.000791613943874836,
+          "scan_sim_age": 0.19999999999999574,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=stub-test-double"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3805904.754170274,
+          "sim_seconds": 41.9,
+          "scan_wall_age": 0.02907742979004979,
+          "scan_sim_age": 0.19999999999999574,
+          "stage": "navigating",
+          "place_id": "station_b",
+          "message": "attempt=1"
+        },
+        {
+          "event": "first_actual_motion",
+          "wall_seconds": 3805904.908053328,
+          "sim_seconds": 41.92,
+          "scan_wall_age": 0.018250349909067154,
+          "scan_sim_age": 0.12000000000000455
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806050.636890901,
+          "sim_seconds": 99.3,
+          "scan_wall_age": 0.18280352978035808,
+          "scan_sim_age": 0.20000000000000284,
+          "stage": "verifying_arrival",
+          "place_id": "station_b",
+          "message": ""
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806051.348680196,
+          "sim_seconds": 99.592,
+          "scan_wall_age": 0.09129399294033647,
+          "scan_sim_age": 0.19199999999999307,
+          "stage": "navigating",
+          "place_id": "station_a",
+          "message": "attempt=1"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806131.419086844,
+          "sim_seconds": 133.5,
+          "scan_wall_age": 0.16092166025191545,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "verifying_arrival",
+          "place_id": "station_a",
+          "message": ""
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806132.151491328,
+          "sim_seconds": 133.8,
+          "scan_wall_age": 0.10539870895445347,
+          "scan_sim_age": 0.20000000000001705,
+          "stage": "navigating",
+          "place_id": "base",
+          "message": "attempt=1"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806253.641603154,
+          "sim_seconds": 185.7,
+          "scan_wall_age": 0.16492706211283803,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "verifying_arrival",
+          "place_id": "base",
+          "message": ""
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3806254.330780713,
+          "sim_seconds": 185.984,
+          "scan_wall_age": 0.08562399167567492,
+          "scan_sim_age": 0.1839999999999975,
+          "action_status": 4,
+          "result": {
+            "outcome": "completed",
+            "message": "task completed",
+            "planner_mode": "stub-test-double",
+            "steps": [
+              {
+                "place_id": "station_b",
+                "outcome": "arrived",
+                "attempts": 1,
+                "pose": [
+                  2.8622787508103937,
+                  1.914512082670711,
+                  1.325494481578015
+                ],
+                "nav2_status": 4
+              },
+              {
+                "place_id": "station_a",
+                "outcome": "arrived",
+                "attempts": 1,
+                "pose": [
+                  2.9298462034064285,
+                  -1.8321463081683573,
+                  -0.23825528444752597
+                ],
+                "nav2_status": 4
+              },
+              {
+                "place_id": "base",
+                "outcome": "arrived",
+                "attempts": 1,
+                "pose": [
+                  -2.8796409072480103,
+                  -1.9273982066742263,
+                  -0.24440834877001472
+                ],
+                "nav2_status": 4
+              }
+            ],
+            "return_requested": true,
+            "return_recommended": false
+          }
+        }
+      ],
+      "case": "multipoint",
+      "pass_": true,
+      "real_ai_verified": false,
+      "final_map_pose": [
+        -2.8809729307149605,
+        -1.926816968997699,
+        -0.24487669854033142
+      ],
+      "sample_count": 1459,
+      "original_evidence": "logs/multipoint-20261011T061125Z.json",
+      "original_sha256": "a57d72d2e4881612e99a66e89a79e1a33764b297c8506bb50770fbf03489c259",
+      "classification": "ordered_navigation_task",
+      "independent_summary": {
+        "wall_instruction_to_terminal_s": 349.6152561758645,
+        "sim_instruction_to_terminal_s": 144.096,
+        "arrival_errors": [
+          {
+            "place_id": "station_b",
+            "position_error_m": 0.16209665785464236,
+            "yaw_error_rad": 0.2445055184219851
+          },
+          {
+            "place_id": "station_a",
+            "position_error_m": 0.18192420685000735,
+            "yaw_error_rad": 0.23825528444752597
+          },
+          {
+            "place_id": "base",
+            "position_error_m": 0.14056077547523854,
+            "yaw_error_rad": 0.24440834877001474
+          }
+        ],
+        "step_limit": "8, set dynamically on executor for this run",
+        "harness_total_wait_s": 1000,
+        "per_goal_budgets": "unchanged 120 sim seconds / 300 wall seconds; at most one retry"
+      }
+    },
+    {
+      "run_id": "unknown-20261011T061805Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806409.77929395,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": false,
+          "generation": 2,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806410.61064351,
+          "sim_seconds": 249.596,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "5ca17e8524f3434497e6868e29722c6d",
+          "status": 4
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806410.610656286,
+          "sim_seconds": 249.596,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "9aff036bf8764a78b1a655f94fa98eb7",
+          "status": 4
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806410.610661719,
+          "sim_seconds": 249.596,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "24983988133640a6af1369f7d939dbae",
+          "status": 4
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806411.6910956,
+          "sim_seconds": 250.012,
+          "scan_wall_age": 0.007872418966144323,
+          "scan_sim_age": 0.11199999999999477,
+          "locked": false,
+          "generation": 3,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3806411.691642582,
+          "sim_seconds": 250.016,
+          "scan_wall_age": 0.00841940101236105,
+          "scan_sim_age": 0.11599999999998545,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3806411.898854332,
+          "sim_seconds": 250.1,
+          "scan_wall_age": 0.21563115110620856,
+          "scan_sim_age": 0.19999999999998863,
+          "instruction": "去仓库"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806411.902971981,
+          "sim_seconds": 250.1,
+          "scan_wall_age": 0.21974880015477538,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=stub-test-double"
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3806411.925580463,
+          "sim_seconds": 250.1,
+          "scan_wall_age": 0.24235728196799755,
+          "scan_sim_age": 0.19999999999998863,
+          "action_status": 4,
+          "result": {
+            "outcome": "rejected",
+            "message": "whole task rejected: unresolved instruction",
+            "planner_mode": "stub-test-double",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806414.931129758,
+          "sim_seconds": 251.3,
+          "scan_wall_age": 0.20276008592918515,
+          "scan_sim_age": 0.20000000000001705,
+          "locked": true,
+          "generation": 4,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        }
+      ],
+      "baseline_nav2_goal_uuids": [
+        "24983988133640a6af1369f7d939dbae",
+        "5ca17e8524f3434497e6868e29722c6d",
+        "9aff036bf8764a78b1a655f94fa98eb7"
+      ],
+      "new_nav2_goal_uuids": [],
+      "observed_odom_displacement_max_m": 0.0,
+      "case": "unknown",
+      "pass_": true,
+      "real_ai_verified": false,
+      "planner_is_test_double": true,
+      "final_map_pose": [
+        -2.8809729307149605,
+        -1.926816968997699,
+        -0.24487669854033142
+      ],
+      "collision_statistics": "not measured",
+      "sample_count": 18,
+      "original_evidence": "logs/unknown-20261011T061805Z.json",
+      "original_sha256": "a09f49dee9f76f13a8c4df8d683a0230939d32f8290e0bccd7c07b87ba0f594e",
+      "classification": "isolated_error_path_with_test_double"
+    },
+    {
+      "run_id": "unreachable-20261011T061930Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806472.073102937,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "5ca17e8524f3434497e6868e29722c6d",
+          "status": 4
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806472.073116702,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "9aff036bf8764a78b1a655f94fa98eb7",
+          "status": 4
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806472.07312268,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "24983988133640a6af1369f7d939dbae",
+          "status": 4
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806472.867781651,
+          "sim_seconds": 274.9,
+          "scan_wall_age": 0.21282795537263155,
+          "scan_sim_age": 0.19999999999998863,
+          "locked": true,
+          "generation": 4,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806473.951030288,
+          "sim_seconds": 275.372,
+          "scan_wall_age": 0.0726052988320589,
+          "scan_sim_age": 0.17200000000002547,
+          "locked": false,
+          "generation": 5,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3806473.951807829,
+          "sim_seconds": 275.376,
+          "scan_wall_age": 0.07338284002617002,
+          "scan_sim_age": 0.17599999999998772,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3806474.154450933,
+          "sim_seconds": 275.468,
+          "scan_wall_age": 0.06554634077474475,
+          "scan_sim_age": 0.16800000000000637,
+          "instruction": "先去设备 A，然后返回基地"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806474.181173796,
+          "sim_seconds": 275.496,
+          "scan_wall_age": 0.09226920362561941,
+          "scan_sim_age": 0.19599999999996953,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=stub-test-double"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806474.237839694,
+          "sim_seconds": 275.5,
+          "scan_wall_age": 0.14893510192632675,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "navigating",
+          "place_id": "station_a",
+          "message": "attempt=1"
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806474.242451594,
+          "sim_seconds": 275.5,
+          "scan_wall_age": 0.15354700200259686,
+          "scan_sim_age": 0.19999999999998863,
+          "goal_uuid": "dc676323116a4f649ba5bbb31d9b1784",
+          "status": 2
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806474.284926793,
+          "sim_seconds": 275.5,
+          "scan_wall_age": 0.1960222008638084,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "retrying",
+          "place_id": "station_a",
+          "message": ""
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806474.310649661,
+          "sim_seconds": 275.5,
+          "scan_wall_age": 0.22174506867304444,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "navigating",
+          "place_id": "station_a",
+          "message": "attempt=2"
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806474.312010866,
+          "sim_seconds": 275.5,
+          "scan_wall_age": 0.22310627391561866,
+          "scan_sim_age": 0.19999999999998863,
+          "goal_uuid": "67803248e5764313b3f6c87abdb5c9ac",
+          "status": 2
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806474.370205473,
+          "sim_seconds": 275.5,
+          "scan_wall_age": 0.28130088094621897,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "navigating",
+          "place_id": "base",
+          "message": "attempt=1"
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806474.371671561,
+          "sim_seconds": 275.5,
+          "scan_wall_age": 0.28276696894317865,
+          "scan_sim_age": 0.19999999999998863,
+          "goal_uuid": "4aa8f0a823df49b09ab241ca4c01f39a",
+          "status": 2
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806474.475751992,
+          "sim_seconds": 275.58,
+          "scan_wall_age": 0.07908750884234905,
+          "scan_sim_age": 0.18000000000000682,
+          "stage": "verifying_arrival",
+          "place_id": "base",
+          "message": ""
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3806474.988158971,
+          "sim_seconds": 275.8,
+          "scan_wall_age": 0.11140579311177135,
+          "scan_sim_age": 0.19999999999998863,
+          "action_status": 4,
+          "result": {
+            "outcome": "completed_with_failures",
+            "message": "known station failed; remaining steps completed; submit a new return instruction if needed",
+            "planner_mode": "stub-test-double",
+            "steps": [
+              {
+                "place_id": "station_a",
+                "outcome": "failed",
+                "reason": "",
+                "error_code": 208,
+                "attempts": 2
+              },
+              {
+                "place_id": "base",
+                "outcome": "arrived",
+                "attempts": 1,
+                "pose": [
+                  -2.8809729307149605,
+                  -1.926816968997699,
+                  -0.24487669854033142
+                ],
+                "nav2_status": 4
+              }
+            ],
+            "return_requested": true,
+            "return_recommended": true
+          }
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806478.011704246,
+          "sim_seconds": 277.0,
+          "scan_wall_age": 0.1241274680942297,
+          "scan_sim_age": 0.19999999999998863,
+          "locked": true,
+          "generation": 6,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        }
+      ],
+      "baseline_nav2_goal_uuids": [
+        "24983988133640a6af1369f7d939dbae",
+        "5ca17e8524f3434497e6868e29722c6d",
+        "9aff036bf8764a78b1a655f94fa98eb7"
+      ],
+      "new_nav2_goal_uuids": [
+        "4aa8f0a823df49b09ab241ca4c01f39a",
+        "67803248e5764313b3f6c87abdb5c9ac",
+        "dc676323116a4f649ba5bbb31d9b1784"
+      ],
+      "case": "unreachable",
+      "pass_": false,
+      "real_ai_verified": false,
+      "planner_is_test_double": true,
+      "final_map_pose": [
+        -2.8809729307149605,
+        -1.926816968997699,
+        -0.24487669854033142
+      ],
+      "collision_statistics": "not measured",
+      "sample_count": 24,
+      "original_evidence": "logs/unreachable-20261011T061930Z.json",
+      "original_sha256": "425ab7912d0a7a503e618368d063b626ef14596fa1140241de653343dff13795",
+      "classification": "isolated_error_path_with_test_double",
+      "derived_validation": {
+        "source_run": "unreachable-20261011T061930Z.json",
+        "original_harness_pass": false,
+        "fault_acceptance_pass": true,
+        "assertion_correction": "Navfn tolerance=0.20 cannot find a path within the occupied goal neighborhood: actual NO_VALID_PATH=208 is a legitimate unreachable result, not only GOAL_OCCUPIED=206.",
+        "station_a_actual_error_code": 208,
+        "station_a_attempts": 2,
+        "actual_nav2_goal_count": 3,
+        "base_actual_nav2_status": 4,
+        "product_stations_sha256_after": "8cb1b688e4305618eeeb040c9f999a59777b06cbd7c7c59cfa332b5cee65446e",
+        "product_coordinates_unchanged": true,
+        "configuration_evidence": "unreachable-test-profile.json",
+        "real_ai_verified": false
+      },
+      "derived_validation_sha256": "f6a5fbe56290774f495b2d6569f34670e94acd1b0fa9d726a9759ea0a4269b09",
+      "configuration": {
+        "profile": "isolated-unreachable-test-double",
+        "product_stations_sha256": "8cb1b688e4305618eeeb040c9f999a59777b06cbd7c7c59cfa332b5cee65446e",
+        "product_stations": "simulation/config/stations.yaml",
+        "test_stations": "/opt/pai/logs/unreachable-test-stations.yaml",
+        "only_difference": {
+          "station_a_before": {
+            "x": 3.0,
+            "y": -2.0,
+            "yaw": 0.0
+          },
+          "station_a_after": {
+            "x": 0.0,
+            "y": 0.0,
+            "yaw": 0.0
+          }
+        },
+        "reason": "(0,0) is occupied by the known central box in actual map/world",
+        "station_b_and_base_unchanged": true,
+        "product_coordinates_modified": false,
+        "planner_is_test_double": true
+      },
+      "limitation": "Base was already within arrival tolerance during this isolated run; this validates continuation to the base goal. The separate B→A→base run validates the moving return."
+    },
+    {
+      "run_id": "model-timeout-20261011T062140Z",
+      "source": "real_ros_gazebo_with_explicit_stub_planner",
+      "events": [
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806638.212798997,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "5ca17e8524f3434497e6868e29722c6d",
+          "status": 4
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806638.212813355,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "9aff036bf8764a78b1a655f94fa98eb7",
+          "status": 4
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806638.212819322,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "24983988133640a6af1369f7d939dbae",
+          "status": 4
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806638.212822936,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "dc676323116a4f649ba5bbb31d9b1784",
+          "status": 6
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806638.212826654,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "67803248e5764313b3f6c87abdb5c9ac",
+          "status": 6
+        },
+        {
+          "event": "observed_nav2_goal_uuid",
+          "wall_seconds": 3806638.212831056,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "goal_uuid": "4aa8f0a823df49b09ab241ca4c01f39a",
+          "status": 4
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806639.219408298,
+          "sim_seconds": null,
+          "scan_wall_age": null,
+          "scan_sim_age": null,
+          "locked": true,
+          "generation": 6,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806640.080820115,
+          "sim_seconds": 343.3,
+          "scan_wall_age": 0.1518574496731162,
+          "scan_sim_age": 0.19999999999998863,
+          "locked": false,
+          "generation": 7,
+          "reason": "ready",
+          "motion_permitted": false
+        },
+        {
+          "event": "resume_response",
+          "wall_seconds": 3806640.081246291,
+          "sim_seconds": 343.3,
+          "scan_wall_age": 0.15228362567722797,
+          "scan_sim_age": 0.19999999999998863,
+          "success": true,
+          "reason": "ready_new_task_required"
+        },
+        {
+          "event": "raw_instruction_submitted",
+          "wall_seconds": 3806640.286709204,
+          "sim_seconds": 343.396,
+          "scan_wall_age": 0.0955892070196569,
+          "scan_sim_age": 0.19600000000002638,
+          "instruction": "去设备 A"
+        },
+        {
+          "event": "task_feedback",
+          "wall_seconds": 3806640.296394197,
+          "sim_seconds": 343.4,
+          "scan_wall_age": 0.10527419997379184,
+          "scan_sim_age": 0.19999999999998863,
+          "stage": "planning",
+          "place_id": "",
+          "message": "planner=injected-test-double"
+        },
+        {
+          "event": "instruction_terminal",
+          "wall_seconds": 3806675.308597334,
+          "sim_seconds": 357.5,
+          "scan_wall_age": 0.0984792560338974,
+          "scan_sim_age": 0.19999999999998863,
+          "action_status": 6,
+          "result": {
+            "outcome": "aborted",
+            "message": "service_or_action_response_timeout",
+            "planner_mode": "injected-test-double",
+            "steps": [],
+            "return_requested": false,
+            "return_recommended": false
+          }
+        },
+        {
+          "event": "safety_state",
+          "wall_seconds": 3806675.312090346,
+          "sim_seconds": 357.5,
+          "scan_wall_age": 0.10197226796299219,
+          "scan_sim_age": 0.19999999999998863,
+          "locked": true,
+          "generation": 8,
+          "reason": "manual_stop",
+          "motion_permitted": false
+        }
+      ],
+      "baseline_nav2_goal_uuids": [
+        "24983988133640a6af1369f7d939dbae",
+        "4aa8f0a823df49b09ab241ca4c01f39a",
+        "5ca17e8524f3434497e6868e29722c6d",
+        "67803248e5764313b3f6c87abdb5c9ac",
+        "9aff036bf8764a78b1a655f94fa98eb7",
+        "dc676323116a4f649ba5bbb31d9b1784"
+      ],
+      "new_nav2_goal_uuids": [],
+      "observed_odom_displacement_max_m": 0.0,
+      "case": "model-timeout",
+      "pass_": true,
+      "real_ai_verified": false,
+      "planner_is_test_double": true,
+      "final_map_pose": [
+        -2.8809729307149605,
+        -1.926816968997699,
+        -0.24487669854033142
+      ],
+      "collision_statistics": "not measured",
+      "sample_count": 156,
+      "original_evidence": "logs/model-timeout-20261011T062140Z.json",
+      "original_sha256": "44b5fb98886118e285e15850c878f18dc8c70481177f46e449a634d8316b4e95",
+      "classification": "isolated_error_path_with_test_double",
+      "derived_validation": {
+        "source_run": "model-timeout-20261011T062140Z.json",
+        "fault_acceptance_pass": true,
+        "injection": "SlowPlanner returns a schema-valid StubPlanner plan after 36 seconds; no Vertex request",
+        "application_wait_timeout_seconds": 35,
+        "actual_raw_request_to_terminal_wall_s": 35.02188813034445,
+        "late_valid_plan_wall": 3806676.308878092,
+        "late_plan_after_terminal_wall_s": 1.0002807579003274,
+        "observed_after_late_result_wall_s": 1.8839093949645758,
+        "new_nav2_goal_count": 0,
+        "odom_displacement_m": 0.0,
+        "real_vertex_http_timeout_verified": false,
+        "real_ai_verified": false
+      },
+      "derived_validation_sha256": "030a67a388ff018f7549bf2e52271660d084b1aa5d1e54ede2269e42b3db57ad",
+      "planner_event_log": [
+        "INJECTED TEST DOUBLE begin wall=3806640.298545178",
+        "INJECTED TEST DOUBLE late valid result wall=3806676.308878092"
+      ]
+    }
+  ],
+  "collision_measurement": "not measured; no zero-count claim",
+  "p3_error_paths": {
+    "original_automatic_passes": 2,
+    "cases": 3,
+    "reviewed_expected_behavior_passes": 3,
+    "real_ai_verified": false
+  },
+  "model_timeout_note": "Injected slow test planner, not an actual Vertex timeout. SDK timeout is separately verified with a transport double."
+}

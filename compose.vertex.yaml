@@ -1,0 +1,12 @@
+services:
+  simulation:
+    environment:
+      PAI_PLANNER_MODE: vertex
+      GOOGLE_APPLICATION_CREDENTIALS: /run/pai/adc.json
+    volumes:
+      - type: bind
+        source: ${PAI_ADC_PATH:?Set PAI_ADC_PATH to your ADC JSON file}
+        target: /run/pai/adc.json
+        read_only: true
+        bind:
+          create_host_path: false

@@ -1,0 +1,47 @@
+{
+  "checked_utc": "2026-10-11",
+  "image_id": "sha256:8e6f5bf76069ed800bbe47c83877520287a9e9a7a9627b933e06a6d85060bd68",
+  "workspace": {
+    "core_path": "<repository>/core/pai_inspection_core",
+    "python": "<repository>/.venv/bin/python",
+    "sdk_version": "2.29.0",
+    "sha256": {
+      "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+      "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+      "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+      "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+      "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+    }
+  },
+  "container": [
+    {
+      "core_path": "/opt/pai/core/pai_inspection_core",
+      "python": "/usr/bin/python3",
+      "sdk_version": "2.29.0",
+      "sha256": {
+        "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+        "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+        "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+      },
+      "matches_workspace": true
+    },
+    {
+      "core_path": "/opt/pai/core/pai_inspection_core",
+      "python": "/opt/pai/venv/bin/python",
+      "sdk_version": "2.29.0",
+      "sha256": {
+        "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+        "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+        "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+      },
+      "matches_workspace": true
+    }
+  ],
+  "real_model_attempts": 0,
+  "motion_goals_sent": 0,
+  "sanitization": "Local repository prefix replaced; measured values and source hashes retained."
+}

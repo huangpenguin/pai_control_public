@@ -1,0 +1,61 @@
+{
+  "version": "visual-formal-v1",
+  "frozen_before_formal_images": true,
+  "calibration_excluded": "one explicit stub Action A inspect, B inspect, base; no API and no formal accuracy count",
+  "classification_input": "actual RGB only; scenario and expected labels remain outside classifier/planner/executor",
+  "required_per_inspection": [
+    "actual Nav2 SUCCEEDED and fresh verified arrival",
+    "permit revoked and continuous stopped >=0.5wall",
+    "new actual frame with receipt and stamp age <=0.5s at decision",
+    "actual PNG exists with matching SHA256",
+    "same classifier full threshold values and SHA frozen after calibration before formal outputs",
+    "original model plan unchanged; Action/application-request/Nav2 correlation"
+  ],
+  "gray_unknown_requires_actual_fresh_png": true,
+  "missing_stale_timeout_camera_tests_separate_from_gray_pixel_score": true,
+  "formal_tasks_maximum": 3,
+  "formal_api_attempts_maximum": 3,
+  "cases": [
+    {
+      "id": "formal_red_green",
+      "scenario": "red_green",
+      "instruction": "先去设备 B 检查指示灯，再去设备 A 检查指示灯，最后回起点",
+      "expected_inspections": [
+        [
+          "station_b",
+          "green"
+        ],
+        [
+          "station_a",
+          "red"
+        ]
+      ]
+    },
+    {
+      "id": "formal_green_red",
+      "scenario": "green_red",
+      "instruction": "先去设备 A 检查指示灯，再去设备 B 检查指示灯，最后回起点",
+      "expected_inspections": [
+        [
+          "station_a",
+          "green"
+        ],
+        [
+          "station_b",
+          "red"
+        ]
+      ]
+    },
+    {
+      "id": "formal_gray_green",
+      "scenario": "gray_green",
+      "instruction": "去设备 A 检查指示灯，然后回起点",
+      "expected_inspections": [
+        [
+          "station_a",
+          "unknown"
+        ]
+      ]
+    }
+  ]
+}

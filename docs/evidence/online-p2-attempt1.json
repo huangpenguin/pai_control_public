@@ -1,0 +1,386 @@
+{
+  "raw_file_sha256": "b75b6b67be216b714e9ae3653c7853479661733a4cfe2f2946a76e1c5a5809e1",
+  "image_sha256": "074c7c8b6c6f0994c1ed11a713e97f3e79a6e88156ad0c4982b66f93856461a8",
+  "run_id": "online-p2-20261011T081259Z",
+  "source": "online_product_VertexPlanner_then_real_ROS_Gazebo",
+  "raw_task_pass": false,
+  "model_plan_semantically_valid": true,
+  "raw_model_plan_equals_validated_original_plan": true,
+  "planning": {
+    "mode": "vertex-real",
+    "model": "gemini-3.1-pro-preview",
+    "location": "global",
+    "instruction": "先去 B，再去 A，最后回起点",
+    "instruction_sha256": "25936bb6e9a3a39244494d1ff75b2c8da1c6d9a08a9e3a81eb62d0172403fc90",
+    "prompt_version": "task-plan-v3",
+    "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+    "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+    "request_id": "df060d25757e47f1bfcad022bbb3f304",
+    "duration_wall_s": 9.492666780017316,
+    "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"先去 B\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去 A\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最后回起点\"\n    }\n  ],\n  \"unresolved\": []\n}",
+    "validated_plan": {
+      "decision": "accept",
+      "steps": [
+        {
+          "op": "navigate_to",
+          "place_id": "station_b",
+          "evidence": "先去 B"
+        },
+        {
+          "op": "navigate_to",
+          "place_id": "station_a",
+          "evidence": "再去 A"
+        },
+        {
+          "op": "return_to_base",
+          "place_id": null,
+          "evidence": "最后回起点"
+        }
+      ],
+      "unresolved": []
+    },
+    "finish_reason": "STOP",
+    "error": null,
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 139,
+      "candidates_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 139
+        }
+      ],
+      "prompt_token_count": 876,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 876
+        }
+      ],
+      "thoughts_token_count": 424,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1439,
+      "traffic_type": "ON_DEMAND"
+    },
+    "request_accounting": {
+      "reserved_usd": 0.82543,
+      "accounted_usd": 0.008508,
+      "usage_status": "known",
+      "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 139,
+        "candidates_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 139
+          }
+        ],
+        "prompt_token_count": 876,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 876
+          }
+        ],
+        "thoughts_token_count": 424,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1439,
+        "traffic_type": "ON_DEMAND"
+      }
+    },
+    "sdk_http_attempts": 1,
+    "generation_config": {
+      "temperature": 0,
+      "max_output_tokens": 2048,
+      "thinking_config": {
+        "thinking_level": "LOW"
+      },
+      "http_timeout_seconds": 30.0,
+      "automatic_function_calling": false
+    }
+  },
+  "action_uuid": "6736d495125449ae8e41d1c7770f2202",
+  "action_requests_sent": 1,
+  "nav2_goals": {
+    "ed979a979adb4ff2804c353566fb2c54": 5
+  },
+  "nav2_events": [
+    {
+      "event": "nav2_status",
+      "wall_seconds": 3813235.742036168,
+      "sim_seconds": 45.5,
+      "scan_wall_age": 0.23341568186879158,
+      "scan_sim_age": 0.20000000000000284,
+      "nav2_goal_uuid": "ed979a979adb4ff2804c353566fb2c54",
+      "status": 2
+    },
+    {
+      "event": "nav2_status",
+      "wall_seconds": 3813265.194889078,
+      "sim_seconds": 57.1,
+      "scan_wall_age": 0.265727736055851,
+      "scan_sim_age": 0.20000000000000284,
+      "nav2_goal_uuid": "ed979a979adb4ff2804c353566fb2c54",
+      "status": 3
+    },
+    {
+      "event": "nav2_status",
+      "wall_seconds": 3813265.240910688,
+      "sim_seconds": 57.1,
+      "scan_wall_age": 0.31174934608861804,
+      "scan_sim_age": 0.20000000000000284,
+      "nav2_goal_uuid": "ed979a979adb4ff2804c353566fb2c54",
+      "status": 5
+    }
+  ],
+  "safety_and_terminal_events": [
+    {
+      "event": "safety_state",
+      "wall_seconds": 3813224.169619201,
+      "sim_seconds": null,
+      "scan_wall_age": null,
+      "scan_sim_age": null,
+      "locked": true,
+      "generation": 1,
+      "reason": "startup_locked",
+      "motion_permitted": false
+    },
+    {
+      "event": "safety_state",
+      "wall_seconds": 3813226.191414644,
+      "sim_seconds": 41.3,
+      "scan_wall_age": 0.22673929808661342,
+      "scan_sim_age": 0.19999999999999574,
+      "locked": false,
+      "generation": 2,
+      "reason": "ready",
+      "motion_permitted": false
+    },
+    {
+      "event": "safety_state",
+      "wall_seconds": 3813265.18841352,
+      "sim_seconds": 57.1,
+      "scan_wall_age": 0.25925217801705003,
+      "scan_sim_age": 0.20000000000000284,
+      "locked": true,
+      "generation": 3,
+      "reason": "velocity_stale",
+      "motion_permitted": false
+    },
+    {
+      "event": "instruction_terminal",
+      "wall_seconds": 3813265.252390432,
+      "sim_seconds": 57.104,
+      "scan_wall_age": 0.007292683236300945,
+      "scan_sim_age": 0.1039999999999992,
+      "action_status": 6,
+      "result": {
+        "outcome": "stopped",
+        "message": "task invalidated: velocity_stale",
+        "planner_mode": "vertex",
+        "steps": [],
+        "return_requested": true,
+        "return_recommended": false
+      }
+    },
+    {
+      "event": "safety_state",
+      "wall_seconds": 3813267.262685737,
+      "sim_seconds": 57.916,
+      "scan_wall_age": 0.014861826319247484,
+      "scan_sim_age": 0.11599999999999966,
+      "locked": true,
+      "generation": 4,
+      "reason": "manual_stop",
+      "motion_permitted": false
+    },
+    {
+      "event": "cleanup_stop_response",
+      "wall_seconds": 3813267.268710938,
+      "sim_seconds": 57.924,
+      "scan_wall_age": 0.02088702702894807,
+      "scan_sim_age": 0.12400000000000233,
+      "success": true,
+      "reason": "locked; navigation cancellation requested; pending task invalidated"
+    }
+  ],
+  "task_wall_seconds": 39.06069976976141,
+  "task_observed_sim_seconds": 15.804000000000002,
+  "final_map_pose": [
+    -2.25438885684275,
+    -0.7932225632263115,
+    0.9938146460449989
+  ],
+  "arrival_count": 0,
+  "post_terminal_continuous_standstill": false,
+  "api_attempt_delta": 1,
+  "historical_request_rows_unchanged": true,
+  "audit_usage_equals_actual_ledger_usage": true,
+  "cumulative_usage": {
+    "attempts": 58,
+    "accounted_usd": 0.365644,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.199281,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  },
+  "assessment": "online model produced and passed exact ordered plan; actual motion failed on first target due velocity_stale protective lock; no arrival, A/base not executed; do not upgrade model to repair ROS timing",
+  "collision_statistics": "not measured",
+  "full_raw_local_file": "logs/online-p2-20261011T081259Z.json",
+  "task_feedback": [
+    {
+      "event": "task_feedback",
+      "wall_seconds": 3813226.197430377,
+      "sim_seconds": 41.3,
+      "scan_wall_age": 0.23275503097102046,
+      "scan_sim_age": 0.19999999999999574,
+      "stage": "planning",
+      "place_id": "",
+      "message": "planner=vertex"
+    },
+    {
+      "event": "task_feedback",
+      "wall_seconds": 3813235.740100886,
+      "sim_seconds": 45.5,
+      "scan_wall_age": 0.23148040007799864,
+      "scan_sim_age": 0.20000000000000284,
+      "stage": "navigating",
+      "place_id": "station_b",
+      "message": "attempt=1"
+    }
+  ],
+  "first_actual_motion": [
+    {
+      "event": "first_actual_motion",
+      "wall_seconds": 3813235.861270038,
+      "sim_seconds": 45.6,
+      "scan_wall_age": 0.0998292239382863,
+      "scan_sim_age": 0.20000000000000284
+    }
+  ],
+  "product_audits": [
+    {
+      "kind": "planning_started",
+      "action_uuid": "6736d495125449ae8e41d1c7770f2202",
+      "instruction_sha256": "25936bb6e9a3a39244494d1ff75b2c8da1c6d9a08a9e3a81eb62d0172403fc90",
+      "instruction": "先去 B，再去 A，最后回起点",
+      "task_generation": 2
+    },
+    {
+      "kind": "planning_completed",
+      "action_uuid": "6736d495125449ae8e41d1c7770f2202",
+      "task_generation": 2,
+      "planning": {
+        "mode": "vertex-real",
+        "model": "gemini-3.1-pro-preview",
+        "location": "global",
+        "instruction": "先去 B，再去 A，最后回起点",
+        "instruction_sha256": "25936bb6e9a3a39244494d1ff75b2c8da1c6d9a08a9e3a81eb62d0172403fc90",
+        "prompt_version": "task-plan-v3",
+        "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+        "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+        "request_id": "df060d25757e47f1bfcad022bbb3f304",
+        "duration_wall_s": 9.492666780017316,
+        "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"先去 B\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去 A\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最后回起点\"\n    }\n  ],\n  \"unresolved\": []\n}",
+        "validated_plan": {
+          "decision": "accept",
+          "steps": [
+            {
+              "op": "navigate_to",
+              "place_id": "station_b",
+              "evidence": "先去 B"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_a",
+              "evidence": "再去 A"
+            },
+            {
+              "op": "return_to_base",
+              "place_id": null,
+              "evidence": "最后回起点"
+            }
+          ],
+          "unresolved": []
+        },
+        "finish_reason": "STOP",
+        "error": null,
+        "usage_metadata": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 139,
+          "candidates_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 139
+            }
+          ],
+          "prompt_token_count": 876,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 876
+            }
+          ],
+          "thoughts_token_count": 424,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1439,
+          "traffic_type": "ON_DEMAND"
+        },
+        "request_accounting": {
+          "reserved_usd": 0.82543,
+          "accounted_usd": 0.008508,
+          "usage_status": "known",
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 139,
+            "candidates_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 139
+              }
+            ],
+            "prompt_token_count": 876,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 876
+              }
+            ],
+            "thoughts_token_count": 424,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 1439,
+            "traffic_type": "ON_DEMAND"
+          }
+        },
+        "sdk_http_attempts": 1,
+        "generation_config": {
+          "temperature": 0,
+          "max_output_tokens": 2048,
+          "thinking_config": {
+            "thinking_level": "LOW"
+          },
+          "http_timeout_seconds": 30.0,
+          "automatic_function_calling": false
+        }
+      }
+    }
+  ],
+  "diagnostic_correction": {
+    "controller_rate_clock": "Jazzy rclcpp::WallRate (wall time)",
+    "official_source": "https://api.nav2.org/nav2-jazzy/html/controller__server_8cpp_source.html",
+    "official_line": 503,
+    "withdrawn_inference": "do not derive command wall period from odometry simulation interval and RTF",
+    "root_cause": "unresolved; no per-packet command/guard-receipt timings in first run",
+    "approved_followup": "single-variable10→20wallHz experiment, same thresholds/resources/model/prompt"
+  }
+}

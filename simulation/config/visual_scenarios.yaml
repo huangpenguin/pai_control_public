@@ -1,0 +1,8 @@
+# Fixture configuration for the world generator only. Pixel classifiers must
+# never read this file or infer state from station names or model materials.
+default: red_green
+scenarios:
+  red_green: {station_a: red, station_b: green}
+  green_red: {station_a: green, station_b: red}
+  gray_green: {station_a: gray, station_b: green}
+  red_gray: {station_a: red, station_b: gray}

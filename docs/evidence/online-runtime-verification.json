@@ -1,0 +1,76 @@
+{
+  "image_sha256": "074c7c8b6c6f0994c1ed11a713e97f3e79a6e88156ad0c4982b66f93856461a8",
+  "scope": "first online P2 runtime; later controller-rate change will have a separate image",
+  "original_file_sha256": {
+    "runtime-online-final-integrity.json": "40491ead34bbb5d43447e36a6604435a249e7bc2c38aa06ed68aa02f7415a21f",
+    "online-final-compose-isolation.json": "1f21ce5d9f2e7913bc1199a88d914023cc5078a434f156e5f4dc1278335a7b4f",
+    "online-p2-running-isolation.json": "ea765e6722860765216de50abee492a128f7a3672ba7d11f2ddc0faf820b8c7e",
+    "online-p2-static-config.json": "c53d802f681d28d43706e01fbf240f598138ae95aae0b9c63ca0065280ebd082"
+  },
+  "runtime-online-final-integrity.json": {
+    "image": "sha256:074c7c8b6c6f0994c1ed11a713e97f3e79a6e88156ad0c4982b66f93856461a8",
+    "source_hash_count": 59,
+    "all_hashes_match": true,
+    "pip_check": "No broken requirements found.",
+    "model": "gemini-3.1-pro-preview",
+    "location": "global",
+    "thinking_level": "LOW",
+    "prompt_version": "task-plan-v3",
+    "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+    "sdk_version": "2.29.0",
+    "budget": {
+      "attempts": 57,
+      "accounted_usd": 0.357136,
+      "unknown_or_pending": 1,
+      "unknown_reserved_usd": 0.166363,
+      "known_estimated_usd": 0.190773,
+      "max_usd": 5.0,
+      "max_attempts": 300,
+      "warning_80_percent": false
+    },
+    "network": "none",
+    "adc_mounted": false,
+    "simulation_started": false,
+    "model_calls": 0
+  },
+  "online-final-compose-isolation.json": {
+    "model": "gemini-3.1-pro-preview",
+    "planner_mode": "vertex",
+    "location": "global",
+    "project_configured": true,
+    "adc_path_external_expected": true,
+    "adc_runtime_read_only": true,
+    "adc_mode": "0o600",
+    "cpus": 4,
+    "memory_limit": "8589934592",
+    "software_renderer": "llvmpipe",
+    "gpu_devices": [],
+    "ports": [],
+    "camera_update_rate": "5"
+  },
+  "online-p2-running-isolation.json": {
+    "image": "sha256:074c7c8b6c6f0994c1ed11a713e97f3e79a6e88156ad0c4982b66f93856461a8",
+    "running": true,
+    "adc_runtime_read_only": true,
+    "host_ports": {},
+    "device_requests": null
+  },
+  "online-p2-static-config.json": {
+    "params": {
+      "use_sim_time": true,
+      "planner_mode": "vertex",
+      "max_steps": 8
+    },
+    "safety": {
+      "locked": true,
+      "motion_permitted": false,
+      "generation": 1,
+      "reason": "startup_locked"
+    },
+    "model": "gemini-3.1-pro-preview",
+    "adc_mount_target": "/run/pai/adc.json",
+    "software_renderer": "llvmpipe",
+    "API_requests_sent": 0,
+    "Action_goals_sent": 0
+  }
+}

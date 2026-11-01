@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-11T07:04:45.736321+00:00",
+  "read_only": true,
+  "generate_content_attempts": 0,
+  "project_matches_user_supplied": true,
+  "queries": [
+    {
+      "operation": "projects.get",
+      "http_status": 200,
+      "returned_project_matches_requested": true,
+      "project_state": "ACTIVE"
+    },
+    {
+      "operation": "projects.testIamPermissions",
+      "http_status": 200,
+      "requested_permissions_granted": {
+        "serviceusage.services.use": false,
+        "aiplatform.endpoints.predict": true,
+        "resourcemanager.projects.get": true,
+        "serviceusage.services.get": false
+      }
+    },
+    {
+      "operation": "services.get aiplatform",
+      "http_status": 403,
+      "status": "PERMISSION_DENIED",
+      "reasons": [
+        "AUTH_PERMISSION_DENIED"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,549 @@
+{
+  "stage": "calibration only, excluded from formal accuracy and real AI success counts",
+  "raw_automatic_result": false,
+  "raw_failure_retained": true,
+  "raw_failure_reason": "external helper started_sim=None causes float-NoneType subtraction after successful product terminal",
+  "raw_sha256": "7842d654d407042c12a26c3264f2299307ffdb555a79e4b064db77e80cf93774",
+  "raw_path": "logs/p4-calibration.json",
+  "product_terminal": {
+    "event": "instruction_terminal",
+    "wall_seconds": 3817862.586393459,
+    "sim_seconds": 194.856,
+    "scan_wall_age": 0.058735191822052,
+    "scan_sim_age": 0.1560000000000059,
+    "action_status": 4,
+    "result": {
+      "outcome": "completed",
+      "message": "task completed",
+      "planner_mode": "stub-test-double",
+      "steps": [
+        {
+          "place_id": "station_a",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            2.800999835722027,
+            -2.0099740674648245,
+            -0.015544414485842291
+          ],
+          "nav2_status": 4
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_a",
+          "outcome": "inspected",
+          "color": "red",
+          "reason": "indicator_detected",
+          "png_path": "/opt/pai/logs/inspections/8dcdcfa14b0f44e785bf81ad085bcb8d-1-station_a.png",
+          "action_uuid": "8dcdcfa14b0f44e785bf81ad085bcb8d",
+          "task_generation": 2,
+          "capture_after_sim_seconds": 101.0,
+          "capture_after_wall_seconds": 3817620.912603932,
+          "stop_verified_wall_s": 0.520020314026624,
+          "thresholds": {
+            "algorithm": "connected-HSV-rgb-focus-v1",
+            "roi": [
+              0.03,
+              0.1,
+              0.97,
+              0.64
+            ],
+            "saturation_min": 80,
+            "value_min": 50,
+            "red_hue_ranges": [
+              [
+                0,
+                12
+              ],
+              [
+                168,
+                179
+              ]
+            ],
+            "green_hue_range": [
+              45,
+              90
+            ],
+            "minimum_component_fraction": 0.02,
+            "maximum_other_fraction": 0.005,
+            "minimum_component_fill": 0.55,
+            "minimum_focus_variance": 12.0
+          },
+          "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+          "frame_id": "camera_rgb_frame",
+          "frame_stamp_sim_seconds": 101.0,
+          "frame_receipt_wall_seconds": 3817621.083549679,
+          "encoding": "rgb8",
+          "roi_pixels": [
+            19,
+            48,
+            620,
+            307
+          ],
+          "measurements": {
+            "focus_variance": 197.80919738308268,
+            "red": {
+              "pixel_fraction": 0.17414990459915586,
+              "largest_component_fraction": 0.17414990459915586,
+              "component_fill": 0.9951541850220265,
+              "bounding_box": [
+                231,
+                160,
+                227,
+                120
+              ]
+            },
+            "green": {
+              "pixel_fraction": 0.0,
+              "largest_component_fraction": 0.0,
+              "component_fill": 0.0,
+              "bounding_box": null
+            }
+          },
+          "png_sha256": "fc55c1db901fbc00c315758ee1564440022e47b9a64f895ce83ed3efbbff6a16",
+          "frame_sim_age_at_decision_s": 0.09999999999999432,
+          "frame_wall_age_at_decision_s": 0.062443641014397144,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0,
+          "pose": [
+            2.800999835722027,
+            -2.0099740674648245,
+            -0.015544414485842291
+          ],
+          "pose_stamp_sim_seconds": 101.1,
+          "inspection_status": "anomaly"
+        },
+        {
+          "place_id": "station_b",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            2.9660026200382683,
+            1.8097852851452956,
+            1.4143365582862863
+          ],
+          "nav2_status": 4
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_b",
+          "outcome": "inspected",
+          "color": "green",
+          "reason": "indicator_detected",
+          "png_path": "/opt/pai/logs/inspections/8dcdcfa14b0f44e785bf81ad085bcb8d-3-station_b.png",
+          "action_uuid": "8dcdcfa14b0f44e785bf81ad085bcb8d",
+          "task_generation": 2,
+          "capture_after_sim_seconds": 131.588,
+          "capture_after_wall_seconds": 3817695.478098896,
+          "stop_verified_wall_s": 0.5161379189230502,
+          "thresholds": {
+            "algorithm": "connected-HSV-rgb-focus-v1",
+            "roi": [
+              0.03,
+              0.1,
+              0.97,
+              0.64
+            ],
+            "saturation_min": 80,
+            "value_min": 50,
+            "red_hue_ranges": [
+              [
+                0,
+                12
+              ],
+              [
+                168,
+                179
+              ]
+            ],
+            "green_hue_range": [
+              45,
+              90
+            ],
+            "minimum_component_fraction": 0.02,
+            "maximum_other_fraction": 0.005,
+            "minimum_component_fill": 0.55,
+            "minimum_focus_variance": 12.0
+          },
+          "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+          "frame_id": "camera_rgb_frame",
+          "frame_stamp_sim_seconds": 131.6,
+          "frame_receipt_wall_seconds": 3817695.712564828,
+          "encoding": "rgb8",
+          "roi_pixels": [
+            19,
+            48,
+            620,
+            307
+          ],
+          "measurements": {
+            "focus_variance": 258.043029844909,
+            "red": {
+              "pixel_fraction": 0.0,
+              "largest_component_fraction": 0.0,
+              "component_fill": 0.0,
+              "bounding_box": null
+            },
+            "green": {
+              "pixel_fraction": 0.16565698096480128,
+              "largest_component_fraction": 0.16565698096480128,
+              "component_fill": 0.9679429429429429,
+              "bounding_box": [
+                159,
+                160,
+                222,
+                120
+              ]
+            }
+          },
+          "png_sha256": "181ca00e11d6d61cc876d4ce0d9d4fb40ef70d433c865bb9ce0120905048d35d",
+          "frame_sim_age_at_decision_s": 0.09999999999999432,
+          "frame_wall_age_at_decision_s": 0.02542911935597658,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0,
+          "pose": [
+            2.9660026200382683,
+            1.8097852851452958,
+            1.4143365582862863
+          ],
+          "pose_stamp_sim_seconds": 131.7,
+          "inspection_status": "normal"
+        },
+        {
+          "place_id": "base",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            -2.8519423766885805,
+            -1.9425401495511267,
+            -0.23931458167673794
+          ],
+          "nav2_status": 4
+        }
+      ],
+      "return_requested": true,
+      "return_recommended": false
+    }
+  },
+  "actual_inspection_observations": [
+    {
+      "op": "inspect_indicator",
+      "place_id": "station_a",
+      "outcome": "inspected",
+      "color": "red",
+      "reason": "indicator_detected",
+      "png_path": "/opt/pai/logs/inspections/8dcdcfa14b0f44e785bf81ad085bcb8d-1-station_a.png",
+      "action_uuid": "8dcdcfa14b0f44e785bf81ad085bcb8d",
+      "task_generation": 2,
+      "capture_after_sim_seconds": 101.0,
+      "capture_after_wall_seconds": 3817620.912603932,
+      "stop_verified_wall_s": 0.520020314026624,
+      "thresholds": {
+        "algorithm": "connected-HSV-rgb-focus-v1",
+        "roi": [
+          0.03,
+          0.1,
+          0.97,
+          0.64
+        ],
+        "saturation_min": 80,
+        "value_min": 50,
+        "red_hue_ranges": [
+          [
+            0,
+            12
+          ],
+          [
+            168,
+            179
+          ]
+        ],
+        "green_hue_range": [
+          45,
+          90
+        ],
+        "minimum_component_fraction": 0.02,
+        "maximum_other_fraction": 0.005,
+        "minimum_component_fill": 0.55,
+        "minimum_focus_variance": 12.0
+      },
+      "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+      "frame_id": "camera_rgb_frame",
+      "frame_stamp_sim_seconds": 101.0,
+      "frame_receipt_wall_seconds": 3817621.083549679,
+      "encoding": "rgb8",
+      "roi_pixels": [
+        19,
+        48,
+        620,
+        307
+      ],
+      "measurements": {
+        "focus_variance": 197.80919738308268,
+        "red": {
+          "pixel_fraction": 0.17414990459915586,
+          "largest_component_fraction": 0.17414990459915586,
+          "component_fill": 0.9951541850220265,
+          "bounding_box": [
+            231,
+            160,
+            227,
+            120
+          ]
+        },
+        "green": {
+          "pixel_fraction": 0.0,
+          "largest_component_fraction": 0.0,
+          "component_fill": 0.0,
+          "bounding_box": null
+        }
+      },
+      "png_sha256": "fc55c1db901fbc00c315758ee1564440022e47b9a64f895ce83ed3efbbff6a16",
+      "frame_sim_age_at_decision_s": 0.09999999999999432,
+      "frame_wall_age_at_decision_s": 0.062443641014397144,
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "pose": [
+        2.800999835722027,
+        -2.0099740674648245,
+        -0.015544414485842291
+      ],
+      "pose_stamp_sim_seconds": 101.1,
+      "inspection_status": "anomaly",
+      "committed_calibration_png": "docs/evidence/visual-calibration-station_a.png"
+    },
+    {
+      "op": "inspect_indicator",
+      "place_id": "station_b",
+      "outcome": "inspected",
+      "color": "green",
+      "reason": "indicator_detected",
+      "png_path": "/opt/pai/logs/inspections/8dcdcfa14b0f44e785bf81ad085bcb8d-3-station_b.png",
+      "action_uuid": "8dcdcfa14b0f44e785bf81ad085bcb8d",
+      "task_generation": 2,
+      "capture_after_sim_seconds": 131.588,
+      "capture_after_wall_seconds": 3817695.478098896,
+      "stop_verified_wall_s": 0.5161379189230502,
+      "thresholds": {
+        "algorithm": "connected-HSV-rgb-focus-v1",
+        "roi": [
+          0.03,
+          0.1,
+          0.97,
+          0.64
+        ],
+        "saturation_min": 80,
+        "value_min": 50,
+        "red_hue_ranges": [
+          [
+            0,
+            12
+          ],
+          [
+            168,
+            179
+          ]
+        ],
+        "green_hue_range": [
+          45,
+          90
+        ],
+        "minimum_component_fraction": 0.02,
+        "maximum_other_fraction": 0.005,
+        "minimum_component_fill": 0.55,
+        "minimum_focus_variance": 12.0
+      },
+      "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+      "frame_id": "camera_rgb_frame",
+      "frame_stamp_sim_seconds": 131.6,
+      "frame_receipt_wall_seconds": 3817695.712564828,
+      "encoding": "rgb8",
+      "roi_pixels": [
+        19,
+        48,
+        620,
+        307
+      ],
+      "measurements": {
+        "focus_variance": 258.043029844909,
+        "red": {
+          "pixel_fraction": 0.0,
+          "largest_component_fraction": 0.0,
+          "component_fill": 0.0,
+          "bounding_box": null
+        },
+        "green": {
+          "pixel_fraction": 0.16565698096480128,
+          "largest_component_fraction": 0.16565698096480128,
+          "component_fill": 0.9679429429429429,
+          "bounding_box": [
+            159,
+            160,
+            222,
+            120
+          ]
+        }
+      },
+      "png_sha256": "181ca00e11d6d61cc876d4ce0d9d4fb40ef70d433c865bb9ce0120905048d35d",
+      "frame_sim_age_at_decision_s": 0.09999999999999432,
+      "frame_wall_age_at_decision_s": 0.02542911935597658,
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "pose": [
+        2.9660026200382683,
+        1.8097852851452958,
+        1.4143365582862863
+      ],
+      "pose_stamp_sim_seconds": 131.7,
+      "inspection_status": "normal",
+      "committed_calibration_png": "docs/evidence/visual-calibration-station_b.png"
+    }
+  ],
+  "arrival_observations": [
+    {
+      "kind": "arrival_verified",
+      "place_id": "station_a",
+      "nav2_goal_uuid": "62ba10b72a804427a4118c1cc2c56296",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5200739488936961,
+      "observation": {
+        "iterations": 58,
+        "fresh_iterations": 58,
+        "pose_within_iterations": 25,
+        "stationary_iterations": 49,
+        "max_continuous_settle_wall_s": 0.4953996818512678,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 100.78,
+          "pose": [
+            2.800999835722027,
+            -2.0099740674648245,
+            -0.015544414485842291
+          ],
+          "position_error_m": 0.19924996211907559,
+          "yaw_error_rad": 0.015544414485842293,
+          "fresh": true,
+          "odom_wall_age_s": 0.02506400179117918,
+          "odom_sim_age_s": 0.01999999999999602,
+          "tf_sim_age_s": 0.01999999999999602,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "8dcdcfa14b0f44e785bf81ad085bcb8d"
+    },
+    {
+      "kind": "arrival_verified",
+      "place_id": "station_b",
+      "nav2_goal_uuid": "622105aaaa0e4c03b26a822f92b52e3e",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5119021022692323,
+      "observation": {
+        "iterations": 37,
+        "fresh_iterations": 37,
+        "pose_within_iterations": 37,
+        "stationary_iterations": 25,
+        "max_continuous_settle_wall_s": 0.4915608330629766,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 131.384,
+          "pose": [
+            2.9660026200382683,
+            1.8097852851452956,
+            1.4143365582862863
+          ],
+          "position_error_m": 0.19322903402832314,
+          "yaw_error_rad": 0.1564597685037137,
+          "fresh": true,
+          "odom_wall_age_s": 0.0021066595800220966,
+          "odom_sim_age_s": 0.003999999999990678,
+          "tf_sim_age_s": 0.023999999999972488,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "8dcdcfa14b0f44e785bf81ad085bcb8d"
+    },
+    {
+      "kind": "arrival_verified",
+      "place_id": "base",
+      "nav2_goal_uuid": "b35d652b365b457c8a2e1586417a08a5",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5011739749461412,
+      "observation": {
+        "iterations": 31,
+        "fresh_iterations": 31,
+        "pose_within_iterations": 31,
+        "stationary_iterations": 25,
+        "max_continuous_settle_wall_s": 0.48081051791086793,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 194.84,
+          "pose": [
+            -2.8519423766885805,
+            -1.9425401495511267,
+            -0.23931458167673794
+          ],
+          "position_error_m": 0.15881654269701587,
+          "yaw_error_rad": 0.23931458167673794,
+          "fresh": true,
+          "odom_wall_age_s": 0.02120443480089307,
+          "odom_sim_age_s": 0.020000000000010232,
+          "tf_sim_age_s": 0.020000000000010232,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "8dcdcfa14b0f44e785bf81ad085bcb8d"
+    }
+  ],
+  "post_terminal_sample_count": 0,
+  "post_terminal_continuous_standstill_claimed": false,
+  "actual_calibration_pngs_independently_viewed": true,
+  "original_threshold_changes": 0,
+  "frozen_classifier_config": {
+    "algorithm": "connected-HSV-rgb-focus-v1",
+    "roi": [
+      0.03,
+      0.1,
+      0.97,
+      0.64
+    ],
+    "saturation_min": 80,
+    "value_min": 50,
+    "red_hue_ranges": [
+      [
+        0,
+        12
+      ],
+      [
+        168,
+        179
+      ]
+    ],
+    "green_hue_range": [
+      45,
+      90
+    ],
+    "minimum_component_fraction": 0.02,
+    "maximum_other_fraction": 0.005,
+    "minimum_component_fill": 0.55,
+    "minimum_focus_variance": 12.0
+  },
+  "frozen_classifier_config_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+  "formal_cases_sha256": "a82a5a19e9e7fb647075a77163bf5f42e7030299479d9bf97afe22518bbe4c92",
+  "formal_images_seen_before_freeze": 0,
+  "api_attempt_delta": 0,
+  "ledger_attempts_before_after": [
+    62,
+    62
+  ],
+  "ledger_rows_exactly_equal": true,
+  "image": "cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+  "helper_source_sha256": "1e6cf14030bc4729c87a212efae70ad6f5ab072bff9a7c0c0672e56c679f009e",
+  "observer_source_sha256": "9bfc7607cc854866bc38b48c9c2fdd352b07b4938fd43c6d99678b6f8c025103",
+  "classifier_source_sha256": "5a09e1fd27454524c1c38a4ffeac13a0b43356304b2da8f5c4ac9eadf676b697"
+}

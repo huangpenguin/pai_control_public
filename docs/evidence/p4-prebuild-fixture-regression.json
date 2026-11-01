@@ -1,0 +1,44 @@
+{
+  "stage": "P4 prebuild source regression, before final image",
+  "initial_run": {
+    "tests": 49,
+    "passed": 48,
+    "failed": 1,
+    "failed_test": "test_stop_during_image_processing_or_write_never_appends_or_returns",
+    "observed_outcome": "aborted",
+    "expected_outcome": "stopped",
+    "root_cause": "Test feedback double rejected message keyword before reaching the intended stop race branch",
+    "raw_log": "logs/control-runtime-p4-prebuild-source-tests.log",
+    "raw_sha256": "196c5a5e024431c4cc760911bc2bfcdc1c4d3d211dd04fb11c2818c768a13580"
+  },
+  "correction": {
+    "scope": "fixture only: accept keyword arguments and show response.message in failure assertion",
+    "production_change": false,
+    "stop_or_generation_assertions_relaxed": false
+  },
+  "targeted_run": {
+    "tests": 1,
+    "subscenarios": [
+      "stop during conversion",
+      "generation changes during PNG write"
+    ],
+    "passed": 1,
+    "seconds": 0.065,
+    "raw_log": "logs/control-runtime-p4-stop-fixture-fixed.log",
+    "raw_sha256": "faaf43eccec790027da815eedbbe436a986cc8bad06ad00f075b16a8e9b4a70c",
+    "required_assertions": [
+      "outcome stopped",
+      "only station_a arrived result",
+      "no station_b/base navigation",
+      "no inspection_completed audit"
+    ]
+  },
+  "final_image_regression": {
+    "image": "sha256:cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+    "tests": 49,
+    "passed": 49,
+    "skips": 0,
+    "seconds": 4.372,
+    "evidence": "docs/evidence/p4-runtime-verification.json"
+  }
+}

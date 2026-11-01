@@ -1,0 +1,4 @@
+places:
+  base: {x: -3.0, y: -2.0, yaw: 0.0}
+  station_a: {x: 3.0, y: -2.0, yaw: 0.0}
+  station_b: {x: 3.0, y: 2.0, yaw: 1.57079632679}

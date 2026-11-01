@@ -1,0 +1,310 @@
+{
+  "run_id": "online-p3-unreachable-20261011T090140Z",
+  "image_sha256": "d94fac513765a6d912b050db6bb33995352f9f9f881bc3fc5fc7850b79d41a6e",
+  "source": "online_product_VertexPlanner_then_real_ROS_Gazebo",
+  "raw_file_sha256": "f5e21f598c50c2f52aa9328c8278d1e3e473fa063a6704418fbb07c7548ac566",
+  "raw_task_pass": true,
+  "planning": {
+    "mode": "vertex-real",
+    "model": "gemini-3.1-pro-preview",
+    "location": "global",
+    "instruction": "先去设备 A，然后回基地",
+    "instruction_sha256": "e984811ee76a614ece21d6ee798d73c454dd1e66e2b917b7cf0644d794d8d423",
+    "prompt_version": "task-plan-v3",
+    "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+    "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+    "request_id": "d28c0e1367b64fe4859b61a893e46fe1",
+    "duration_wall_s": 7.965491211041808,
+    "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"先去设备 A\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"然后回基地\"\n    }\n  ],\n  \"unresolved\": []\n}",
+    "validated_plan": {
+      "decision": "accept",
+      "steps": [
+        {
+          "op": "navigate_to",
+          "place_id": "station_a",
+          "evidence": "先去设备 A"
+        },
+        {
+          "op": "return_to_base",
+          "place_id": null,
+          "evidence": "然后回基地"
+        }
+      ],
+      "unresolved": []
+    },
+    "finish_reason": "STOP",
+    "error": null,
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 103,
+      "candidates_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 103
+        }
+      ],
+      "prompt_token_count": 874,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 874
+        }
+      ],
+      "thoughts_token_count": 332,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1309,
+      "traffic_type": "ON_DEMAND"
+    },
+    "request_accounting": {
+      "reserved_usd": 0.82542,
+      "accounted_usd": 0.006968,
+      "usage_status": "known",
+      "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 103,
+        "candidates_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 103
+          }
+        ],
+        "prompt_token_count": 874,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 874
+          }
+        ],
+        "thoughts_token_count": 332,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1309,
+        "traffic_type": "ON_DEMAND"
+      }
+    },
+    "sdk_http_attempts": 1,
+    "generation_config": {
+      "temperature": 0,
+      "max_output_tokens": 2048,
+      "thinking_config": {
+        "thinking_level": "LOW"
+      },
+      "http_timeout_seconds": 30.0,
+      "automatic_function_calling": false
+    }
+  },
+  "raw_model_equals_validated_original_plan": true,
+  "action_uuid": "e76af369fcdc470c851f04ea19aa3f10",
+  "action_requests_sent": 1,
+  "new_nav2_goals": {
+    "834ad20aff6e49108d41375572e0fc62": 6,
+    "4faa3b026d1a49cf97685c34bfce3508": 6,
+    "adbb753cc91b44849362dceb888429fa": 4
+  },
+  "navigation_terminals": [
+    {
+      "kind": "navigation_terminal",
+      "place_id": "station_a",
+      "nav2_goal_uuid": "834ad20aff6e49108d41375572e0fc62",
+      "nav2_status": 6,
+      "attempt": 1,
+      "error_code": 208,
+      "action_uuid": "e76af369fcdc470c851f04ea19aa3f10"
+    },
+    {
+      "kind": "navigation_terminal",
+      "place_id": "station_a",
+      "nav2_goal_uuid": "4faa3b026d1a49cf97685c34bfce3508",
+      "nav2_status": 6,
+      "attempt": 2,
+      "error_code": 208,
+      "action_uuid": "e76af369fcdc470c851f04ea19aa3f10"
+    },
+    {
+      "kind": "navigation_terminal",
+      "place_id": "base",
+      "nav2_goal_uuid": "adbb753cc91b44849362dceb888429fa",
+      "nav2_status": 4,
+      "attempt": 1,
+      "error_code": 0,
+      "action_uuid": "e76af369fcdc470c851f04ea19aa3f10"
+    }
+  ],
+  "arrival_observations": [
+    {
+      "kind": "arrival_verified",
+      "place_id": "base",
+      "nav2_goal_uuid": "adbb753cc91b44849362dceb888429fa",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5085411323234439,
+      "observation": {
+        "iterations": 25,
+        "fresh_iterations": 25,
+        "pose_within_iterations": 25,
+        "stationary_iterations": 25,
+        "max_continuous_settle_wall_s": 0.48638530634343624,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 195.364,
+          "pose": [
+            -3.0000000000002305,
+            -2.0,
+            1.9481277265740354e-15
+          ],
+          "position_error_m": 2.304822999121825e-13,
+          "yaw_error_rad": 1.9481277265740354e-15,
+          "fresh": true,
+          "odom_wall_age_s": 0.004377041012048721,
+          "odom_sim_age_s": 0.003999999999990678,
+          "tf_sim_age_s": 0.003999999999990678,
+          "linear_velocity": 3.639594695233322e-21,
+          "angular_velocity": -9.914638700984027e-20
+        }
+      },
+      "action_uuid": "e76af369fcdc470c851f04ea19aa3f10"
+    }
+  ],
+  "task_wall_seconds": 8.750390097964555,
+  "task_observed_sim_seconds": 3.891999999999996,
+  "safety_and_terminal_events": [
+    {
+      "event": "safety_state",
+      "wall_seconds": 3816138.897801395,
+      "sim_seconds": null,
+      "scan_wall_age": null,
+      "scan_sim_age": null,
+      "locked": true,
+      "generation": 2,
+      "reason": "manual_stop",
+      "motion_permitted": false
+    },
+    {
+      "event": "safety_state",
+      "wall_seconds": 3816140.907551237,
+      "sim_seconds": 191.464,
+      "scan_wall_age": 0.0669534606859088,
+      "scan_sim_age": 0.16399999999998727,
+      "locked": false,
+      "generation": 3,
+      "reason": "ready",
+      "motion_permitted": false
+    },
+    {
+      "event": "instruction_terminal",
+      "wall_seconds": 3816149.659806144,
+      "sim_seconds": 195.364,
+      "scan_wall_age": 0.06711224792525172,
+      "scan_sim_age": 0.1640000000000157,
+      "action_status": 4,
+      "result": {
+        "outcome": "completed_with_failures",
+        "message": "known station failed; remaining steps and return to base completed",
+        "planner_mode": "vertex",
+        "steps": [
+          {
+            "place_id": "station_a",
+            "outcome": "failed",
+            "reason": "",
+            "error_code": 208,
+            "attempts": 2
+          },
+          {
+            "place_id": "base",
+            "outcome": "arrived",
+            "attempts": 1,
+            "pose": [
+              -3.0000000000002305,
+              -2.0,
+              1.9481277265740354e-15
+            ],
+            "nav2_status": 4
+          }
+        ],
+        "return_requested": true,
+        "return_recommended": false
+      }
+    },
+    {
+      "event": "safety_state",
+      "wall_seconds": 3816151.678161034,
+      "sim_seconds": 196.276,
+      "scan_wall_age": 0.08323863474652171,
+      "scan_sim_age": 0.17600000000001614,
+      "locked": true,
+      "generation": 4,
+      "reason": "manual_stop",
+      "motion_permitted": false
+    },
+    {
+      "event": "cleanup_stop_response",
+      "wall_seconds": 3816151.683444331,
+      "sim_seconds": 196.292,
+      "scan_wall_age": 0.08852193178609014,
+      "scan_sim_age": 0.19200000000000728,
+      "success": true,
+      "reason": "locked; navigation cancellation requested; pending task invalidated"
+    }
+  ],
+  "post_terminal_continuous_standstill": true,
+  "isolated_test_profile": {
+    "profile": "isolated-known-unreachable-real-online-Vertex",
+    "product_stations": "/opt/pai/simulation/config/stations.yaml",
+    "product_stations_sha256": "8cb1b688e4305618eeeb040c9f999a59777b06cbd7c7c59cfa332b5cee65446e",
+    "executor_stations_file": "/opt/pai/logs/online-p3-unreachable-harness/stations.yaml",
+    "isolated_stations_sha256": "6f255fef9156e9a2cf5fa97a4c270a923df69e14f2a742105e068c1b9221f7c3",
+    "station_a_before": {
+      "x": 3.0,
+      "y": -2.0,
+      "yaw": 0.0
+    },
+    "station_a_after": {
+      "x": 0.0,
+      "y": 0.0,
+      "yaw": 0.0
+    },
+    "other_places_unchanged": true,
+    "product_stations_unchanged": true,
+    "occupancy_evidence": "actual unchanged central box occupies x,y [-0.7,0.7]",
+    "old_executor_exited": true,
+    "guard_locked_before_replacement": true,
+    "planner_source": "unchanged product VertexPlanner",
+    "API_requests_sent": 0,
+    "Action_goals_sent": 0
+  },
+  "isolated_test_profile_sha256": "1d6b8835d7a3a932333df11b07166eddfd6ba3f1db8ecaac2fa91ffb3a847e87",
+  "actual_executor_parameters": {
+    "stations_file": "/opt/pai/logs/online-p3-unreachable-harness/stations.yaml",
+    "use_sim_time": true,
+    "planner_mode": "vertex",
+    "max_steps": 8
+  },
+  "actual_executor_config_raw_sha256": "9eb6493201b8385ca3e2cea14bd8c3336c39b408a61d0666d3a72adbbe6c99ac",
+  "product_station_file_unchanged": true,
+  "api_attempt_delta": 1,
+  "historical61_request_rows_unchanged": true,
+  "audit_usage_equals_actual_ledger_usage": true,
+  "cumulative_usage": {
+    "attempts": 62,
+    "accounted_usd": 0.392938,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.226575,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  },
+  "script_sha256": "78e7d1083fc175f76b9d3afa56d1f438b5b71b19f4f2d996e69abda6d72832e3",
+  "collection_script_sha256": "5a2099cc1162ad8b71546f9f1485de1a68607841dac30e48ac55f3ba545ea506",
+  "path_sampling_policy": {
+    "global": "first observed frame per source/navigation attempt; then geometry changes at most once per wall second; header stamp excluded from geometry hash",
+    "local": "at most once per wall second",
+    "safe_commands": "observed depth=1 receiver stream; completeness is not guaranteed"
+  },
+  "full_raw_local_file": "logs/online-p3-unreachable-20261011T090140Z.json",
+  "collision_statistics": "not measured",
+  "assessment": "expected known-unreachable behavior passed: two actual A planning failures/error208 and original remaining base step completed; no station A arrival claimed; test-only coordinate override, production stations unchanged"
+}

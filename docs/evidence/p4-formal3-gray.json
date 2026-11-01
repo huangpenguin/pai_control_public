@@ -1,0 +1,478 @@
+{
+  "run_id": "p4-formal3-gray",
+  "formal_case": {
+    "id": "formal_gray_green",
+    "scenario": "gray_green",
+    "instruction": "去设备 A 检查指示灯，然后回起点",
+    "expected_inspections": [
+      [
+        "station_a",
+        "unknown"
+      ]
+    ]
+  },
+  "formal_cases_sha256": "a82a5a19e9e7fb647075a77163bf5f42e7030299479d9bf97afe22518bbe4c92",
+  "raw_task_sha256": "86b166eb3e62efa53ed224707c4b077ba549c66e00c05d7ea29e0338181f3910",
+  "raw_task_path": "logs/p4-formal3-gray.json",
+  "raw_task_pass": true,
+  "independent_plan_execution_png_config_usage_coverage_checks": true,
+  "raw_model_plan_not_replaced": true,
+  "real_online_inference": true,
+  "image": "cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+  "actual_external_observer_sha256": "da0cbcb4f4c74b8ee6f57fd32eab2b41a225250198085e72ec7b2b03d04a827b",
+  "external_clock_sources": {
+    "live_online_acceptance.py": "da0cbcb4f4c74b8ee6f57fd32eab2b41a225250198085e72ec7b2b03d04a827b",
+    "observation_clock.py": "fd92080c5646317c476a264d042235791e33f75b0e0484eea3425da8c980a9ab",
+    "test_observation_clock.py": "fd5a0b51d20fa52cd014137a7c25f27da049067fd7e666ece66957fe71cc21f8"
+  },
+  "observer_sources_baked_into_image_49": false,
+  "planning": {
+    "mode": "vertex-real",
+    "model": "gemini-3.1-pro-preview",
+    "location": "global",
+    "instruction": "去设备 A 检查指示灯，然后回起点",
+    "instruction_sha256": "789434dfb919a3c7d4e3b5d6b9663886ebc03f81a75493c220ba4d8d0e9e3588",
+    "prompt_version": "task-plan-v3",
+    "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+    "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+    "request_id": "dd4e069ac9fc4dd7a2bfc3590dd8d27b",
+    "duration_wall_s": 8.611981762107462,
+    "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"去设备 A 检查指示灯\"\n    },\n    {\n      \"op\": \"inspect_indicator\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"去设备 A 检查指示灯\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"然后回起点\"\n    }\n  ],\n  \"unresolved\": []\n}",
+    "validated_plan": {
+      "decision": "accept",
+      "steps": [
+        {
+          "op": "navigate_to",
+          "place_id": "station_a",
+          "evidence": "去设备 A 检查指示灯"
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_a",
+          "evidence": "去设备 A 检查指示灯"
+        },
+        {
+          "op": "return_to_base",
+          "place_id": null,
+          "evidence": "然后回起点"
+        }
+      ],
+      "unresolved": []
+    },
+    "finish_reason": "STOP",
+    "error": null,
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 148,
+      "candidates_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 148
+        }
+      ],
+      "prompt_token_count": 877,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 877
+        }
+      ],
+      "thoughts_token_count": 291,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1316,
+      "traffic_type": "ON_DEMAND"
+    },
+    "request_accounting": {
+      "reserved_usd": 0.825446,
+      "accounted_usd": 0.007022,
+      "usage_status": "known",
+      "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 148,
+        "candidates_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 148
+          }
+        ],
+        "prompt_token_count": 877,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 877
+          }
+        ],
+        "thoughts_token_count": 291,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1316,
+        "traffic_type": "ON_DEMAND"
+      }
+    },
+    "sdk_http_attempts": 1,
+    "generation_config": {
+      "temperature": 0,
+      "max_output_tokens": 2048,
+      "thinking_config": {
+        "thinking_level": "LOW"
+      },
+      "http_timeout_seconds": 30.0,
+      "automatic_function_calling": false
+    }
+  },
+  "action_uuid": "48719b30036c459bbc677580605dfe82",
+  "action_requests_sent": 1,
+  "instruction_terminal": {
+    "event": "instruction_terminal",
+    "wall_seconds": 3819616.412214868,
+    "sim_seconds": 136.548,
+    "scan_wall_age": 0.05070909671485424,
+    "scan_sim_age": 0.14799999999999613,
+    "action_status": 4,
+    "result": {
+      "outcome": "completed",
+      "message": "task completed",
+      "planner_mode": "vertex",
+      "steps": [
+        {
+          "place_id": "station_a",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            2.8025364967295414,
+            -1.9963948958231799,
+            -0.022587397986541247
+          ],
+          "nav2_status": 4
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_a",
+          "outcome": "inspected",
+          "color": "unknown",
+          "reason": "no_clear_indicator",
+          "png_path": "/opt/pai/logs/inspections/48719b30036c459bbc677580605dfe82-1-station_a.png",
+          "action_uuid": "48719b30036c459bbc677580605dfe82",
+          "task_generation": 2,
+          "capture_after_sim_seconds": 83.4,
+          "capture_after_wall_seconds": 3819486.021565151,
+          "stop_verified_wall_s": 0.5161881800740957,
+          "thresholds": {
+            "algorithm": "connected-HSV-rgb-focus-v1",
+            "roi": [
+              0.03,
+              0.1,
+              0.97,
+              0.64
+            ],
+            "saturation_min": 80,
+            "value_min": 50,
+            "red_hue_ranges": [
+              [
+                0,
+                12
+              ],
+              [
+                168,
+                179
+              ]
+            ],
+            "green_hue_range": [
+              45,
+              90
+            ],
+            "minimum_component_fraction": 0.02,
+            "maximum_other_fraction": 0.005,
+            "minimum_component_fill": 0.55,
+            "minimum_focus_variance": 12.0
+          },
+          "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+          "frame_id": "camera_rgb_frame",
+          "frame_stamp_sim_seconds": 83.6,
+          "frame_receipt_wall_seconds": 3819486.657877462,
+          "encoding": "rgb8",
+          "roi_pixels": [
+            19,
+            48,
+            620,
+            307
+          ],
+          "measurements": {
+            "focus_variance": 123.4191461375796,
+            "red": {
+              "pixel_fraction": 0.0,
+              "largest_component_fraction": 0.0,
+              "component_fill": 0.0,
+              "bounding_box": null
+            },
+            "green": {
+              "pixel_fraction": 0.0,
+              "largest_component_fraction": 0.0,
+              "component_fill": 0.0,
+              "bounding_box": null
+            }
+          },
+          "png_sha256": "b4fbe7bb26532dba428eceae6d163f5a38c49f82d6728caaa3ba206d40280b49",
+          "frame_sim_age_at_decision_s": 0.10000000000000853,
+          "frame_wall_age_at_decision_s": 0.04782493505626917,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0,
+          "pose": [
+            2.8025364967295414,
+            -1.9963948958231799,
+            -0.022587397986541247
+          ],
+          "pose_stamp_sim_seconds": 83.7,
+          "inspection_status": "unconfirmed"
+        },
+        {
+          "place_id": "base",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            -2.8122398583591766,
+            -1.9731143586885505,
+            -0.24606413689704806
+          ],
+          "nav2_status": 4
+        }
+      ],
+      "return_requested": true,
+      "return_recommended": false
+    }
+  },
+  "new_nav2_goals": {
+    "8186706135a94b3a963087e868b38633": 4,
+    "cce5563b21684bbfbd65ced0887cb3bf": 4
+  },
+  "arrival_observations": [
+    {
+      "kind": "arrival_verified",
+      "place_id": "station_a",
+      "nav2_goal_uuid": "8186706135a94b3a963087e868b38633",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5001304829493165,
+      "observation": {
+        "iterations": 34,
+        "fresh_iterations": 34,
+        "pose_within_iterations": 34,
+        "stationary_iterations": 25,
+        "max_continuous_settle_wall_s": 0.4772494868375361,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 83.2,
+          "pose": [
+            2.8025364967295414,
+            -1.9963948958231799,
+            -0.022587397986541247
+          ],
+          "position_error_m": 0.19749640984070604,
+          "yaw_error_rad": 0.022587397986541247,
+          "fresh": true,
+          "odom_wall_age_s": 0.019434585236012936,
+          "odom_sim_age_s": 0.01999999999999602,
+          "tf_sim_age_s": 0.01999999999999602,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "48719b30036c459bbc677580605dfe82"
+    },
+    {
+      "kind": "arrival_verified",
+      "place_id": "base",
+      "nav2_goal_uuid": "cce5563b21684bbfbd65ced0887cb3bf",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5107246208935976,
+      "observation": {
+        "iterations": 36,
+        "fresh_iterations": 36,
+        "pose_within_iterations": 36,
+        "stationary_iterations": 24,
+        "max_continuous_settle_wall_s": 0.48839029809460044,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 136.54,
+          "pose": [
+            -2.8122398583591766,
+            -1.9731143586885505,
+            -0.24606413689704806
+          ],
+          "position_error_m": 0.18967527118132718,
+          "yaw_error_rad": 0.24606413689704806,
+          "fresh": true,
+          "odom_wall_age_s": 0.0004964489489793777,
+          "odom_sim_age_s": 0.0,
+          "tf_sim_age_s": 0.0,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "48719b30036c459bbc677580605dfe82"
+    }
+  ],
+  "inspection_observations": [
+    {
+      "op": "inspect_indicator",
+      "place_id": "station_a",
+      "outcome": "inspected",
+      "color": "unknown",
+      "reason": "no_clear_indicator",
+      "png_path": "/opt/pai/logs/inspections/48719b30036c459bbc677580605dfe82-1-station_a.png",
+      "action_uuid": "48719b30036c459bbc677580605dfe82",
+      "task_generation": 2,
+      "capture_after_sim_seconds": 83.4,
+      "capture_after_wall_seconds": 3819486.021565151,
+      "stop_verified_wall_s": 0.5161881800740957,
+      "thresholds": {
+        "algorithm": "connected-HSV-rgb-focus-v1",
+        "roi": [
+          0.03,
+          0.1,
+          0.97,
+          0.64
+        ],
+        "saturation_min": 80,
+        "value_min": 50,
+        "red_hue_ranges": [
+          [
+            0,
+            12
+          ],
+          [
+            168,
+            179
+          ]
+        ],
+        "green_hue_range": [
+          45,
+          90
+        ],
+        "minimum_component_fraction": 0.02,
+        "maximum_other_fraction": 0.005,
+        "minimum_component_fill": 0.55,
+        "minimum_focus_variance": 12.0
+      },
+      "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+      "frame_id": "camera_rgb_frame",
+      "frame_stamp_sim_seconds": 83.6,
+      "frame_receipt_wall_seconds": 3819486.657877462,
+      "encoding": "rgb8",
+      "roi_pixels": [
+        19,
+        48,
+        620,
+        307
+      ],
+      "measurements": {
+        "focus_variance": 123.4191461375796,
+        "red": {
+          "pixel_fraction": 0.0,
+          "largest_component_fraction": 0.0,
+          "component_fill": 0.0,
+          "bounding_box": null
+        },
+        "green": {
+          "pixel_fraction": 0.0,
+          "largest_component_fraction": 0.0,
+          "component_fill": 0.0,
+          "bounding_box": null
+        }
+      },
+      "png_sha256": "b4fbe7bb26532dba428eceae6d163f5a38c49f82d6728caaa3ba206d40280b49",
+      "frame_sim_age_at_decision_s": 0.10000000000000853,
+      "frame_wall_age_at_decision_s": 0.04782493505626917,
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "pose": [
+        2.8025364967295414,
+        -1.9963948958231799,
+        -0.022587397986541247
+      ],
+      "pose_stamp_sim_seconds": 83.7,
+      "inspection_status": "unconfirmed",
+      "committed_formal_png": "docs/evidence/p4-formal3-gray-station_a.png"
+    }
+  ],
+  "independent_actual_png_views": true,
+  "task_wall_seconds": 240.97928955918178,
+  "task_observed_sim_seconds": 99.44800000000001,
+  "post_terminal_sample_count": 7,
+  "post_terminal_sample_span_wall_s": 1.5652279830537736,
+  "post_terminal_continuous_standstill": true,
+  "api_attempt_delta": 1,
+  "ledger_attempts_before_after": [
+    64,
+    65
+  ],
+  "all_prior_ledger_rows_preserved": true,
+  "application_request_id": "dd4e069ac9fc4dd7a2bfc3590dd8d27b",
+  "real_usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 148,
+    "candidates_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 148
+      }
+    ],
+    "prompt_token_count": 877,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 877
+      }
+    ],
+    "thoughts_token_count": 291,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 1316,
+    "traffic_type": "ON_DEMAND"
+  },
+  "token_price_estimate_usd": 0.007022,
+  "companion_recording": {
+    "action_window_wall_s": [
+      3819375.432944754,
+      3819616.412214868
+    ],
+    "actual_frame_count": 209,
+    "actual_frame_window_wall_s": [
+      3819312.266171638,
+      3819682.569105914
+    ],
+    "camera_covers_action": true,
+    "contact_clock_window_wall_s": [
+      3819313.072754415,
+      3819683.557749224
+    ],
+    "contact_covers_action": true,
+    "contact_topic_health": true,
+    "contact_clock_health": true,
+    "observed_contact_episodes": 0,
+    "maximum_clock_gap_wall_s": 0.33281428273767233,
+    "same_positive_probe_and_current_recorder_bridge_sha": true,
+    "lossless_or_universal_collision_free_claim": false,
+    "contact_raw_sha256": "2a858cf84c27e3c9295b565ae0970ac2231e75c9f3ec755b0d52e8b67393fb7b",
+    "capture_raw_sha256": "524a8103671cdc3f9f243b4e995be8767eaa9e624824f5ce6cd0aeca783e90e3",
+    "recorder_script_sha256": "d26ae58a30857ced3dbd0e5d5695e29dc68498629b8a3a0e21f59280bc563876",
+    "bridge_config_sha256": "7a3e30d0361895467263eaaa20284f2e086d84b623d90c50a9a21449c47920a1"
+  },
+  "cleanup_stop_events": [
+    {
+      "event": "cleanup_stop_response",
+      "wall_seconds": 3819618.457386241,
+      "sim_seconds": 137.3,
+      "scan_wall_age": 0.3162468606606126,
+      "scan_sim_age": 0.20000000000001705,
+      "success": true,
+      "reason": "locked; navigation cancellation requested; pending task invalidated"
+    }
+  ],
+  "retained_failures": "earlier semantic, P2, contact probe, prebuild fixture and calibration raw failures remain in separate evidence"
+}

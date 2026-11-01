@@ -1,0 +1,12 @@
+.venv/
+.local/
+state/
+logs/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.env
+submission/
+human_review/
+upload/

@@ -1,0 +1,3 @@
+ADC read-only local probe; no generate_content call
+DefaultCredentialsError
+Real model attempts made by this probe: 0

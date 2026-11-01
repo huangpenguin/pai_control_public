@@ -1,0 +1,16 @@
+{
+  "purpose": "Persist exact actual external formal observer; no production changes, no new API or Action",
+  "files": {
+    "live_online_acceptance.py": "da0cbcb4f4c74b8ee6f57fd32eab2b41a225250198085e72ec7b2b03d04a827b",
+    "live_acceptance.py": "5a2099cc1162ad8b71546f9f1485de1a68607841dac30e48ac55f3ba545ea506",
+    "observation_clock.py": "fd92080c5646317c476a264d042235791e33f75b0e0484eea3425da8c980a9ab",
+    "test_observation_clock.py": "fd5a0b51d20fa52cd014137a7c25f27da049067fd7e666ece66957fe71cc21f8"
+  },
+  "production_executor_sha256": "5d7d69db9aeec3575a026bf9124310bda2d8cfa24629d44947b88e410a23628b",
+  "image_baked_tests": 49,
+  "external_observer_timing_tests": 3,
+  "new_sources_baked_in_current_image": false,
+  "actual_runtime_image": "cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+  "regression_log": "logs/p4-observation-clock-persisted-regression.log",
+  "independent_persisted_files_sha_match": true
+}

@@ -1,0 +1,9 @@
+{
+  "credential_file_exists": true,
+  "adc_loaded": true,
+  "refresh_success": true,
+  "generate_content_attempts": 0,
+  "quota_project_present": false,
+  "credential_valid": true,
+  "token_present": true
+}

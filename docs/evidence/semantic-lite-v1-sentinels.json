@@ -1,0 +1,397 @@
+{
+  "mode": "vertex-real",
+  "created_utc": "2026-10-11T07:55:55.845522+00:00",
+  "cases": [
+    {
+      "id": "critical-1",
+      "group": "critical",
+      "instruction": "去A站，然后去未知地点",
+      "decision": "reject",
+      "steps": [],
+      "hard_gate": true,
+      "actual": {
+        "decision": "reject",
+        "steps": [],
+        "unresolved": [
+          "未知地点"
+        ]
+      },
+      "raw_response": "{\n  \"decision\": \"reject\",\n  \"steps\": [],\n  \"unresolved\": [\n    \"未知地点\"\n  ]\n}",
+      "passed": true,
+      "classification": "passed",
+      "audit": {
+        "mode": "vertex-real",
+        "model": "gemini-3.1-flash-lite",
+        "location": "global",
+        "instruction": "去A站，然后去未知地点",
+        "instruction_sha256": "3c134e1d914e64cdab2fa677aca6c0150ffd1c4994437af927e62c3f1ed18370",
+        "prompt_version": "task-plan-v1",
+        "prompt_sha256": "735ab5d8f13cb660f8868432d2690c017d9a325debde8caaab1ac719c0a50e74",
+        "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+        "request_id": "9f734306748c4bada10d926bc500aac6",
+        "duration_wall_s": 2.7328598238527775,
+        "raw_response": "{\n  \"decision\": \"reject\",\n  \"steps\": [],\n  \"unresolved\": [\n    \"未知地点\"\n  ]\n}",
+        "validated_plan": {
+          "decision": "reject",
+          "steps": [],
+          "unresolved": [
+            "未知地点"
+          ]
+        },
+        "finish_reason": "STOP",
+        "error": null,
+        "usage_metadata": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 33,
+          "candidates_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 33
+            }
+          ],
+          "prompt_token_count": 694,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 694
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 727,
+          "traffic_type": "ON_DEMAND"
+        },
+        "request_accounting": {
+          "reserved_usd": 0.10295,
+          "accounted_usd": 0.000223,
+          "usage_status": "known",
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 33,
+            "candidates_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 33
+              }
+            ],
+            "prompt_token_count": 694,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 694
+              }
+            ],
+            "thoughts_token_count": null,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 727,
+            "traffic_type": "ON_DEMAND"
+          }
+        },
+        "sdk_http_attempts": 1,
+        "generation_config": {
+          "temperature": 0,
+          "max_output_tokens": 2048,
+          "thinking_config": {
+            "thinking_level": "MINIMAL"
+          },
+          "http_timeout_seconds": 30.0,
+          "automatic_function_calling": false
+        }
+      },
+      "request_id": "9f734306748c4bada10d926bc500aac6",
+      "raw_plan_matches_golden_steps": true
+    },
+    {
+      "id": "critical-2",
+      "group": "critical",
+      "instruction": "まず設備Bへ行き、次に設備Aへ行って、最後に出発地点へ戻ってください。",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "hard_gate": true,
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "設備Bへ行き"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "次に設備Aへ行って"
+          },
+          {
+            "op": "return_to_base",
+            "place_id": null,
+            "evidence": "最後に出発地点へ戻ってください"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"設備Bへ行き\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"次に設備Aへ行って\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最後に出発地点へ戻ってください\"\n    }\n  ],\n  \"unresolved\": []\n}",
+      "passed": true,
+      "classification": "passed",
+      "audit": {
+        "mode": "vertex-real",
+        "model": "gemini-3.1-flash-lite",
+        "location": "global",
+        "instruction": "まず設備Bへ行き、次に設備Aへ行って、最後に出発地点へ戻ってください。",
+        "instruction_sha256": "2bcd9d3501ef12da428ea3b08f28b60df566201d12f5c8a1fefe38aac43e5ceb",
+        "prompt_version": "task-plan-v1",
+        "prompt_sha256": "735ab5d8f13cb660f8868432d2690c017d9a325debde8caaab1ac719c0a50e74",
+        "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+        "request_id": "05788fea8a1145f09c68be2b33ba8cca",
+        "duration_wall_s": 1.7784780790098011,
+        "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"設備Bへ行き\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"次に設備Aへ行って\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最後に出発地点へ戻ってください\"\n    }\n  ],\n  \"unresolved\": []\n}",
+        "validated_plan": {
+          "decision": "accept",
+          "steps": [
+            {
+              "op": "navigate_to",
+              "place_id": "station_b",
+              "evidence": "設備Bへ行き"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_a",
+              "evidence": "次に設備Aへ行って"
+            },
+            {
+              "op": "return_to_base",
+              "place_id": null,
+              "evidence": "最後に出発地点へ戻ってください"
+            }
+          ],
+          "unresolved": []
+        },
+        "finish_reason": "STOP",
+        "error": null,
+        "usage_metadata": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 147,
+          "candidates_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 147
+            }
+          ],
+          "prompt_token_count": 706,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 706
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 853,
+          "traffic_type": "ON_DEMAND"
+        },
+        "request_accounting": {
+          "reserved_usd": 0.102968,
+          "accounted_usd": 0.000397,
+          "usage_status": "known",
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 147,
+            "candidates_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 147
+              }
+            ],
+            "prompt_token_count": 706,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 706
+              }
+            ],
+            "thoughts_token_count": null,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 853,
+            "traffic_type": "ON_DEMAND"
+          }
+        },
+        "sdk_http_attempts": 1,
+        "generation_config": {
+          "temperature": 0,
+          "max_output_tokens": 2048,
+          "thinking_config": {
+            "thinking_level": "MINIMAL"
+          },
+          "http_timeout_seconds": 30.0,
+          "automatic_function_calling": false
+        }
+      },
+      "request_id": "05788fea8a1145f09c68be2b33ba8cca",
+      "raw_plan_matches_golden_steps": true
+    },
+    {
+      "id": "critical-3",
+      "group": "critical",
+      "instruction": "先去设备 A 检查指示灯，再去设备 B，最后回起点。红灯记为异常，绿灯记为正常，看不清就记为未确认。",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "inspect_indicator",
+          "station_a"
+        ],
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "inspect_indicator",
+          "station_b"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "hard_gate": true,
+      "passed": false,
+      "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"先去设备 A\"\n    },\n    {\n      \"op\": \"inspect_indicator\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"检查指示灯\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去设备 B\"\n    },\n    {\n      \"op\": \"inspect_indicator\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去设备 B\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最后回起点\"\n    }\n  ],\n  \"unresolved\": []\n}",
+      "error": "PlanValidationError",
+      "message": "place/action evidence must quote the instruction",
+      "audit": {
+        "mode": "vertex-real",
+        "model": "gemini-3.1-flash-lite",
+        "location": "global",
+        "instruction": "先去设备 A 检查指示灯，再去设备 B，最后回起点。红灯记为异常，绿灯记为正常，看不清就记为未确认。",
+        "instruction_sha256": "aa010c76342d7f35800ffc8a5a5f91cb211888df134c67b4c14bde60f36cf194",
+        "prompt_version": "task-plan-v1",
+        "prompt_sha256": "735ab5d8f13cb660f8868432d2690c017d9a325debde8caaab1ac719c0a50e74",
+        "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+        "request_id": "2b60cecbcd5d402ea8b668d620ff22a6",
+        "duration_wall_s": 1.895968222990632,
+        "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"先去设备 A\"\n    },\n    {\n      \"op\": \"inspect_indicator\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"检查指示灯\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去设备 B\"\n    },\n    {\n      \"op\": \"inspect_indicator\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去设备 B\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最后回起点\"\n    }\n  ],\n  \"unresolved\": []\n}",
+        "validated_plan": null,
+        "finish_reason": "STOP",
+        "error": {
+          "category": "plan_validation",
+          "type": "PlanValidationError"
+        },
+        "usage_metadata": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 217,
+          "candidates_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 217
+            }
+          ],
+          "prompt_token_count": 723,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 723
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 940,
+          "traffic_type": "ON_DEMAND"
+        },
+        "request_accounting": {
+          "reserved_usd": 0.102977,
+          "accounted_usd": 0.000507,
+          "usage_status": "known",
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 217,
+            "candidates_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 217
+              }
+            ],
+            "prompt_token_count": 723,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 723
+              }
+            ],
+            "thoughts_token_count": null,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 940,
+            "traffic_type": "ON_DEMAND"
+          }
+        },
+        "sdk_http_attempts": 1,
+        "generation_config": {
+          "temperature": 0,
+          "max_output_tokens": 2048,
+          "thinking_config": {
+            "thinking_level": "MINIMAL"
+          },
+          "http_timeout_seconds": 30.0,
+          "automatic_function_calling": false
+        }
+      },
+      "request_id": "2b60cecbcd5d402ea8b668d620ff22a6",
+      "classification": "validation_rejection_with_correct_golden_steps",
+      "raw_plan_matches_golden_steps": true
+    }
+  ],
+  "case_file_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+  "suite_total": 24,
+  "offset": 0,
+  "requested_case_ids": [
+    "critical-1",
+    "critical-2",
+    "critical-3",
+    "critical-4"
+  ],
+  "stopped_early": true,
+  "passed": 2,
+  "total": 4,
+  "executed_cases": 3,
+  "skipped_case_ids": [
+    "critical-4"
+  ],
+  "hard_gate_passed": false,
+  "attempts_this_run": 3,
+  "cumulative_usage": {
+    "attempts": 5,
+    "accounted_usd": 0.167731,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.001368,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  }
+}

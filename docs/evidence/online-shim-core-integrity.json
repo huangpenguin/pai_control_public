@@ -1,0 +1,95 @@
+{
+  "image_sha256": "d94fac513765a6d912b050db6bb33995352f9f9f881bc3fc5fc7850b79d41a6e",
+  "network": "none",
+  "credentials_mounted": false,
+  "host_state_mounted": false,
+  "core_tests_repeated": false,
+  "core_runtime_unchanged_from_previous_online_images": true,
+  "both_interpreter_sdk_core_prompt_hash_checks_passed": true,
+  "interpreters": [
+    {
+      "core_import": "/opt/pai/core/pai_inspection_core/__init__.py",
+      "default_model": "gemini-3.1-pro-preview",
+      "prices": {
+        "gemini-2.5-flash": [
+          "0.30",
+          "2.50"
+        ],
+        "gemini-3.1-flash-lite": [
+          "0.25",
+          "1.50"
+        ],
+        "gemini-3.1-pro-preview": [
+          "2.00",
+          "12.00"
+        ],
+        "gemini-3.8-flash": [
+          "1.50",
+          "7.50"
+        ]
+      },
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "prompt_version": "task-plan-v3",
+      "python": "/usr/bin/python3",
+      "python_version": "3.12.3",
+      "sdk_version": "2.29.0",
+      "source_sha256": {
+        "core/pai_inspection_core/__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "core/pai_inspection_core/budget.py": "14108ae946355396fb5e4f2fbd908730b0712e150125e38d1ddc6328ce7513e3",
+        "core/pai_inspection_core/cli.py": "7842b4f1d5a8eb3d1ff74483921eb7a398eb09fa0aac9864ff969b3b831a8076",
+        "core/pai_inspection_core/plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "core/pai_inspection_core/vertex.py": "3184d1af58519991c57b064d630367629b564c5ef9cb3f222ba2a610c18ef8e0",
+        "pyproject.toml": "8c9afed36481f96062ef8298f7f3505434a98f97f06ec955923d7dff4743ce66",
+        "requirements.lock": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672"
+      },
+      "thinking": {
+        "gemini-2.5-flash": null,
+        "gemini-3.1-flash-lite": "MINIMAL",
+        "gemini-3.1-pro-preview": "LOW",
+        "gemini-3.8-flash": "LOW"
+      }
+    },
+    {
+      "core_import": "/opt/pai/core/pai_inspection_core/__init__.py",
+      "default_model": "gemini-3.1-pro-preview",
+      "prices": {
+        "gemini-2.5-flash": [
+          "0.30",
+          "2.50"
+        ],
+        "gemini-3.1-flash-lite": [
+          "0.25",
+          "1.50"
+        ],
+        "gemini-3.1-pro-preview": [
+          "2.00",
+          "12.00"
+        ],
+        "gemini-3.8-flash": [
+          "1.50",
+          "7.50"
+        ]
+      },
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "prompt_version": "task-plan-v3",
+      "python": "/opt/pai/venv/bin/python",
+      "python_version": "3.12.3",
+      "sdk_version": "2.29.0",
+      "source_sha256": {
+        "core/pai_inspection_core/__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "core/pai_inspection_core/budget.py": "14108ae946355396fb5e4f2fbd908730b0712e150125e38d1ddc6328ce7513e3",
+        "core/pai_inspection_core/cli.py": "7842b4f1d5a8eb3d1ff74483921eb7a398eb09fa0aac9864ff969b3b831a8076",
+        "core/pai_inspection_core/plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "core/pai_inspection_core/vertex.py": "3184d1af58519991c57b064d630367629b564c5ef9cb3f222ba2a610c18ef8e0",
+        "pyproject.toml": "8c9afed36481f96062ef8298f7f3505434a98f97f06ec955923d7dff4743ce66",
+        "requirements.lock": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672"
+      },
+      "thinking": {
+        "gemini-2.5-flash": null,
+        "gemini-3.1-flash-lite": "MINIMAL",
+        "gemini-3.1-pro-preview": "LOW",
+        "gemini-3.8-flash": "LOW"
+      }
+    }
+  ]
+}

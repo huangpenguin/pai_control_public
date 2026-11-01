@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-10-11",
+  "image": "sha256:a713be8e8422fd3d161904674ddbcda8f104a58b22828264a0b76854d025337f",
+  "scope": "core and Python dependency installation; live_acceptance harness later patched separately",
+  "host": {
+    "configuration_sha256": {
+      "pyproject.toml": "0d2205b62fa204046c15a9f88f78c2d9c9094b759aed1505650d3b445a3bca4c",
+      "requirements.lock": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672"
+    },
+    "core_path": "<repository>/core/pai_inspection_core",
+    "dependencies": {
+      "google-genai": "2.29.0",
+      "pytest": "8.4.2",
+      "setuptools": "79.0.1"
+    },
+    "python": "<repository>/.venv/bin/python",
+    "python_version": "3.13.2",
+    "sha256": {
+      "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+      "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+      "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+      "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+      "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+    }
+  },
+  "container": [
+    {
+      "configuration_sha256": {
+        "pyproject.toml": "0d2205b62fa204046c15a9f88f78c2d9c9094b759aed1505650d3b445a3bca4c",
+        "requirements.lock": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672"
+      },
+      "core_path": "/opt/pai/core/pai_inspection_core",
+      "dependencies": {
+        "google-genai": "2.29.0",
+        "pytest": "8.4.2",
+        "setuptools": "79.0.1"
+      },
+      "python": "/usr/bin/python3",
+      "python_version": "3.12.3",
+      "sha256": {
+        "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+        "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+        "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+      },
+      "matches_workspace": true
+    },
+    {
+      "configuration_sha256": {
+        "pyproject.toml": "0d2205b62fa204046c15a9f88f78c2d9c9094b759aed1505650d3b445a3bca4c",
+        "requirements.lock": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672"
+      },
+      "core_path": "/opt/pai/core/pai_inspection_core",
+      "dependencies": {
+        "google-genai": "2.29.0",
+        "pytest": "8.4.2",
+        "setuptools": "79.0.1"
+      },
+      "python": "/opt/pai/venv/bin/python",
+      "python_version": "3.12.3",
+      "sha256": {
+        "__init__.py": "60f4047964cac4062b1deaf990dbc463a31037c4969349038a904737f0889e8d",
+        "budget.py": "1c1ce22131eb4b73504d7a49620da3d84400022c892d5658cf7f9a0c78ec5295",
+        "cli.py": "76c7bbf4cfe706c8a450685fb344585deba9e88305287f1ac3b00d99f7ac4efe",
+        "plan.py": "30f76126f02c7bd2afa031ceb7955ce74cc3eaa0013ea7c4c2089e36071ea74b",
+        "vertex.py": "dff5f01405e0565d1edd893bbd477df03c4891733f0eb8b8c9c8ec5bbbbbb196"
+      },
+      "matches_workspace": true
+    }
+  ],
+  "sanitization": "Local repository prefix replaced; measured values and source hashes retained."
+}

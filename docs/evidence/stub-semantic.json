@@ -1,0 +1,499 @@
+{
+  "mode": "stub-test-double",
+  "created_utc": "2026-10-11T05:28:37.877420+00:00",
+  "cases": [
+    {
+      "id": "normal-1",
+      "group": "normal",
+      "instruction": "去A站",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "A站"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"A站\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "normal-2",
+      "group": "normal",
+      "instruction": "前往B站",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_b"
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "B站"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"B站\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "normal-3",
+      "group": "normal",
+      "instruction": "检查A站指示灯，然后返回基地",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "inspect_indicator",
+          "station_a"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "A站"
+          },
+          {
+            "op": "inspect_indicator",
+            "place_id": "station_a",
+            "evidence": "A站"
+          },
+          {
+            "op": "return_to_base",
+            "place_id": null,
+            "evidence": "基地"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"A站\"}, {\"op\": \"inspect_indicator\", \"place_id\": \"station_a\", \"evidence\": \"A站\"}, {\"op\": \"return_to_base\", \"place_id\": null, \"evidence\": \"基地\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "normal-4",
+      "group": "normal",
+      "instruction": "停止",
+      "decision": "accept",
+      "steps": [
+        [
+          "stop",
+          null
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "stop",
+            "place_id": null,
+            "evidence": "停止"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"stop\", \"place_id\": null, \"evidence\": \"停止\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "rewrite-1",
+      "group": "rewrite",
+      "instruction": "请到站点A",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "站点A"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"站点A\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "rewrite-2",
+      "group": "rewrite",
+      "instruction": "ステーションBへ行ってください",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_b"
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "ステーションB"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"ステーションB\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "rewrite-3",
+      "group": "rewrite",
+      "instruction": "地点Aの表示灯を確認して、ホームに戻ってください",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "inspect_indicator",
+          "station_a"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "地点A"
+          },
+          {
+            "op": "inspect_indicator",
+            "place_id": "station_a",
+            "evidence": "地点A"
+          },
+          {
+            "op": "return_to_base",
+            "place_id": null,
+            "evidence": "ホーム"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"地点A\"}, {\"op\": \"inspect_indicator\", \"place_id\": \"station_a\", \"evidence\": \"地点A\"}, {\"op\": \"return_to_base\", \"place_id\": null, \"evidence\": \"ホーム\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "rewrite-4",
+      "group": "rewrite",
+      "instruction": "please go to station b",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_b"
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "station b"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"station b\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "order-1",
+      "group": "order",
+      "instruction": "先去A站，然后去B站，最后返回基地",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "A站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "B站"
+          },
+          {
+            "op": "return_to_base",
+            "place_id": null,
+            "evidence": "基地"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"A站\"}, {\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"B站\"}, {\"op\": \"return_to_base\", \"place_id\": null, \"evidence\": \"基地\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "order-2",
+      "group": "order",
+      "instruction": "先检查B站指示灯，然后检查A站指示灯，最后返回基地",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "inspect_indicator",
+          "station_b"
+        ],
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "inspect_indicator",
+          "station_a"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "B站"
+          },
+          {
+            "op": "inspect_indicator",
+            "place_id": "station_b",
+            "evidence": "B站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "A站"
+          },
+          {
+            "op": "inspect_indicator",
+            "place_id": "station_a",
+            "evidence": "A站"
+          },
+          {
+            "op": "return_to_base",
+            "place_id": null,
+            "evidence": "基地"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"B站\"}, {\"op\": \"inspect_indicator\", \"place_id\": \"station_b\", \"evidence\": \"B站\"}, {\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"A站\"}, {\"op\": \"inspect_indicator\", \"place_id\": \"station_a\", \"evidence\": \"A站\"}, {\"op\": \"return_to_base\", \"place_id\": null, \"evidence\": \"基地\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "order-3",
+      "group": "order",
+      "instruction": "まず地点Bへ移動、次に地点Aへ移動、最後に拠点に戻る",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "地点B"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "地点A"
+          },
+          {
+            "op": "return_to_base",
+            "place_id": null,
+            "evidence": "拠点"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"地点B\"}, {\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"地点A\"}, {\"op\": \"return_to_base\", \"place_id\": null, \"evidence\": \"拠点\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "order-4",
+      "group": "order",
+      "instruction": "go to station a, then go to station b, finally stop",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "stop",
+          null
+        ]
+      ],
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "station a"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "station b"
+          },
+          {
+            "op": "stop",
+            "place_id": null,
+            "evidence": "stop"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\"decision\": \"accept\", \"steps\": [{\"op\": \"navigate_to\", \"place_id\": \"station_a\", \"evidence\": \"station a\"}, {\"op\": \"navigate_to\", \"place_id\": \"station_b\", \"evidence\": \"station b\"}, {\"op\": \"stop\", \"place_id\": null, \"evidence\": \"stop\"}], \"unresolved\": []}",
+      "passed": true
+    },
+    {
+      "id": "unknown-1",
+      "group": "unknown",
+      "instruction": "去C站",
+      "decision": "reject",
+      "steps": [],
+      "actual": {
+        "decision": "reject",
+        "steps": [],
+        "unresolved": [
+          "去C站"
+        ]
+      },
+      "raw_response": "{\"decision\": \"reject\", \"steps\": [], \"unresolved\": [\"去C站\"]}",
+      "passed": true
+    },
+    {
+      "id": "unknown-2",
+      "group": "unknown",
+      "instruction": "去A站，然后去仓库",
+      "decision": "reject",
+      "steps": [],
+      "actual": {
+        "decision": "reject",
+        "steps": [],
+        "unresolved": [
+          "去A站，然后去仓库"
+        ]
+      },
+      "raw_response": "{\"decision\": \"reject\", \"steps\": [], \"unresolved\": [\"去A站，然后去仓库\"]}",
+      "passed": true
+    },
+    {
+      "id": "unknown-3",
+      "group": "unknown",
+      "instruction": "ステーションCへ行ってください",
+      "decision": "reject",
+      "steps": [],
+      "actual": {
+        "decision": "reject",
+        "steps": [],
+        "unresolved": [
+          "ステーションCへ行ってください"
+        ]
+      },
+      "raw_response": "{\"decision\": \"reject\", \"steps\": [], \"unresolved\": [\"ステーションCへ行ってください\"]}",
+      "passed": true
+    },
+    {
+      "id": "unknown-4",
+      "group": "unknown",
+      "instruction": "检查station_a和station_c的指示灯",
+      "decision": "reject",
+      "steps": [],
+      "actual": {
+        "decision": "reject",
+        "steps": [],
+        "unresolved": [
+          "检查station_a和station_c的指示灯"
+        ]
+      },
+      "raw_response": "{\"decision\": \"reject\", \"steps\": [], \"unresolved\": [\"检查station_a和station_c的指示灯\"]}",
+      "passed": true
+    }
+  ],
+  "passed": 16,
+  "total": 16,
+  "attempts_this_run": 0
+}

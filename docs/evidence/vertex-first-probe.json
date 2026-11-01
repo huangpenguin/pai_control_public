@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-10-11T07:01:07.041117+00:00",
+  "mode": "vertex-real",
+  "model": "gemini-2.5-flash",
+  "location": "global",
+  "instruction": "去设备 A",
+  "single_attempt_limit": 1,
+  "sdk_http_attempts": 1,
+  "resource_creation_performed": false,
+  "ledger_before": {
+    "attempts": 0,
+    "accounted_usd": 0.0,
+    "unknown_or_pending": 0,
+    "warning_80_percent": false
+  },
+  "adc_refresh_success": true,
+  "quota_project_present": false,
+  "success": false,
+  "semantic_validated": false,
+  "error_type": "ClientError",
+  "http_status": 403,
+  "structured_error": {
+    "status": "PERMISSION_DENIED",
+    "reason": "CONSUMER_INVALID",
+    "service": "aiplatform.googleapis.com"
+  },
+  "duration_wall_s": 1.5999536239542067,
+  "ledger_after": {
+    "attempts": 1,
+    "accounted_usd": 0.166363,
+    "unknown_or_pending": 1,
+    "warning_80_percent": false
+  },
+  "attempts_this_probe": 1,
+  "request_accounting": {
+    "model": "gemini-2.5-flash",
+    "location": "global",
+    "reserved_usd": 0.166363,
+    "accounted_usd": 0.166363,
+    "usage_status": "unknown",
+    "usage_metadata": null,
+    "error_type": "ClientError"
+  },
+  "configuration_diagnosis": {
+    "invalid_project_expression_sent": true,
+    "cause": "Temporary probe parser treated shell default expression as literal instead of sourcing runtime.env",
+    "correct_shell_configuration_matches_existing_user_project": true,
+    "production_start_and_auth_configuration_reader_affected": false,
+    "actual_project_permission_conclusion": "Not determined by this malformed-config request"
+  }
+}

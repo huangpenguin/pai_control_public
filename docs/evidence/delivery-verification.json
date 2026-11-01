@@ -1,0 +1,195 @@
+{
+  "environment": {
+    "image": "sha256:10700d294b7ce956193bf8e2de71cdb0d2fed9db71683c0954599342303d391b",
+    "motion_evidence_image": "sha256:f3efdf18453231ba4b912756fee052e8b810c24eb32d257bcc7339d9f0182f9b",
+    "backend": "vertex",
+    "real_ai_verified": false,
+    "source_shas": {
+      "turtlebot3": "0c0be84e3f5c3194fb2adea8426a58a96060eab5",
+      "turtlebot3_msgs": "9209e01b4708cf3ca5610b01dfc9586d3c7889d8",
+      "turtlebot3_simulations": "45633014a14e8f438495b532a723e4ad45cbbd31"
+    },
+    "debian_packages_lock_sha256": "b8c8dd2f07e14fc053aef0fd5831739cba1e26ad9cef192edf439678a8e88b24",
+    "requirements_lock_sha256": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672",
+    "sensors": [
+      {
+        "name": "tb3_imu",
+        "type": "imu",
+        "simulation_update_rate_hz": 200.0
+      },
+      {
+        "name": "hls_lfcd_lds",
+        "type": "gpu_lidar",
+        "simulation_update_rate_hz": 10.0
+      },
+      {
+        "name": "camera",
+        "type": "camera",
+        "simulation_update_rate_hz": 5.0
+      }
+    ],
+    "software_rendering": true,
+    "gl": {
+      "GL_VERSION": "06:30:46: GL_VERSION = 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4",
+      "GL_RENDERER": "06:30:46: GL_RENDERER = llvmpipe (LLVM 20.1.2, 256 bits)"
+    },
+    "static_evidence": "logs/static-20261011T063106Z.json",
+    "changes_from_motion_image": [
+      "max_steps default 1 to 8",
+      "accurate stop response",
+      "recommend return after completed explicit return disabled",
+      "test harness and callback fixtures corrected"
+    ],
+    "motion_repeated_on_delivery_image": false
+  },
+  "acceptance": {
+    "real_ai_verified": false,
+    "vertex_requests_in_this_agent_live_validation": 0,
+    "ordinary_navigation_tasks": {
+      "successes": 2,
+      "attempts": 3,
+      "singlepoint_successes": 1,
+      "singlepoint_attempts": 2,
+      "multipoint_successes": 1,
+      "multipoint_attempts": 1,
+      "retained_failure": "singlepoint-20261011T055250Z.json scan_stale",
+      "multipoint_station_successes": 3,
+      "multipoint_station_attempts": 3
+    },
+    "independent_safety_cases": {
+      "accepted": 4,
+      "attempts": 4,
+      "cases": {
+        "manual-stop": "manual-stop-20261011T060240Z.json",
+        "guard-loss": "guard-loss-20261011T060400Z-validation.json",
+        "bridge-loss": "bridge-loss-20261011T060625Z-validation.json",
+        "pause": "pause-20261011T060825Z-validation.json"
+      },
+      "raw_automatic_false_preserved": "guard-loss-20261011T060400Z.json; assertion only expected stopped, but control-service loss correctly aborted"
+    },
+    "p3_integration_cases": {
+      "accepted": 3,
+      "attempts": 3,
+      "unknown": "unknown-20261011T061805Z.json; new Nav2 UUIDs=0, odom displacement=0",
+      "unreachable": "unreachable-20261011T061930Z-validation.json; isolated config only; actual NO_VALID_PATH208, two attempts, base SUCCEEDED",
+      "model_wait_timeout": "model-timeout-20261011T062140Z-validation.json; explicit SlowPlanner test double, 35 s application wait, late valid plan, new Nav2 UUIDs=0",
+      "raw_automatic_false_preserved": "unreachable-20261011T061930Z.json; assertion incorrectly required GOAL_OCCUPIED206 alone"
+    },
+    "harness_error_before_any_motion": {
+      "count": 1,
+      "evidence": "singlepoint-20261011T055130Z.json; spin_until method indentation, no resume or goal sent"
+    },
+    "collision_statistics": "not measured; reliable contact detector absent",
+    "unverified": {
+      "real_vertex_semantics_and_http_timeout": "ADC not authorized; no model calls",
+      "invalid_parameters": "covered by pure/schema and ROS callback tests only; no live malformed velocity or invalid model-schema profile",
+      "opencv_indicator": "not implemented in this agent P1/P2/P3 scope"
+    },
+    "run_image_sha256": "f3efdf18453231ba4b912756fee052e8b810c24eb32d257bcc7339d9f0182f9b",
+    "run_configuration": "explicit stub; camera 5 Hz sim; dynamic max_steps=8 for P2/P3; per goal 120sim/300wall; .20m/.25rad arrival",
+    "final_source_differences_after_live_runs": [
+      "max_steps defaults changed from P1 1 to product 8",
+      "stop response accurately says cancellation requested",
+      "return recommendation/message depends on actual base arrived",
+      "test harness expected abort and NO_VALID_PATH assertions corrected; old raw results preserved"
+    ],
+    "final_build_verification_pending": false,
+    "delivery_image_sha256": "10700d294b7ce956193bf8e2de71cdb0d2fed9db71683c0954599342303d391b",
+    "delivery_verification": {
+      "tests_passed": 27,
+      "tests_run": 27,
+      "ros_callback_tests": 13,
+      "pure_tests": 14,
+      "skipped": 0,
+      "duration_wall_s": 4.056,
+      "test_log": "control-runtime-tests-delivery.log",
+      "cpp_command_lease_exit_code": 0,
+      "default_max_steps": 8,
+      "default_planner_mode": "vertex",
+      "startup_locked": true,
+      "motion_permitted": false,
+      "static_sensor_pass": true,
+      "static_log": "static-20261011T063106Z.json",
+      "pip_check": "clean",
+      "source_sha_verification": "matches current workspace; delivery-integrity.json",
+      "container_shutdown": "stopped and removed, final image retained"
+    }
+  },
+  "static_sensors": {
+    "backend": "sensor_diagnostics_no_model_call",
+    "duration_s": 20.034838673193008,
+    "message_counts": {
+      "/camera/image_raw": 31,
+      "/clock": 2104,
+      "/odom": 421,
+      "/scan": 84,
+      "/camera/camera_info": 42
+    },
+    "rates_hz": {
+      "/camera/image_raw": 1.5846509361628294,
+      "/clock": 110.8774887749905,
+      "/odom": 22.15253742580312,
+      "/scan": 4.437431834591654,
+      "/camera/camera_info": 2.213812567207525
+    },
+    "transforms": {
+      "odom<-base_footprint": {
+        "available": true,
+        "xyz": [
+          1.3958919346457653e-07,
+          6.770044600076786e-18,
+          0.0
+        ]
+      },
+      "base_footprint<-base_scan": {
+        "available": true,
+        "xyz": [
+          -0.064,
+          0.0,
+          0.132
+        ]
+      },
+      "base_footprint<-camera_rgb_frame": {
+        "available": true,
+        "xyz": [
+          0.076,
+          0.0,
+          0.103
+        ]
+      },
+      "map<-base_footprint": {
+        "available": true,
+        "xyz": [
+          -3.0000000000002305,
+          -2.0,
+          0.0
+        ]
+      }
+    },
+    "sim_time_advance_s": 8.412,
+    "real_time_factor": 0.44350995509996205,
+    "scan": {
+      "frame_id": "base_scan",
+      "samples": 360,
+      "finite_samples": 230,
+      "closest_m": 1.8120603561401367
+    },
+    "stationary_displacement_max_m": 1.437309032372141e-19,
+    "camera": {
+      "width": 640,
+      "height": 480,
+      "encoding": "rgb8",
+      "frame_id": "camera_rgb_frame",
+      "snapshot": "/opt/pai/logs/static-20261011T063106Z-camera.png"
+    },
+    "static_sensor_pass": true
+  },
+  "pip_check": "No broken requirements found.",
+  "source_sha_verification": "Matched all 30 project ROS source/test files and core with both interpreters; delivery-integrity.json",
+  "container_shutdown": "Stopped and removed simulation container and dedicated network; final image retained",
+  "shutdown_evidence": {
+    "container_listing": [],
+    "log": "logs/stop-delivery.log",
+    "retained_image": "logs/image-retained-delivery.txt"
+  }
+}

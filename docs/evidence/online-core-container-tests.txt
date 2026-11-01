@@ -1,0 +1,10 @@
+.............................................................            [100%]
+=============================== warnings summary ===============================
+tests/core/test_budget.py::test_attempt_cap_and_persistence
+tests/core/test_vertex.py::test_validated_model_evidence_is_returned_without_local_replacement
+tests/core/test_vertex.py::test_model_thinking_profile_and_audit_are_explicit[gemini-3.1-pro-preview-LOW]
+tests/core/test_vertex.py::test_audit_callback_failure_cannot_release_a_plan_but_cost_is_settled
+  Warning: Vertex allowance has reached 80%; check persistent usage ledger
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+61 passed, 4 warnings in 1.79s

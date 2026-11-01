@@ -1,0 +1,61 @@
+{
+  "source": "local_command_stub_no_docker_no_oauth_no_cloud_api",
+  "cases": [
+    {
+      "case": "default_success",
+      "exit_status": 0,
+      "stages": [
+        "login",
+        "quota"
+      ],
+      "pass": true
+    },
+    {
+      "case": "default_quota_failure",
+      "exit_status": 17,
+      "stages": [
+        "login",
+        "quota"
+      ],
+      "pass": true
+    },
+    {
+      "case": "quota_only_success",
+      "exit_status": 0,
+      "stages": [
+        "quota"
+      ],
+      "pass": true
+    },
+    {
+      "case": "quota_only_failure",
+      "exit_status": 17,
+      "stages": [
+        "quota"
+      ],
+      "pass": true
+    },
+    {
+      "case": "quota_only_missing_adc",
+      "exit_status": 1,
+      "stages": [],
+      "pass": true
+    },
+    {
+      "case": "invalid_option",
+      "exit_status": 2,
+      "stages": [],
+      "pass": true
+    },
+    {
+      "case": "extra_argument",
+      "exit_status": 2,
+      "stages": [],
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "auth_script_sha256": "0bc3702f979253e3e45ef6149e0a874b040f4f5d32759cff83a18c49a2002a76",
+  "bash_syntax_check": "passed by environment agent",
+  "independent_diff_review": "quota-only skips login, requires readable existing ADC, preserves quota error exit status; no IAM/API/resource operations added"
+}

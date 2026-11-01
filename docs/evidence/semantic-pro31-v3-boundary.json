@@ -1,0 +1,242 @@
+{
+  "mode": "vertex-real",
+  "created_utc": "2026-10-11T08:04:16.506035+00:00",
+  "cases": [
+    {
+      "id": "critical-8",
+      "group": "critical",
+      "instruction": "先去A站，然后去B站，再去A站，再去B站，再去A站，再去B站，再去A站，最后返回基地",
+      "decision": "accept",
+      "steps": [
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "navigate_to",
+          "station_b"
+        ],
+        [
+          "navigate_to",
+          "station_a"
+        ],
+        [
+          "return_to_base",
+          null
+        ]
+      ],
+      "hard_gate": true,
+      "actual": {
+        "decision": "accept",
+        "steps": [
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "先去A站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "然后去B站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "再去A站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "再去B站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "再去A站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_b",
+            "evidence": "再去B站"
+          },
+          {
+            "op": "navigate_to",
+            "place_id": "station_a",
+            "evidence": "再去A站"
+          },
+          {
+            "op": "return_to_base",
+            "place_id": null,
+            "evidence": "最后返回基地"
+          }
+        ],
+        "unresolved": []
+      },
+      "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"先去A站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"然后去B站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去A站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去B站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去A站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去B站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去A站\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最后返回基地\"\n    }\n  ],\n  \"unresolved\": []\n}",
+      "passed": true,
+      "classification": "passed",
+      "audit": {
+        "mode": "vertex-real",
+        "model": "gemini-3.1-pro-preview",
+        "location": "global",
+        "instruction": "先去A站，然后去B站，再去A站，再去B站，再去A站，再去B站，再去A站，最后返回基地",
+        "instruction_sha256": "6792cfef68d516e1b8c7ab6dc98fa8a8a4181223e26b4e09981cf9ce4e5d2114",
+        "prompt_version": "task-plan-v3",
+        "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+        "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+        "request_id": "dedf66858ee547cf9bc515c96566a4e0",
+        "duration_wall_s": 10.828901987988502,
+        "raw_response": "{\n  \"decision\": \"accept\",\n  \"steps\": [\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"先去A站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"然后去B站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去A站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去B站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去A站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_b\",\n      \"evidence\": \"再去B站\"\n    },\n    {\n      \"op\": \"navigate_to\",\n      \"place_id\": \"station_a\",\n      \"evidence\": \"再去A站\"\n    },\n    {\n      \"op\": \"return_to_base\",\n      \"place_id\": null,\n      \"evidence\": \"最后返回基地\"\n    }\n  ],\n  \"unresolved\": []\n}",
+        "validated_plan": {
+          "decision": "accept",
+          "steps": [
+            {
+              "op": "navigate_to",
+              "place_id": "station_a",
+              "evidence": "先去A站"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_b",
+              "evidence": "然后去B站"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_a",
+              "evidence": "再去A站"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_b",
+              "evidence": "再去B站"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_a",
+              "evidence": "再去A站"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_b",
+              "evidence": "再去B站"
+            },
+            {
+              "op": "navigate_to",
+              "place_id": "station_a",
+              "evidence": "再去A站"
+            },
+            {
+              "op": "return_to_base",
+              "place_id": null,
+              "evidence": "最后返回基地"
+            }
+          ],
+          "unresolved": []
+        },
+        "finish_reason": "STOP",
+        "error": null,
+        "usage_metadata": {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 332,
+          "candidates_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 332
+            }
+          ],
+          "prompt_token_count": 899,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 899
+            }
+          ],
+          "thoughts_token_count": 509,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1740,
+          "traffic_type": "ON_DEMAND"
+        },
+        "request_accounting": {
+          "reserved_usd": 0.82558,
+          "accounted_usd": 0.01189,
+          "usage_status": "known",
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 332,
+            "candidates_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 332
+              }
+            ],
+            "prompt_token_count": 899,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 899
+              }
+            ],
+            "thoughts_token_count": 509,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 1740,
+            "traffic_type": "ON_DEMAND"
+          }
+        },
+        "sdk_http_attempts": 1,
+        "generation_config": {
+          "temperature": 0,
+          "max_output_tokens": 2048,
+          "thinking_config": {
+            "thinking_level": "LOW"
+          },
+          "http_timeout_seconds": 30.0,
+          "automatic_function_calling": false
+        }
+      },
+      "request_id": "dedf66858ee547cf9bc515c96566a4e0",
+      "raw_plan_matches_golden_steps": true
+    }
+  ],
+  "case_file_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+  "suite_total": 24,
+  "offset": 23,
+  "requested_case_ids": [
+    "critical-8"
+  ],
+  "passed": 1,
+  "total": 1,
+  "executed_cases": 1,
+  "skipped_case_ids": [],
+  "hard_gate_passed": true,
+  "attempts_this_run": 1,
+  "cumulative_usage": {
+    "attempts": 34,
+    "accounted_usd": 0.22919,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.062827,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  }
+}

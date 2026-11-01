@@ -1,0 +1,15 @@
+{
+  "action": "corrected second real Vertex generate_content request",
+  "automatic_approval": "rejected",
+  "reason": "Reviewer accepted only one real request as trusted user authorization; additional billable request had only parent-agent authorization.",
+  "process_started": false,
+  "generate_content_started": false,
+  "attempts_this_probe": 0,
+  "cumulative_ledger": {
+    "attempts": 1,
+    "accounted_usd": 0.166363,
+    "unknown_or_pending": 1,
+    "warning_80_percent": false
+  },
+  "follow_up": "No bypass or retry. Read-only project/IAM diagnosis completed; resolve missing Service Usage permissions before any further generation."
+}

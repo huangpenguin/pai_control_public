@@ -1,0 +1,169 @@
+{
+  "source": "independent native Gazebo cube contact probe; no task robot/Nav2/LLM",
+  "probe_attempts": 2,
+  "first_raw_failure_retained": true,
+  "navigation_collision_count_claim": false,
+  "known_navigation_contact_statistics": "historical P2/P3 unmeasured",
+  "runs": [
+    {
+      "source": "actual_gazebo_contact_sensors",
+      "control_commands_published": 0,
+      "run_kind": "independent_contact_probe_not_navigation",
+      "robot_model_allowlist": "contact_probe_robot",
+      "recorder_script_sha256": "2f98da53f66ef7e241015b1ee941866da4a1b025b35ef73763eeb0d00f6e3435",
+      "bridge_config_sha256": "7a3e30d0361895467263eaaa20284f2e086d84b623d90c50a9a21449c47920a1",
+      "positive_smoke_evidence_sha256": null,
+      "scope": "specified robot model versus five walls/central_obstacle; ground/self excluded",
+      "status": "unknown_not_measured",
+      "observed_episode_count": null,
+      "episode_gap_sim_s": 0.25,
+      "episodes": [],
+      "message_counts": {
+        "west_wall": 0,
+        "east_wall": 0,
+        "south_wall": 0,
+        "north_wall": 0,
+        "central_obstacle": 0
+      },
+      "excluded_contacts": {
+        "ground_excluded": 0,
+        "self_excluded": 0,
+        "unresolved_or_other": 0
+      },
+      "unresolved_examples": [],
+      "gz_publisher_health_checks": [
+        {
+          "wall_s": 3816301.281506245,
+          "gz_publishers": {
+            "west_wall": true,
+            "east_wall": true,
+            "south_wall": true,
+            "north_wall": true,
+            "central_obstacle": true
+          }
+        }
+      ],
+      "topic_health": false,
+      "ros_publisher_counts": {
+        "west_wall": 0,
+        "east_wall": 0,
+        "south_wall": 0,
+        "north_wall": 0,
+        "central_obstacle": 0
+      },
+      "clock_health": true,
+      "clock_messages": 7142,
+      "clock_first_sim_s": 0.008,
+      "clock_last_sim_s": 28.572,
+      "collection_started_wall_s": 3816301.060200381,
+      "collection_ended_wall_s": 3816331.285522736,
+      "clock_first_callback_wall_s": 3816301.803990169,
+      "clock_last_callback_wall_s": 3816331.285437776,
+      "maximum_clock_callback_gap_wall_s": 0.04513644194230437,
+      "elapsed_wall_s": 30.225322355050594,
+      "full_packet_audit": false,
+      "limitation": "Contact-only messages and bounded ROS subscriptions; publisher and clock coverage checked. Historical runs without sensors remain unmeasured.",
+      "raw_local_file": "logs/contact-smoke-20261011T090431Z.json",
+      "raw_file_sha256": "eb95a72e9c56f750425cba992d1ca39d7cc2b4d8d665c75e1f9d73d6bfd81578"
+    },
+    {
+      "source": "actual_gazebo_contact_sensors",
+      "control_commands_published": 0,
+      "run_kind": "independent_contact_probe_not_navigation",
+      "robot_model_allowlist": "contact_probe_robot",
+      "recorder_script_sha256": "d26ae58a30857ced3dbd0e5d5695e29dc68498629b8a3a0e21f59280bc563876",
+      "bridge_config_sha256": "7a3e30d0361895467263eaaa20284f2e086d84b623d90c50a9a21449c47920a1",
+      "positive_smoke_evidence_sha256": null,
+      "scope": "specified robot model versus five walls/central_obstacle; ground/self excluded",
+      "status": "observed",
+      "observed_episode_count": 1,
+      "episode_gap_sim_s": 0.25,
+      "episodes": [
+        {
+          "obstacle": "central_obstacle",
+          "first_sim_s": 0.43200000000000005,
+          "last_sim_s": 55.9,
+          "first_wall_s": 3816426.780313575,
+          "last_wall_s": 3816486.125197071,
+          "contact_messages": 13868,
+          "example_collision_pair": [
+            "central_obstacle::body::collision",
+            "contact_probe_robot::probe::probe_collision"
+          ]
+        }
+      ],
+      "message_counts": {
+        "west_wall": 0,
+        "east_wall": 0,
+        "south_wall": 0,
+        "north_wall": 0,
+        "central_obstacle": 13868
+      },
+      "excluded_contacts": {
+        "ground_excluded": 0,
+        "self_excluded": 0,
+        "unresolved_or_other": 0
+      },
+      "unresolved_examples": [],
+      "gz_publisher_health_checks": [
+        {
+          "wall_s": 3816426.128417423,
+          "gz_publishers": {
+            "west_wall": true,
+            "east_wall": true,
+            "south_wall": true,
+            "north_wall": true,
+            "central_obstacle": true
+          },
+          "completed_wall_s": 3816438.723290553
+        },
+        {
+          "wall_s": 3816448.724166779,
+          "gz_publishers": {
+            "west_wall": true,
+            "east_wall": true,
+            "south_wall": true,
+            "north_wall": true,
+            "central_obstacle": true
+          },
+          "completed_wall_s": 3816461.39286473
+        },
+        {
+          "wall_s": 3816471.39303383,
+          "gz_publishers": {
+            "west_wall": true,
+            "east_wall": true,
+            "south_wall": true,
+            "north_wall": true,
+            "central_obstacle": true
+          },
+          "completed_wall_s": 3816484.129135194
+        }
+      ],
+      "topic_health": true,
+      "ros_publisher_counts": {
+        "west_wall": 1,
+        "east_wall": 1,
+        "south_wall": 1,
+        "north_wall": 1,
+        "central_obstacle": 1
+      },
+      "clock_health": true,
+      "clock_messages": 13967,
+      "clock_first_sim_s": 0.008,
+      "clock_last_sim_s": 55.904,
+      "collection_started_wall_s": 3816425.909802685,
+      "collection_ended_wall_s": 3816486.130356562,
+      "clock_first_callback_wall_s": 3816426.214725126,
+      "clock_last_callback_wall_s": 3816486.130292617,
+      "maximum_clock_callback_gap_wall_s": 0.05974890384823084,
+      "elapsed_wall_s": 60.22055387683213,
+      "full_packet_audit": false,
+      "limitation": "Contact-only messages and bounded ROS subscriptions; publisher and clock coverage checked. Historical runs without sensors remain unmeasured.",
+      "raw_local_file": "logs/contact-smoke-20261011T090635Z.json",
+      "raw_file_sha256": "b3bb242c9f677327c45abc125b3d3ef8552f4728580875884b39ffc9bde95981"
+    }
+  ],
+  "current_recorder_and_bridge_sha_match_second_success": true,
+  "zero_observed_episode_preconditions": "same smoke recorder/bridge SHA, publisher/clock health, collection/clock coverage spanning Action window; no lossless packet or universal collision guarantee"
+}

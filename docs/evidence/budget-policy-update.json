@@ -1,0 +1,29 @@
+{
+  "before": {
+    "attempts": 2,
+    "accounted_usd": 0.166604,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.000241,
+    "max_usd": 1.0,
+    "max_attempts": 100,
+    "warning_80_percent": false
+  },
+  "after": {
+    "attempts": 2,
+    "accounted_usd": 0.166604,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.000241,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  },
+  "cloud_billing_changed": false,
+  "request_rows_unchanged": true,
+  "request_rows_sha256": "8081e9fc91a1c99f43232177d67256ec8ee2ac23b84300f8b2d2f23930280250",
+  "authorization": "user explicitly confirmed cumulative USD5/300 attempts on 2026-10-11; reviewed policy was already applied unchanged",
+  "new_generation_attempts": 0,
+  "recorded_at": "2026-10-11",
+  "scope": "application ledger only; no cloud billing change"
+}

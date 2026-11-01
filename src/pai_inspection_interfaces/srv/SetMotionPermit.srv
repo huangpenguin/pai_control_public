@@ -1,0 +1,5 @@
+uint64 generation
+bool enabled
+---
+bool accepted
+string reason

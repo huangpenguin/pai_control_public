@@ -1,0 +1,199 @@
+{
+  "run_id": "online-p3-unknown-20261011T085148Z",
+  "image_sha256": "d94fac513765a6d912b050db6bb33995352f9f9f881bc3fc5fc7850b79d41a6e",
+  "source": "online_product_VertexPlanner_then_real_ROS_Gazebo",
+  "raw_file_sha256": "74f9024dd510fb5a219d926fbfb4503d8939708715e770284a8f1cafe4de45e4",
+  "raw_task_pass": true,
+  "planning": {
+    "mode": "vertex-real",
+    "model": "gemini-3.1-pro-preview",
+    "location": "global",
+    "instruction": "去设备 C",
+    "instruction_sha256": "30752dc13519f0f334069a509a2a0cca8aa85c5f761ec38b8327d6762cf87d8d",
+    "prompt_version": "task-plan-v3",
+    "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+    "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+    "request_id": "2523a781ceda4f8988467b0aa2228bc0",
+    "duration_wall_s": 4.32641562493518,
+    "raw_response": "{\n  \"decision\": \"reject\",\n  \"steps\": [],\n  \"unresolved\": [\n    \"去设备 C\"\n  ]\n}",
+    "validated_plan": {
+      "decision": "reject",
+      "steps": [],
+      "unresolved": [
+        "去设备 C"
+      ]
+    },
+    "finish_reason": "STOP",
+    "error": null,
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 34,
+      "candidates_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 34
+        }
+      ],
+      "prompt_token_count": 869,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 869
+        }
+      ],
+      "thoughts_token_count": 155,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1058,
+      "traffic_type": "ON_DEMAND"
+    },
+    "request_accounting": {
+      "reserved_usd": 0.825378,
+      "accounted_usd": 0.004006,
+      "usage_status": "known",
+      "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 34,
+        "candidates_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 34
+          }
+        ],
+        "prompt_token_count": 869,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 869
+          }
+        ],
+        "thoughts_token_count": 155,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1058,
+        "traffic_type": "ON_DEMAND"
+      }
+    },
+    "sdk_http_attempts": 1,
+    "generation_config": {
+      "temperature": 0,
+      "max_output_tokens": 2048,
+      "thinking_config": {
+        "thinking_level": "LOW"
+      },
+      "http_timeout_seconds": 30.0,
+      "automatic_function_calling": false
+    }
+  },
+  "raw_model_equals_validated_original_plan": true,
+  "action_uuid": "7814a8981d2b47aa8a6248883e5b1ae2",
+  "action_requests_sent": 1,
+  "new_nav2_goals": {},
+  "task_wall_seconds": 4.348641966935247,
+  "safety_and_terminal_events": [
+    {
+      "event": "safety_state",
+      "wall_seconds": 3815562.206724774,
+      "sim_seconds": null,
+      "scan_wall_age": null,
+      "scan_sim_age": null,
+      "locked": true,
+      "generation": 3,
+      "reason": "manual_stop",
+      "motion_permitted": false
+    },
+    {
+      "event": "safety_state",
+      "wall_seconds": 3815564.210404074,
+      "sim_seconds": 272.096,
+      "scan_wall_age": 0.0970367519184947,
+      "scan_sim_age": 0.19600000000002638,
+      "locked": false,
+      "generation": 4,
+      "reason": "ready",
+      "motion_permitted": false
+    },
+    {
+      "event": "instruction_terminal",
+      "wall_seconds": 3815568.559463359,
+      "sim_seconds": 273.8,
+      "scan_wall_age": 0.19292323989793658,
+      "scan_sim_age": 0.19999999999998863,
+      "action_status": 4,
+      "result": {
+        "outcome": "rejected",
+        "message": "whole task rejected: unresolved instruction",
+        "planner_mode": "vertex",
+        "steps": [],
+        "return_requested": false,
+        "return_recommended": false
+      }
+    },
+    {
+      "event": "safety_state",
+      "wall_seconds": 3815570.576720779,
+      "sim_seconds": 274.664,
+      "scan_wall_age": 0.07219520071521401,
+      "scan_sim_age": 0.16399999999998727,
+      "locked": true,
+      "generation": 5,
+      "reason": "manual_stop",
+      "motion_permitted": false
+    },
+    {
+      "event": "cleanup_stop_response",
+      "wall_seconds": 3815570.588670148,
+      "sim_seconds": 274.688,
+      "scan_wall_age": 0.08414456993341446,
+      "scan_sim_age": 0.18799999999998818,
+      "success": true,
+      "reason": "locked; navigation cancellation requested; pending task invalidated"
+    }
+  ],
+  "post_terminal_continuous_standstill": true,
+  "initial_and_final_odom_samples": [
+    {
+      "wall_seconds": 3815562.207476136,
+      "sim_seconds": 271.14,
+      "odom_pose": [
+        0.4026765678463367,
+        -0.5624555079302008,
+        -0.0674258823593585
+      ],
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "scan_wall_age": null,
+      "scan_sim_age": null
+    },
+    {
+      "wall_seconds": 3815570.520885994,
+      "sim_seconds": 274.62,
+      "odom_pose": [
+        0.4026765678463367,
+        -0.5624555079302008,
+        -0.0674258823593585
+      ],
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "scan_wall_age": 0.01636041607707739,
+      "scan_sim_age": 0.11599999999998545
+    }
+  ],
+  "historical60_request_rows_unchanged": true,
+  "audit_usage_equals_actual_ledger_usage": true,
+  "api_attempt_delta": 1,
+  "cumulative_usage": {
+    "attempts": 61,
+    "accounted_usd": 0.38597,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.219607,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  },
+  "full_raw_local_file": "logs/online-p3-unknown-20261011T085148Z.json",
+  "collision_statistics": "not measured"
+}

@@ -1,0 +1,9 @@
+string raw_instruction
+---
+string outcome
+string message
+string result_json
+---
+string stage
+string place_id
+string message

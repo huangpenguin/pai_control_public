@@ -1,0 +1,281 @@
+{
+  "recorded_date": "2026-10-11",
+  "real_model_mode": "vertex-real",
+  "suite_version": "semantic-acceptance-v1",
+  "suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+  "hard_threshold": "all hard cases 100%; overall >=23/24",
+  "application_request_id_note": "locally generated ledger correlation UUID, not a Vertex HTTP response request ID",
+  "batches": [
+    {
+      "file": "semantic-lite-v1-sentinels.json",
+      "sha256": "d17f72eb0db5c5e85d47aeb2e1a27272922b16b4afcfc46d11bad55270b47bf9",
+      "model": "gemini-3.1-flash-lite",
+      "prompt_version": "task-plan-v1",
+      "prompt_sha256": "735ab5d8f13cb660f8868432d2690c017d9a325debde8caaab1ac719c0a50e74",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 4,
+      "executed": 3,
+      "passed": 2,
+      "skipped_case_ids": [
+        "critical-4"
+      ],
+      "hard_gate_passed": false,
+      "failures": [
+        {
+          "case_id": "critical-3",
+          "classification": "validation_rejection_with_correct_golden_steps",
+          "message": "place/action evidence must quote the instruction",
+          "actual": null,
+          "hard_gate": true
+        }
+      ],
+      "known_estimated_usd": 0.001127,
+      "prompt_tokens": 2123,
+      "candidate_tokens": 397,
+      "total_tokens": 2520,
+      "thinking_metadata_note": "individual null values retained in original audits, never forged as zero",
+      "latency_wall_s": {
+        "min": 1.7784780790098011,
+        "max": 2.7328598238527775,
+        "median": 1.895968222990632
+      }
+    },
+    {
+      "file": "semantic-lite-v2-sentinels.json",
+      "sha256": "aedde87208c1d9e8339544e10ae2a32d1c73b98123fb2e25f2eb20f6721e59f4",
+      "model": "gemini-3.1-flash-lite",
+      "prompt_version": "task-plan-v2",
+      "prompt_sha256": "1ba87296bd6a685ac7964eeb88077be60254af947714b9eef304d039b05bb09c",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 4,
+      "executed": 2,
+      "passed": 1,
+      "skipped_case_ids": [
+        "critical-3",
+        "critical-4"
+      ],
+      "hard_gate_passed": false,
+      "failures": [
+        {
+          "case_id": "critical-2",
+          "classification": "plan_validation",
+          "message": "plan changes instruction actions or order",
+          "actual": null,
+          "hard_gate": true
+        }
+      ],
+      "known_estimated_usd": 0.000787,
+      "prompt_tokens": 1626,
+      "candidate_tokens": 253,
+      "total_tokens": 1879,
+      "thinking_metadata_note": "individual null values retained in original audits, never forged as zero",
+      "latency_wall_s": {
+        "min": 1.7879862911067903,
+        "max": 2.4698525457642972,
+        "median": 2.1289194184355438
+      }
+    },
+    {
+      "file": "semantic-lite-v3-sentinels.json",
+      "sha256": "71040f2fdf00c54cb614437841351127e06ead5ba36f96a308d9beac5f8437bb",
+      "model": "gemini-3.1-flash-lite",
+      "prompt_version": "task-plan-v3",
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 4,
+      "executed": 2,
+      "passed": 1,
+      "skipped_case_ids": [
+        "critical-3",
+        "critical-4"
+      ],
+      "hard_gate_passed": false,
+      "failures": [
+        {
+          "case_id": "critical-2",
+          "classification": "plan_validation",
+          "message": "plan changes instruction actions or order",
+          "actual": null,
+          "hard_gate": true
+        }
+      ],
+      "known_estimated_usd": 0.000645,
+      "prompt_tokens": 1760,
+      "candidate_tokens": 136,
+      "total_tokens": 1896,
+      "thinking_metadata_note": "individual null values retained in original audits, never forged as zero",
+      "latency_wall_s": {
+        "min": 1.7274509822018445,
+        "max": 3.281957597937435,
+        "median": 2.5047042900696397
+      }
+    },
+    {
+      "file": "semantic-flash38-v3-sentinels.json",
+      "sha256": "3a2a7f444f16c6b4fdb990adbd7deeed399fce686537994172528410c9382dc0",
+      "model": "gemini-3.8-flash",
+      "prompt_version": "task-plan-v3",
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 4,
+      "executed": 4,
+      "passed": 4,
+      "skipped_case_ids": [],
+      "hard_gate_passed": true,
+      "failures": [],
+      "known_estimated_usd": 0.007985,
+      "prompt_tokens": 3533,
+      "candidate_tokens": 248,
+      "total_tokens": 3891,
+      "thinking_metadata_note": "individual null values retained in original audits, never forged as zero",
+      "latency_wall_s": {
+        "min": 2.1221355670131743,
+        "max": 3.1364939589984715,
+        "median": 2.3965294149238616
+      }
+    },
+    {
+      "file": "semantic-flash38-v3-main.json",
+      "sha256": "7f6bde4e3918ae3613a39417b9f7de99b96344b265d565902536934199c1840c",
+      "model": "gemini-3.8-flash",
+      "prompt_version": "task-plan-v3",
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 20,
+      "executed": 20,
+      "passed": 19,
+      "skipped_case_ids": [],
+      "hard_gate_passed": false,
+      "failures": [
+        {
+          "case_id": "critical-8",
+          "classification": "model_semantic_mismatch",
+          "message": null,
+          "actual": {
+            "decision": "reject",
+            "steps": [],
+            "unresolved": [
+              "最后返回基地"
+            ]
+          },
+          "hard_gate": true
+        }
+      ],
+      "known_estimated_usd": 0.040152,
+      "prompt_tokens": 17503,
+      "candidate_tokens": 888,
+      "total_tokens": 19355,
+      "thinking_metadata_note": "individual null values retained in original audits, never forged as zero",
+      "latency_wall_s": {
+        "min": 1.804303685668856,
+        "max": 20.330983594059944,
+        "median": 2.403977814828977
+      }
+    },
+    {
+      "file": "semantic-pro31-v3-boundary.json",
+      "sha256": "3c59637df7982751638fede185435f55bf235a2a1106a0bf32ae5bf138d40b4e",
+      "model": "gemini-3.1-pro-preview",
+      "prompt_version": "task-plan-v3",
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 1,
+      "executed": 1,
+      "passed": 1,
+      "skipped_case_ids": [],
+      "hard_gate_passed": true,
+      "failures": [],
+      "known_estimated_usd": 0.01189,
+      "prompt_tokens": 899,
+      "candidate_tokens": 332,
+      "total_tokens": 1740,
+      "thinking_metadata_note": "individual null values retained in original audits",
+      "latency_wall_s": {
+        "min": 10.828901987988502,
+        "max": 10.828901987988502,
+        "median": 10.828901987988502
+      }
+    },
+    {
+      "file": "semantic-pro31-v3-sentinels.json",
+      "sha256": "672a5cfbe63a59a6df06ff09e6d6571b6466ac62298bdeda4059de2ff2256591",
+      "model": "gemini-3.1-pro-preview",
+      "prompt_version": "task-plan-v3",
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 4,
+      "executed": 4,
+      "passed": 4,
+      "skipped_case_ids": [],
+      "hard_gate_passed": true,
+      "failures": [],
+      "known_estimated_usd": 0.02569,
+      "prompt_tokens": 3533,
+      "candidate_tokens": 472,
+      "total_tokens": 5085,
+      "thinking_metadata_note": "individual null values retained in original audits",
+      "latency_wall_s": {
+        "min": 4.770253739319742,
+        "max": 9.103220884688199,
+        "median": 5.396504083881155
+      }
+    },
+    {
+      "file": "semantic-pro31-v3-main.json",
+      "sha256": "739ac6c415cf86ed7be668b4f17cdb08d64d42309cdc4af368a3f6d08ff3750f",
+      "model": "gemini-3.1-pro-preview",
+      "prompt_version": "task-plan-v3",
+      "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+      "case_suite_sha256": "1eb8b9bd6d51660bd338bc570c19c0d43897c16077579b9fca61033bb388841c",
+      "requested": 19,
+      "executed": 19,
+      "passed": 19,
+      "skipped_case_ids": [],
+      "hard_gate_passed": true,
+      "failures": [],
+      "known_estimated_usd": 0.102256,
+      "prompt_tokens": 16604,
+      "candidate_tokens": 1557,
+      "total_tokens": 22358,
+      "thinking_metadata_note": "individual null values retained in original audits",
+      "latency_wall_s": {
+        "min": 3.4131676736287773,
+        "max": 8.571579592302442,
+        "median": 5.246297463774681
+      }
+    }
+  ],
+  "flash38_v3": {
+    "passed": 23,
+    "total": 24,
+    "hard_gate_passed": false,
+    "online_motion_authorized_by_semantic_gate": false,
+    "failure_assessment": "8-step boundary false rejection; safe but fails frozen functional hard criterion; no truncation or transport error"
+  },
+  "cumulative_usage": {
+    "attempts": 57,
+    "accounted_usd": 0.357136,
+    "unknown_or_pending": 1,
+    "unknown_reserved_usd": 0.166363,
+    "known_estimated_usd": 0.190773,
+    "max_usd": 5.0,
+    "max_attempts": 300,
+    "warning_80_percent": false
+  },
+  "generated_during_this_stage": 55,
+  "unknown_preserved": true,
+  "new_motion_tasks": 0,
+  "cloud_billing_changed": false,
+  "pro31_v3": {
+    "passed": 24,
+    "total": 24,
+    "hard_gate_passed": true,
+    "hard_cases": 18,
+    "unique_case_ids": 24,
+    "estimated_usd": 0.139836,
+    "thinking_token_count_with_original_nulls_retained": 5786,
+    "online_motion_completed": false
+  },
+  "selected_model": "gemini-3.1-pro-preview",
+  "selection_reason": "only compared v3 model to pass all frozen hard cases and full24; preview availability can change; not permanent optimum"
+}

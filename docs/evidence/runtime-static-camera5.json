@@ -1,0 +1,114 @@
+{
+  "image_sha256": "f3efdf18453231ba4b912756fee052e8b810c24eb32d257bcc7339d9f0182f9b",
+  "backend": "stub-test-double",
+  "real_ai_verified": false,
+  "pip_check": "No broken requirements found.",
+  "environment": {
+    "image": "sha256:f3efdf18453231ba4b912756fee052e8b810c24eb32d257bcc7339d9f0182f9b",
+    "backend": "stub-test-double",
+    "real_ai_verified": false,
+    "source_shas": {
+      "turtlebot3": "0c0be84e3f5c3194fb2adea8426a58a96060eab5",
+      "turtlebot3_msgs": "9209e01b4708cf3ca5610b01dfc9586d3c7889d8",
+      "turtlebot3_simulations": "45633014a14e8f438495b532a723e4ad45cbbd31"
+    },
+    "debian_packages_lock_sha256": "b8c8dd2f07e14fc053aef0fd5831739cba1e26ad9cef192edf439678a8e88b24",
+    "requirements_lock_sha256": "fb316250ffeba0332b89135e3e50de7a81315db9cad9237337f1eec43f4b1672",
+    "selected_debian_packages": {
+      "ros-jazzy-gz-plugin-vendor": "0.0.5-1noble.20260820.145930",
+      "ros-jazzy-gz-sim-vendor": "0.0.13-1noble.20260905.073557",
+      "ros-jazzy-gz-transport-vendor": "0.0.9-1noble.20260905.065154",
+      "ros-jazzy-navigation2": "1.3.13-1noble.20260921.033624",
+      "ros-jazzy-ros-gz": "1.0.24-1noble.20261006.041805",
+      "ros-jazzy-ros-gz-bridge": "1.0.24-1noble.20260920.234644",
+      "ros-jazzy-ros-gz-image": "1.0.24-1noble.20260921.023911",
+      "ros-jazzy-ros-gz-interfaces": "1.0.24-1noble.20260911.110630",
+      "ros-jazzy-ros-gz-sim": "1.0.24-1noble.20261006.035056",
+      "ros-jazzy-ros-gz-sim-demos": "1.0.24-1noble.20261006.040806"
+    },
+    "camera_simulation_update_rate_hz": 5,
+    "laser_simulation_update_rate_hz": 10,
+    "control_harness_sha256": "c081efe58019c3394654f5d04bc1ffae4104742433790206548c33ae5661207d",
+    "static_evidence": "logs/static-20261011T055814Z.json"
+  },
+  "static_sensors": {
+    "backend": "sensor_diagnostics_no_model_call",
+    "duration_s": 20.018433072138578,
+    "message_counts": {
+      "/scan": 88,
+      "/clock": 2200,
+      "/odom": 440,
+      "/camera/camera_info": 44,
+      "/camera/image_raw": 30
+    },
+    "rates_hz": {
+      "/scan": 4.413759725894695,
+      "/clock": 111.01365088127643,
+      "/odom": 22.180841151129055,
+      "/camera/camera_info": 2.2050978589171324,
+      "/camera/image_raw": 1.6408326972754252
+    },
+    "transforms": {
+      "odom<-base_footprint": {
+        "available": true,
+        "xyz": [
+          1.3958919346455472e-07,
+          6.770044600074677e-18,
+          0.0
+        ]
+      },
+      "base_footprint<-base_scan": {
+        "available": true,
+        "xyz": [
+          -0.064,
+          0.0,
+          0.132
+        ]
+      },
+      "base_footprint<-camera_rgb_frame": {
+        "available": true,
+        "xyz": [
+          0.076,
+          0.0,
+          0.103
+        ]
+      },
+      "map<-base_footprint": {
+        "available": true,
+        "xyz": [
+          -3.0000000000002305,
+          -2.0,
+          0.0
+        ]
+      }
+    },
+    "sim_time_advance_s": 8.796,
+    "real_time_factor": 0.44405460352510573,
+    "scan": {
+      "frame_id": "base_scan",
+      "samples": 360,
+      "finite_samples": 230,
+      "closest_m": 1.8283542394638062
+    },
+    "stationary_displacement_max_m": 1.5993040835345258e-19,
+    "camera": {
+      "width": 640,
+      "height": 480,
+      "encoding": "rgb8",
+      "frame_id": "camera_rgb_frame",
+      "snapshot": "/opt/pai/logs/static-20261011T055814Z-camera.png"
+    },
+    "static_sensor_pass": true
+  },
+  "rendering": {
+    "source": "/tmp/pai-home/.gz/rendering/ogre2.log",
+    "image": "sha256:f3efdf18453231ba4b912756fee052e8b810c24eb32d257bcc7339d9f0182f9b",
+    "gl": {
+      "GL_VERSION": "05:58:01: GL_VERSION = 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.4",
+      "GL_RENDERER": "05:58:01: GL_RENDERER = llvmpipe (LLVM 20.1.2, 256 bits)"
+    },
+    "software_rendering": true
+  },
+  "previous_image_regressions": "runtime-static-regressions-final.json; unchanged core and execution modules",
+  "motion_acceptance": "recorded separately; this artifact covers static conditions"
+}

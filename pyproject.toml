@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pai-inspection-core"
+version = "0.1.0"
+description = "Validated named-place plans for simulated ROS 2 inspection"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+dependencies = ["google-genai==2.29.0"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+
+[project.scripts]
+pai-plan = "pai_inspection_core.cli:plan_main"
+pai-evaluate = "pai_inspection_core.cli:evaluate_main"
+pai-budget = "pai_inspection_core.cli:budget_main"
+
+[tool.setuptools.packages.find]
+where = ["core"]
+
+[tool.pytest.ini_options]
+pythonpath = ["core"]
+testpaths = ["tests/core"]

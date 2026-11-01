@@ -1,0 +1,35 @@
+{
+  "run_id": "p4-calibration",
+  "formal_score": false,
+  "raw_harness_result": false,
+  "raw_harness_failure_retained": true,
+  "action_window_wall_s": [
+    3817517.067738029,
+    3817862.586393459
+  ],
+  "action_wall_seconds": 345.5186554295942,
+  "camera_actual_frame_window_wall_s": [
+    3817424.861674998,
+    3817956.306116643
+  ],
+  "camera_covers_action": true,
+  "actual_frame_count": 326,
+  "contact_clock_window_wall_s": [
+    3817427.279468567,
+    3817957.056451127
+  ],
+  "contact_covers_action": true,
+  "contact_topic_health": true,
+  "contact_clock_health": true,
+  "maximum_clock_gap_wall_s": 0.33541997196152806,
+  "observed_contact_episodes": 0,
+  "lossless_or_universal_no_collision_claim": false,
+  "same_successful_positive_probe_and_current_recorder_bridge_sha": true,
+  "contact_recorder_sha256": "d26ae58a30857ced3dbd0e5d5695e29dc68498629b8a3a0e21f59280bc563876",
+  "contact_bridge_sha256": "7a3e30d0361895467263eaaa20284f2e086d84b623d90c50a9a21449c47920a1",
+  "raw_sources": {
+    "logs/p4-calibration-contacts.json": "8f4e2e9e5a37ae466b24f77d23d114df40ec7b221813b2a9f802dee68502b413",
+    "logs/p4-calibration-video/capture.json": "a3baebafeaecaa717f683870133f48b745000aa05d93914f83dde94e54f60f4b",
+    "logs/p4-calibration.json": "7842d654d407042c12a26c3264f2299307ffdb555a79e4b064db77e80cf93774"
+  }
+}

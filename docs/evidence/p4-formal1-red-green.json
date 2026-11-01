@@ -1,0 +1,718 @@
+{
+  "run_id": "p4-formal1-red-green",
+  "formal_case": {
+    "id": "formal_red_green",
+    "scenario": "red_green",
+    "instruction": "先去设备 B 检查指示灯，再去设备 A 检查指示灯，最后回起点",
+    "expected_inspections": [
+      [
+        "station_b",
+        "green"
+      ],
+      [
+        "station_a",
+        "red"
+      ]
+    ]
+  },
+  "formal_cases_sha256": "a82a5a19e9e7fb647075a77163bf5f42e7030299479d9bf97afe22518bbe4c92",
+  "raw_task_sha256": "7187868f795866f0c8bc25ad7e84de01990169389ad6f2375fefc9323d01026a",
+  "raw_task_path": "logs/p4-formal1-red-green.json",
+  "raw_task_pass": true,
+  "independent_plan_execution_png_config_usage_coverage_checks": true,
+  "raw_model_plan_not_replaced": true,
+  "real_online_inference": true,
+  "image": "cae82b8e21c65fb49d5efbae6ce1fc6abd16f6c6a44554e775b7e2c7b755cf79",
+  "actual_external_observer_sha256": "da0cbcb4f4c74b8ee6f57fd32eab2b41a225250198085e72ec7b2b03d04a827b",
+  "external_clock_sources": {
+    "live_online_acceptance.py": "da0cbcb4f4c74b8ee6f57fd32eab2b41a225250198085e72ec7b2b03d04a827b",
+    "observation_clock.py": "fd92080c5646317c476a264d042235791e33f75b0e0484eea3425da8c980a9ab",
+    "test_observation_clock.py": "fd5a0b51d20fa52cd014137a7c25f27da049067fd7e666ece66957fe71cc21f8"
+  },
+  "observer_sources_baked_into_image_49": false,
+  "planning": {
+    "mode": "vertex-real",
+    "model": "gemini-3.1-pro-preview",
+    "location": "global",
+    "instruction": "先去设备 B 检查指示灯，再去设备 A 检查指示灯，最后回起点",
+    "instruction_sha256": "d7f38f84bb9cb8b9799b730834cf44570ce193c1e76aa4e9540987ea060aa3c4",
+    "prompt_version": "task-plan-v3",
+    "prompt_sha256": "8f071f4bb063da29c0551e65ddc64ea4dcf15a4ece9f6fa838a895d1c99282ea",
+    "schema_sha256": "402b39424e6ec956a54393a6cd76f50b8359d7f30e2d0aaf0b667a2e3badcc66",
+    "request_id": "908075115f774662b10d55c80258678c",
+    "duration_wall_s": 9.073750390671194,
+    "raw_response": "{\"decision\":\"accept\",\"steps\":[{\"op\":\"navigate_to\",\"place_id\":\"station_b\",\"evidence\":\"先去设备 B 检查指示灯\"},{\"op\":\"inspect_indicator\",\"place_id\":\"station_b\",\"evidence\":\"先去设备 B 检查指示灯\"},{\"op\":\"navigate_to\",\"place_id\":\"station_a\",\"evidence\":\"再去设备 A 检查指示灯\"},{\"op\":\"inspect_indicator\",\"place_id\":\"station_a\",\"evidence\":\"再去设备 A 检查指示灯\"},{\"op\":\"return_to_base\",\"place_id\":null,\"evidence\":\"最后回起点\"}],\"unresolved\":[]}",
+    "validated_plan": {
+      "decision": "accept",
+      "steps": [
+        {
+          "op": "navigate_to",
+          "place_id": "station_b",
+          "evidence": "先去设备 B 检查指示灯"
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_b",
+          "evidence": "先去设备 B 检查指示灯"
+        },
+        {
+          "op": "navigate_to",
+          "place_id": "station_a",
+          "evidence": "再去设备 A 检查指示灯"
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_a",
+          "evidence": "再去设备 A 检查指示灯"
+        },
+        {
+          "op": "return_to_base",
+          "place_id": null,
+          "evidence": "最后回起点"
+        }
+      ],
+      "unresolved": []
+    },
+    "finish_reason": "STOP",
+    "error": null,
+    "usage_metadata": {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 130,
+      "candidates_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 130
+        }
+      ],
+      "prompt_token_count": 886,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 886
+        }
+      ],
+      "thoughts_token_count": 382,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 1398,
+      "traffic_type": "ON_DEMAND"
+    },
+    "request_accounting": {
+      "reserved_usd": 0.825518,
+      "accounted_usd": 0.007916,
+      "usage_status": "known",
+      "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 130,
+        "candidates_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 130
+          }
+        ],
+        "prompt_token_count": 886,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 886
+          }
+        ],
+        "thoughts_token_count": 382,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1398,
+        "traffic_type": "ON_DEMAND"
+      }
+    },
+    "sdk_http_attempts": 1,
+    "generation_config": {
+      "temperature": 0,
+      "max_output_tokens": 2048,
+      "thinking_config": {
+        "thinking_level": "LOW"
+      },
+      "http_timeout_seconds": 30.0,
+      "automatic_function_calling": false
+    }
+  },
+  "action_uuid": "c51add0f7fab40dab4ff26e067395fee",
+  "action_requests_sent": 1,
+  "instruction_terminal": {
+    "event": "instruction_terminal",
+    "wall_seconds": 3818597.653632918,
+    "sim_seconds": 191.56,
+    "scan_wall_age": 0.061908259987831116,
+    "scan_sim_age": 0.1599999999999966,
+    "action_status": 4,
+    "result": {
+      "outcome": "completed",
+      "message": "task completed",
+      "planner_mode": "vertex",
+      "steps": [
+        {
+          "place_id": "station_b",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            2.84776015982464,
+            1.9280765447462203,
+            1.3259681697838799
+          ],
+          "nav2_status": 4
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_b",
+          "outcome": "inspected",
+          "color": "green",
+          "reason": "indicator_detected",
+          "png_path": "/opt/pai/logs/inspections/c51add0f7fab40dab4ff26e067395fee-1-station_b.png",
+          "action_uuid": "c51add0f7fab40dab4ff26e067395fee",
+          "task_generation": 2,
+          "capture_after_sim_seconds": 102.256,
+          "capture_after_wall_seconds": 3818378.596166443,
+          "stop_verified_wall_s": 0.5140536651015282,
+          "thresholds": {
+            "algorithm": "connected-HSV-rgb-focus-v1",
+            "roi": [
+              0.03,
+              0.1,
+              0.97,
+              0.64
+            ],
+            "saturation_min": 80,
+            "value_min": 50,
+            "red_hue_ranges": [
+              [
+                0,
+                12
+              ],
+              [
+                168,
+                179
+              ]
+            ],
+            "green_hue_range": [
+              45,
+              90
+            ],
+            "minimum_component_fraction": 0.02,
+            "maximum_other_fraction": 0.005,
+            "minimum_component_fill": 0.55,
+            "minimum_focus_variance": 12.0
+          },
+          "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+          "frame_id": "camera_rgb_frame",
+          "frame_stamp_sim_seconds": 102.6,
+          "frame_receipt_wall_seconds": 3818379.729322584,
+          "encoding": "rgb8",
+          "roi_pixels": [
+            19,
+            48,
+            620,
+            307
+          ],
+          "measurements": {
+            "focus_variance": 240.66452291777117,
+            "red": {
+              "pixel_fraction": 0.0,
+              "largest_component_fraction": 0.0,
+              "component_fill": 0.0,
+              "bounding_box": null
+            },
+            "green": {
+              "pixel_fraction": 0.19543360807919877,
+              "largest_component_fraction": 0.19543360807919877,
+              "component_fill": 0.9530388471177945,
+              "bounding_box": [
+                159,
+                151,
+                240,
+                133
+              ]
+            }
+          },
+          "png_sha256": "733432f2d6de203a69d0daae5e347f74bf531d8a3d73965a5f144823d2e5f9f1",
+          "frame_sim_age_at_decision_s": 0.10000000000000853,
+          "frame_wall_age_at_decision_s": 0.05334148230031133,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0,
+          "pose": [
+            2.850859291132982,
+            1.9367281558668776,
+            1.3262487645006387
+          ],
+          "pose_stamp_sim_seconds": 102.7,
+          "inspection_status": "normal"
+        },
+        {
+          "place_id": "station_a",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            2.9348311373749,
+            -1.834801284712266,
+            -0.23862264396800667
+          ],
+          "nav2_status": 4
+        },
+        {
+          "op": "inspect_indicator",
+          "place_id": "station_a",
+          "outcome": "inspected",
+          "color": "red",
+          "reason": "indicator_detected",
+          "png_path": "/opt/pai/logs/inspections/c51add0f7fab40dab4ff26e067395fee-3-station_a.png",
+          "action_uuid": "c51add0f7fab40dab4ff26e067395fee",
+          "task_generation": 2,
+          "capture_after_sim_seconds": 138.324,
+          "capture_after_wall_seconds": 3818467.676917567,
+          "stop_verified_wall_s": 0.5034881699830294,
+          "thresholds": {
+            "algorithm": "connected-HSV-rgb-focus-v1",
+            "roi": [
+              0.03,
+              0.1,
+              0.97,
+              0.64
+            ],
+            "saturation_min": 80,
+            "value_min": 50,
+            "red_hue_ranges": [
+              [
+                0,
+                12
+              ],
+              [
+                168,
+                179
+              ]
+            ],
+            "green_hue_range": [
+              45,
+              90
+            ],
+            "minimum_component_fraction": 0.02,
+            "maximum_other_fraction": 0.005,
+            "minimum_component_fill": 0.55,
+            "minimum_focus_variance": 12.0
+          },
+          "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+          "frame_id": "camera_rgb_frame",
+          "frame_stamp_sim_seconds": 138.8,
+          "frame_receipt_wall_seconds": 3818469.076789905,
+          "encoding": "rgb8",
+          "roi_pixels": [
+            19,
+            48,
+            620,
+            307
+          ],
+          "measurements": {
+            "focus_variance": 255.32764518766007,
+            "red": {
+              "pixel_fraction": 0.1887073667439724,
+              "largest_component_fraction": 0.1887073667439724,
+              "component_fill": 0.9438339438339438,
+              "bounding_box": [
+                201,
+                151,
+                234,
+                133
+              ]
+            },
+            "green": {
+              "pixel_fraction": 0.0,
+              "largest_component_fraction": 0.0,
+              "component_fill": 0.0,
+              "bounding_box": null
+            }
+          },
+          "png_sha256": "27a61ac668721d81f71cf72a6479dba8345d9716cf67053c2ada87e001f15373",
+          "frame_sim_age_at_decision_s": 0.09999999999999432,
+          "frame_wall_age_at_decision_s": 0.0743232793174684,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0,
+          "pose": [
+            2.9348311373749,
+            -1.834801284712266,
+            -0.23862264396800667
+          ],
+          "pose_stamp_sim_seconds": 138.9,
+          "inspection_status": "anomaly"
+        },
+        {
+          "place_id": "base",
+          "outcome": "arrived",
+          "attempts": 1,
+          "pose": [
+            -2.8870186528383854,
+            -1.9646591152175086,
+            -0.24660308133765316
+          ],
+          "nav2_status": 4
+        }
+      ],
+      "return_requested": true,
+      "return_recommended": false
+    }
+  },
+  "new_nav2_goals": {
+    "2d8b63b7c9c64ca2b22767d029654d24": 4,
+    "f35f479137a146f297c3e9e394b2b7cf": 4,
+    "4a9f64dc9f6846d9a9a21096662d3494": 4
+  },
+  "arrival_observations": [
+    {
+      "kind": "arrival_verified",
+      "place_id": "station_b",
+      "nav2_goal_uuid": "2d8b63b7c9c64ca2b22767d029654d24",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5182304210029542,
+      "observation": {
+        "iterations": 31,
+        "fresh_iterations": 31,
+        "pose_within_iterations": 31,
+        "stationary_iterations": 26,
+        "max_continuous_settle_wall_s": 0.497865519952029,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 102.044,
+          "pose": [
+            2.84776015982464,
+            1.9280765447462203,
+            1.3259681697838799
+          ],
+          "position_error_m": 0.16837444091150436,
+          "yaw_error_rad": 0.24482815700612015,
+          "fresh": true,
+          "odom_wall_age_s": 0.003513016737997532,
+          "odom_sim_age_s": 0.003999999999990678,
+          "tf_sim_age_s": 0.003999999999990678,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "c51add0f7fab40dab4ff26e067395fee"
+    },
+    {
+      "kind": "arrival_verified",
+      "place_id": "station_a",
+      "nav2_goal_uuid": "f35f479137a146f297c3e9e394b2b7cf",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5022435220889747,
+      "observation": {
+        "iterations": 38,
+        "fresh_iterations": 38,
+        "pose_within_iterations": 38,
+        "stationary_iterations": 25,
+        "max_continuous_settle_wall_s": 0.48157155932858586,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 138.176,
+          "pose": [
+            2.9348311373749,
+            -1.834801284712266,
+            -0.23862264396800667
+          ],
+          "position_error_m": 0.1775882771710087,
+          "yaw_error_rad": 0.23862264396800667,
+          "fresh": true,
+          "odom_wall_age_s": 0.013437721878290176,
+          "odom_sim_age_s": 0.015999999999991132,
+          "tf_sim_age_s": 0.015999999999991132,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "c51add0f7fab40dab4ff26e067395fee"
+    },
+    {
+      "kind": "arrival_verified",
+      "place_id": "base",
+      "nav2_goal_uuid": "4a9f64dc9f6846d9a9a21096662d3494",
+      "nav2_status": 4,
+      "attempts": 1,
+      "settled_wall_s": 0.5079235238954425,
+      "observation": {
+        "iterations": 33,
+        "fresh_iterations": 33,
+        "pose_within_iterations": 33,
+        "stationary_iterations": 25,
+        "max_continuous_settle_wall_s": 0.48447253182530403,
+        "transform_exceptions": 0,
+        "last": {
+          "sim_seconds": 191.552,
+          "pose": [
+            -2.8870186528383854,
+            -1.9646591152175086,
+            -0.24660308133765316
+          ],
+          "position_error_m": 0.1183797404274169,
+          "yaw_error_rad": 0.24660308133765316,
+          "fresh": true,
+          "odom_wall_age_s": 0.004479019902646542,
+          "odom_sim_age_s": 0.012000000000000455,
+          "tf_sim_age_s": 0.012000000000000455,
+          "linear_velocity": 0.0,
+          "angular_velocity": 0.0
+        }
+      },
+      "action_uuid": "c51add0f7fab40dab4ff26e067395fee"
+    }
+  ],
+  "inspection_observations": [
+    {
+      "op": "inspect_indicator",
+      "place_id": "station_b",
+      "outcome": "inspected",
+      "color": "green",
+      "reason": "indicator_detected",
+      "png_path": "/opt/pai/logs/inspections/c51add0f7fab40dab4ff26e067395fee-1-station_b.png",
+      "action_uuid": "c51add0f7fab40dab4ff26e067395fee",
+      "task_generation": 2,
+      "capture_after_sim_seconds": 102.256,
+      "capture_after_wall_seconds": 3818378.596166443,
+      "stop_verified_wall_s": 0.5140536651015282,
+      "thresholds": {
+        "algorithm": "connected-HSV-rgb-focus-v1",
+        "roi": [
+          0.03,
+          0.1,
+          0.97,
+          0.64
+        ],
+        "saturation_min": 80,
+        "value_min": 50,
+        "red_hue_ranges": [
+          [
+            0,
+            12
+          ],
+          [
+            168,
+            179
+          ]
+        ],
+        "green_hue_range": [
+          45,
+          90
+        ],
+        "minimum_component_fraction": 0.02,
+        "maximum_other_fraction": 0.005,
+        "minimum_component_fill": 0.55,
+        "minimum_focus_variance": 12.0
+      },
+      "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+      "frame_id": "camera_rgb_frame",
+      "frame_stamp_sim_seconds": 102.6,
+      "frame_receipt_wall_seconds": 3818379.729322584,
+      "encoding": "rgb8",
+      "roi_pixels": [
+        19,
+        48,
+        620,
+        307
+      ],
+      "measurements": {
+        "focus_variance": 240.66452291777117,
+        "red": {
+          "pixel_fraction": 0.0,
+          "largest_component_fraction": 0.0,
+          "component_fill": 0.0,
+          "bounding_box": null
+        },
+        "green": {
+          "pixel_fraction": 0.19543360807919877,
+          "largest_component_fraction": 0.19543360807919877,
+          "component_fill": 0.9530388471177945,
+          "bounding_box": [
+            159,
+            151,
+            240,
+            133
+          ]
+        }
+      },
+      "png_sha256": "733432f2d6de203a69d0daae5e347f74bf531d8a3d73965a5f144823d2e5f9f1",
+      "frame_sim_age_at_decision_s": 0.10000000000000853,
+      "frame_wall_age_at_decision_s": 0.05334148230031133,
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "pose": [
+        2.850859291132982,
+        1.9367281558668776,
+        1.3262487645006387
+      ],
+      "pose_stamp_sim_seconds": 102.7,
+      "inspection_status": "normal",
+      "committed_formal_png": "docs/evidence/p4-formal1-red-green-station_b.png"
+    },
+    {
+      "op": "inspect_indicator",
+      "place_id": "station_a",
+      "outcome": "inspected",
+      "color": "red",
+      "reason": "indicator_detected",
+      "png_path": "/opt/pai/logs/inspections/c51add0f7fab40dab4ff26e067395fee-3-station_a.png",
+      "action_uuid": "c51add0f7fab40dab4ff26e067395fee",
+      "task_generation": 2,
+      "capture_after_sim_seconds": 138.324,
+      "capture_after_wall_seconds": 3818467.676917567,
+      "stop_verified_wall_s": 0.5034881699830294,
+      "thresholds": {
+        "algorithm": "connected-HSV-rgb-focus-v1",
+        "roi": [
+          0.03,
+          0.1,
+          0.97,
+          0.64
+        ],
+        "saturation_min": 80,
+        "value_min": 50,
+        "red_hue_ranges": [
+          [
+            0,
+            12
+          ],
+          [
+            168,
+            179
+          ]
+        ],
+        "green_hue_range": [
+          45,
+          90
+        ],
+        "minimum_component_fraction": 0.02,
+        "maximum_other_fraction": 0.005,
+        "minimum_component_fill": 0.55,
+        "minimum_focus_variance": 12.0
+      },
+      "thresholds_sha256": "d03fa3824871b01fa28a2b66beedbc51e2fc5de4079ad9fa4ad840778db7a005",
+      "frame_id": "camera_rgb_frame",
+      "frame_stamp_sim_seconds": 138.8,
+      "frame_receipt_wall_seconds": 3818469.076789905,
+      "encoding": "rgb8",
+      "roi_pixels": [
+        19,
+        48,
+        620,
+        307
+      ],
+      "measurements": {
+        "focus_variance": 255.32764518766007,
+        "red": {
+          "pixel_fraction": 0.1887073667439724,
+          "largest_component_fraction": 0.1887073667439724,
+          "component_fill": 0.9438339438339438,
+          "bounding_box": [
+            201,
+            151,
+            234,
+            133
+          ]
+        },
+        "green": {
+          "pixel_fraction": 0.0,
+          "largest_component_fraction": 0.0,
+          "component_fill": 0.0,
+          "bounding_box": null
+        }
+      },
+      "png_sha256": "27a61ac668721d81f71cf72a6479dba8345d9716cf67053c2ada87e001f15373",
+      "frame_sim_age_at_decision_s": 0.09999999999999432,
+      "frame_wall_age_at_decision_s": 0.0743232793174684,
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "pose": [
+        2.9348311373749,
+        -1.834801284712266,
+        -0.23862264396800667
+      ],
+      "pose_stamp_sim_seconds": 138.9,
+      "inspection_status": "anomaly",
+      "committed_formal_png": "docs/evidence/p4-formal1-red-green-station_a.png"
+    }
+  ],
+  "independent_actual_png_views": true,
+  "task_wall_seconds": 381.1444737496786,
+  "task_observed_sim_seconds": 152.128,
+  "post_terminal_sample_count": 8,
+  "post_terminal_sample_span_wall_s": 1.8004875131882727,
+  "post_terminal_continuous_standstill": true,
+  "api_attempt_delta": 1,
+  "ledger_attempts_before_after": [
+    62,
+    63
+  ],
+  "all_prior_ledger_rows_preserved": true,
+  "application_request_id": "908075115f774662b10d55c80258678c",
+  "real_usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 130,
+    "candidates_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 130
+      }
+    ],
+    "prompt_token_count": 886,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 886
+      }
+    ],
+    "thoughts_token_count": 382,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 1398,
+    "traffic_type": "ON_DEMAND"
+  },
+  "token_price_estimate_usd": 0.007916,
+  "companion_recording": {
+    "action_window_wall_s": [
+      3818216.509189225,
+      3818597.653632918
+    ],
+    "actual_frame_count": 331,
+    "actual_frame_window_wall_s": [
+      3818140.919858702,
+      3818701.062918659
+    ],
+    "camera_covers_action": true,
+    "contact_clock_window_wall_s": [
+      3818146.422648365,
+      3818701.017485833
+    ],
+    "contact_covers_action": true,
+    "contact_topic_health": true,
+    "contact_clock_health": true,
+    "observed_contact_episodes": 0,
+    "maximum_clock_gap_wall_s": 0.3955983007326722,
+    "same_positive_probe_and_current_recorder_bridge_sha": true,
+    "lossless_or_universal_collision_free_claim": false,
+    "contact_raw_sha256": "3b5e72c5072d57a6917cee29f381f9e2e28438a98d4a0c7d22e0f1a45f233f78",
+    "capture_raw_sha256": "aff2ab00cb4524b4b2a9c1eff9c169aa93732fa3c8c92b9c00d877c3b509c860",
+    "recorder_script_sha256": "d26ae58a30857ced3dbd0e5d5695e29dc68498629b8a3a0e21f59280bc563876",
+    "bridge_config_sha256": "7a3e30d0361895467263eaaa20284f2e086d84b623d90c50a9a21449c47920a1"
+  },
+  "cleanup_stop_events": [
+    {
+      "event": "cleanup_stop_response",
+      "wall_seconds": 3818599.678904133,
+      "sim_seconds": 192.384,
+      "scan_wall_age": 0.08812560699880123,
+      "scan_sim_age": 0.1839999999999975,
+      "success": true,
+      "reason": "locked; navigation cancellation requested; pending task invalidated"
+    }
+  ],
+  "retained_failures": "earlier semantic, P2, contact probe, prebuild fixture and calibration raw failures remain in separate evidence"
+}
